@@ -1,0 +1,25 @@
+package com.symphony.security.exceptions;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import org.junit.Test;
+
+public class KeyInfoNotFoundExceptionDiffblueTest {
+  /**
+   * Test {@link KeyInfoNotFoundException#KeyInfoNotFoundException(String)}.
+   * <p>
+   * Method under test: {@link KeyInfoNotFoundException#KeyInfoNotFoundException(String)}
+   */
+  @Test
+  @MethodsUnderTest({"void KeyInfoNotFoundException.<init>(String)"})
+  public void testNewKeyInfoNotFoundException() {
+    // Arrange and Act
+    KeyInfoNotFoundException actualKeyInfoNotFoundException = new KeyInfoNotFoundException("foo");
+
+    // Assert
+    assertEquals("foo", actualKeyInfoNotFoundException.getMessage());
+    assertNull(actualKeyInfoNotFoundException.getCause());
+    assertEquals(0, actualKeyInfoNotFoundException.getSuppressed().length);
+  }
+}

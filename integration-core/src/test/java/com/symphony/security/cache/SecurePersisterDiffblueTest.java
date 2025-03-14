@@ -1,0 +1,94 @@
+package com.symphony.security.cache;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.exceptions.SymphonyEncryptionException;
+import com.symphony.security.exceptions.SymphonyInputException;
+import java.io.UnsupportedEncodingException;
+import org.junit.Test;
+
+public class SecurePersisterDiffblueTest {
+  /**
+   * Test {@link SecurePersister#getType()}.
+   * <ul>
+   *   <li>Then return {@code SecurePersister(InMemoryPersister(of size 0))}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link SecurePersister#getType()}
+   */
+  @Test
+  @MethodsUnderTest({"java.lang.String SecurePersister.getType()"})
+  public void testGetType_thenReturnSecurePersisterInMemoryPersisterOfSize0() {
+    // Arrange, Act and Assert
+    assertEquals("SecurePersister(InMemoryPersister(of size 0))",
+        (new SecurePersister(new InMemoryPersister(), 1L)).getType());
+  }
+
+  /**
+   * Test {@link SecurePersister#getType()}.
+   * <ul>
+   *   <li>Then return {@code SecurePersister(SecurePersister(InMemoryPersister(of size 0)))}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link SecurePersister#getType()}
+   */
+  @Test
+  @MethodsUnderTest({"java.lang.String SecurePersister.getType()"})
+  public void testGetType_thenReturnSecurePersisterSecurePersisterInMemoryPersisterOfSize0() {
+    // Arrange, Act and Assert
+    assertEquals("SecurePersister(SecurePersister(InMemoryPersister(of size 0)))",
+        (new SecurePersister(new SecurePersister(new InMemoryPersister(), 1L), 1L)).getType());
+  }
+
+  /**
+   * Test {@link SecurePersister#SecurePersister(IPersister, long)}.
+   * <p>
+   * Method under test: {@link SecurePersister#SecurePersister(IPersister, long)}
+   */
+  @Test
+  @MethodsUnderTest({"void SecurePersister.<init>(IPersister, long)"})
+  public void testNewSecurePersister() {
+    // Arrange, Act and Assert
+    assertEquals("SecurePersister(InMemoryPersister(of size 0))",
+        (new SecurePersister(new InMemoryPersister(), 1L)).getType());
+  }
+
+  /**
+   * Test {@link SecurePersister#retrieve(byte[])}.
+   * <ul>
+   *   <li>Given {@link SecurePersister#SecurePersister(IPersister, long)} with persister is {@link SecurePersister#SecurePersister(IPersister, long)} and randSeed is one.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link SecurePersister#retrieve(byte[])}
+   */
+  @Test
+  @MethodsUnderTest({"byte[] SecurePersister.retrieve(byte[])"})
+  public void testRetrieve_givenSecurePersisterWithPersisterIsSecurePersisterAndRandSeedIsOne()
+      throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
+    // Arrange
+    SecurePersister securePersister = new SecurePersister(new SecurePersister(new InMemoryPersister(), 1L), 1L);
+
+    // Act and Assert
+    assertNull(securePersister.retrieve("AXAXAXAX".getBytes("UTF-8")));
+  }
+
+  /**
+   * Test {@link SecurePersister#retrieve(byte[])}.
+   * <ul>
+   *   <li>Then return {@code null}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link SecurePersister#retrieve(byte[])}
+   */
+  @Test
+  @MethodsUnderTest({"byte[] SecurePersister.retrieve(byte[])"})
+  public void testRetrieve_thenReturnNull()
+      throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
+    // Arrange
+    SecurePersister securePersister = new SecurePersister(new InMemoryPersister(), 1L);
+
+    // Act and Assert
+    assertNull(securePersister.retrieve("AXAXAXAX".getBytes("UTF-8")));
+  }
+}
