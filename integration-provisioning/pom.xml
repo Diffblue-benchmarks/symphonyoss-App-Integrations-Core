@@ -55,6 +55,16 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.symphonyoss.symphony.integrations</groupId>
+            <artifactId>integration-pod-api-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.symphonyoss.symphony.integrations</groupId>
+            <artifactId>integration-config</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
