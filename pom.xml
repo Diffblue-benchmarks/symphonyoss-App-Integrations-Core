@@ -343,6 +343,9 @@
                         <value>XML</value>
                         <value>HTML</value>
                     </outputFormats>
+                    <targetTests>
+                        <param>*DiffblueTest</param>
+                    </targetTests>
                     <timestampedReports>false</timestampedReports>
                 </configuration>
                 <executions>
