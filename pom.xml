@@ -284,6 +284,15 @@
     </profiles>
 
     <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+            </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <!-- DIFFBLUE -->
             <plugin>
@@ -303,6 +312,25 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <configuration>
+                    <rules>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireGroupIdRule">
+                            <groupIdPrefix>org.symphonyoss</groupIdPrefix>
+                        </myCustomRule>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireFileInArtifactRule">
+                            <fileName>NOTICE</fileName>
+                            <match>The Symphony Software Foundation (http://symphony.foundation)</match>
+                        </myCustomRule>
+                        <myCustomRule implementation="org.symphonyoss.maven.enforcer.RequireFileInArtifactRule">
+                            <fileName>LICENSE</fileName>
+                            <match>Copyright 2016 The Symphony Software Foundation</match>
+                        </myCustomRule>
+                    </rules>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
