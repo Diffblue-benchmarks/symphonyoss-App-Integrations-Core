@@ -1,0 +1,551 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-07T14:05:16.07Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name with-diffblue-tests",
+    "totalTime" : 102.932,
+    "environmentDetectionTime" : 0.163,
+    "indexingTime" : 0.378,
+    "entryPointsTime" : 0.134,
+    "generationTime" : 51.779,
+    "timeToFirstTest" : 59.465,
+    "timeToLastTest" : 86.569,
+    "indexQueryTime" : 5.516,
+    "verificationTime" : 4.511,
+    "validationTime" : 6.413
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R026" : "Failed to create Spring context",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T005" : "Trivial constructor",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 10,
+    "methodsCount" : 27,
+    "cumulativeDiffblueTestCount" : 12,
+    "cumulativeManualTestCount" : 16,
+    "completeTestCount" : 12,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 285,
+    "perMethodTestability" : {
+      "T000" : 16,
+      "T001" : 2,
+      "T002" : 2,
+      "T005" : 4,
+      "T023" : 3
+    },
+    "perMethodOutcome" : {
+      "R000" : 12,
+      "R002" : 2,
+      "R026" : 6,
+      "T005" : 4,
+      "T023" : 3
+    },
+    "perTestOutcome" : {
+      "R000" : 12
+    },
+    "perTestValidation" : {
+      "V000" : 12
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.auth.api.client.AuthenticationApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 6
+      }
+    },
+    "org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R026" : 2,
+        "T005" : 1,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R026" : 2,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R026" : 2,
+        "T005" : 1,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.exception.InvalidAppTokenException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.exception.UnauthorizedAppException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.exception.UnexpectedAppAuthenticationException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.model.Token" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 2,
+        "T002" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.auth.api.properties.AuthApiClientProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.auth.api.client.AuthenticationApiClient.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        34,
+        35,
+        36
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.AuthenticationApiClient.authenticate:(Ljava/lang/String;)Lorg/symphonyoss/integration/auth/api/model/Token;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        39,
+        41,
+        42,
+        44,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;Lorg/symphonyoss/integration/logging/LogMessageSource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        60,
+        61,
+        62,
+        63
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient.authenticate:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/AppToken;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        73,
+        74,
+        76,
+        79,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        91,
+        92,
+        93,
+        95,
+        98,
+        99,
+        101
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient.getPodPublicCertificate:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/PodCertificate;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        111,
+        112,
+        114,
+        116,
+        117,
+        118,
+        119,
+        120,
+        122,
+        125,
+        126,
+        127,
+        129,
+        132,
+        133,
+        134
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        48,
+        49
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        53,
+        55,
+        56,
+        57,
+        58,
+        61
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        66
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        65,
+        66
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient.buildHttpClient:(Ljava/lang/String;)Lorg/symphonyoss/integration/api/client/HttpApiClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        91,
+        93,
+        95,
+        98,
+        100
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        70,
+        72,
+        73,
+        74,
+        75,
+        78
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        105
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        52,
+        53
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        57,
+        59,
+        60,
+        61,
+        62,
+        65
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.exception.InvalidAppTokenException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.exception.UnauthorizedAppException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.exception.UnexpectedAppAuthenticationException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.model.Token.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.model.Token.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.model.Token.getToken:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.model.Token.setName:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        34,
+        35
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.model.Token.setToken:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        42,
+        43
+      ]
+    },
+    "org.symphonyoss.integration.auth.api.properties.AuthApiClientProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        22
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

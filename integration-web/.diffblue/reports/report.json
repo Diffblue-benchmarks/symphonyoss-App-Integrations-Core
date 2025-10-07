@@ -1,0 +1,1987 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-07T14:05:16.07Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name with-diffblue-tests",
+    "totalTime" : 436.882,
+    "environmentDetectionTime" : 0.074,
+    "indexingTime" : 0.401,
+    "entryPointsTime" : 0.065,
+    "generationTime" : 2055.4,
+    "timeToFirstTest" : 2607.654,
+    "timeToLastTest" : 2439.855,
+    "indexQueryTime" : 5.833,
+    "verificationTime" : 232.594,
+    "validationTime" : 9.823
+  },
+  "codes" : {
+    "F009" : "Internal error",
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R004" : "No meaningful assertions found",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "R026" : "Failed to create Spring context",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T008" : "Private and never called",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T021" : "Empty method body",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 24,
+    "methodsCount" : 119,
+    "cumulativeDiffblueTestCount" : 56,
+    "cumulativeManualTestCount" : 84,
+    "completeTestCount" : 56,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 1262,
+    "perMethodTestability" : {
+      "T000" : 57,
+      "T003" : 22,
+      "T004" : 4,
+      "T005" : 17,
+      "T006" : 1,
+      "T008" : 1,
+      "T010" : 1,
+      "T012" : 3,
+      "T021" : 4,
+      "T023" : 9
+    },
+    "perMethodOutcome" : {
+      "F009" : 16,
+      "R000" : 28,
+      "R002" : 9,
+      "R004" : 1,
+      "R013" : 5,
+      "R026" : 5,
+      "T003" : 22,
+      "T004" : 4,
+      "T005" : 14,
+      "T006" : 1,
+      "T008" : 1,
+      "T010" : 1,
+      "T012" : 3,
+      "T023" : 9
+    },
+    "perTestOutcome" : {
+      "R000" : 56
+    },
+    "perTestValidation" : {
+      "V000" : 56
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.web.IntegrationBridgeApplication" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T006" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1,
+        "T006" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.exception.IntegrationBridgeUnavailableException" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 5
+      }
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 3,
+        "T005" : 1,
+        "T021" : 1
+      },
+      "perMethodOutcome" : {
+        "R002" : 2,
+        "R013" : 2,
+        "T003" : 3
+      }
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 8,
+        "T005" : 1,
+        "T021" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R002" : 2,
+        "R013" : 2,
+        "T003" : 8,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T021" : 2,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.listener.ApplicationReadyListener" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.listener.BootstrapApplicationListener" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.listener.IntegrationListener" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsConstants" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T008" : 1
+      },
+      "perMethodOutcome" : {
+        "T008" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R026" : 4,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.properties.AuthErrorMessageKeys" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.properties.WebHookDispatcherResourceProperties" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.properties.WebHookOriginCheckFilterProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.properties.WebHookResourceProperties" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.properties.WebProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 24,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 4,
+        "R004" : 1,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 24
+      }
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration$1" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 3,
+        "T003" : 3,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 3,
+        "T003" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource" : {
+      "methodsCount" : 12,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 10,
+        "T003" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 8,
+        "R000" : 1,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource" : {
+      "methodsCount" : 16,
+      "completeTestCount" : 12,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 11,
+        "T003" : 2,
+        "T010" : 1,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 10,
+        "R026" : 1,
+        "T003" : 2,
+        "T010" : 1,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 12
+      }
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource$1" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    },
+    "org.symphonyoss.integration.web.resource.WebHookWelcomeResource" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 2,
+        "T005" : 1,
+        "T023" : 1
+      }
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 5,
+        "T003" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 5
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.web.IntegrationBridgeApplication.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.web.IntegrationBridgeApplication.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        33,
+        34,
+        35,
+        36,
+        37
+      ]
+    },
+    "org.symphonyoss.integration.web.exception.IntegrationBridgeUnavailableException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        30,
+        31
+      ]
+    },
+    "org.symphonyoss.integration.web.exception.IntegrationBridgeUnavailableException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        34,
+        35
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        43
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.destroy:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        155
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.doFilter:(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        79,
+        80,
+        82,
+        85,
+        86,
+        88,
+        90,
+        91,
+        93,
+        94,
+        95,
+        97,
+        101,
+        103,
+        104,
+        106,
+        107,
+        108,
+        103,
+        104,
+        106,
+        107,
+        109,
+        110
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.getIgnoreList:(Ljava/lang/String;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        137,
+        138,
+        141,
+        142
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.init:(Ljavax/servlet/FilterConfig;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        62,
+        63,
+        64,
+        66,
+        68,
+        69,
+        70
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.isWebHookResource:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        151
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.IntegrationMetricsFilter.shouldLogRequest:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        118,
+        119,
+        122,
+        123,
+        124,
+        126,
+        128
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        72
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.destroy:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        303
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.doFilter:(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        148,
+        149,
+        151,
+        152,
+        153,
+        155,
+        157,
+        158,
+        159,
+        162,
+        163,
+        165,
+        166,
+        168,
+        169,
+        171,
+        172,
+        174,
+        175,
+        176,
+        174,
+        177,
+        180
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.getOriginatingAddressInfo:(Ljavax/servlet/http/HttpServletRequest;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        276,
+        278,
+        279,
+        282
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.getWhiteListByApplication:(Ljava/lang/String;)Ljava/util/Set;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        214,
+        217,
+        218,
+        221,
+        219,
+        220,
+        223,
+        224
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.init:(Ljavax/servlet/FilterConfig;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        121,
+        122,
+        123,
+        124,
+        125
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.isWelcomeResource:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        205
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.shouldCheckOrigin:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        188,
+        189,
+        192,
+        193,
+        196
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.verifyOrigin:(Ljava/lang/String;Ljava/util/Set;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        235,
+        236
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.verifyOriginHosts:([Ljava/lang/String;Ljava/util/Set;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        240,
+        242,
+        243,
+        244,
+        246,
+        247,
+        255,
+        249,
+        250,
+        251,
+        253,
+        250,
+        240,
+        257
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.verifyOriginIPs:([Ljava/lang/String;Ljava/util/Set;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        261,
+        262,
+        263,
+        261,
+        266
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter.writeResponse:(Ljavax/servlet/http/HttpServletResponse;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        292,
+        293,
+        295,
+        296,
+        297,
+        299,
+        300
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter.destroy:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        75
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter.doFilter:(Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljavax/servlet/FilterChain;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        61,
+        62,
+        65,
+        66,
+        67,
+        69,
+        70,
+        71
+      ]
+    },
+    "org.symphonyoss.integration.web.filter.WebHookTracingFilter.init:(Ljavax/servlet/FilterConfig;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T021",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        48
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.ApplicationReadyListener.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.ApplicationReadyListener.onApplicationEvent:(Lorg/springframework/boot/context/event/ApplicationReadyEvent;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        31,
+        32,
+        34,
+        35
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.ApplicationReadyListener.onApplicationEvent:(Lorg/springframework/context/ApplicationEvent;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.BootstrapApplicationListener.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.BootstrapApplicationListener.onApplicationEvent:(Lorg/springframework/boot/context/event/ApplicationEnvironmentPreparedEvent;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        40,
+        42,
+        43,
+        44,
+        46,
+        47,
+        50,
+        51,
+        54,
+        55,
+        57
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.BootstrapApplicationListener.onApplicationEvent:(Lorg/springframework/context/ApplicationEvent;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.IntegrationListener.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        35
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.IntegrationListener.contextDestroyed:(Ljavax/servlet/ServletContextEvent;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        49,
+        50
+      ]
+    },
+    "org.symphonyoss.integration.web.listener.IntegrationListener.contextInitialized:(Ljavax/servlet/ServletContextEvent;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        42,
+        43,
+        42,
+        43,
+        44,
+        45
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsConstants.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T008",
+      "perMethodOutcome" : "T008",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        46,
+        69,
+        74
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.finishIntegrationExecution:(Lcom/codahale/metrics/Timer$Context;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        176,
+        177,
+        179
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.finishRequest:(Lcom/codahale/metrics/Timer$Context;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        155,
+        157,
+        158,
+        160,
+        161,
+        163,
+        166,
+        168
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.initController:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        113,
+        114,
+        116,
+        117,
+        118
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.initStatusCode:(ILjava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        99,
+        100,
+        102,
+        103,
+        104
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.startIntegrationExecution:(Ljava/lang/String;)Lcom/codahale/metrics/Timer$Context;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        138,
+        140,
+        141,
+        144
+      ]
+    },
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController.startRequest:()Lcom/codahale/metrics/Timer$Context;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        126,
+        128
+      ]
+    },
+    "org.symphonyoss.integration.web.properties.AuthErrorMessageKeys.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        12
+      ]
+    },
+    "org.symphonyoss.integration.web.properties.WebHookDispatcherResourceProperties.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.properties.WebHookDispatcherResourceProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        8
+      ]
+    },
+    "org.symphonyoss.integration.web.properties.WebHookOriginCheckFilterProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        8
+      ]
+    },
+    "org.symphonyoss.integration.web.properties.WebHookResourceProperties.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.properties.WebHookResourceProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        8
+      ]
+    },
+    "org.symphonyoss.integration.web.properties.WebProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        6
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration$1.<init>:(Lorg/symphonyoss/integration/web/register/WebResourcesRegistration;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        124
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration$1.addCorsMappings:(Lorg/springframework/web/servlet/config/annotation/CorsRegistry;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        127,
+        128
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.apiServletRegistration:(Lorg/springframework/web/context/WebApplicationContext;Lorg/springframework/boot/autoconfigure/web/MultipartProperties;)Lorg/springframework/boot/web/servlet/ServletRegistrationBean;" : {
+      "completeTestCount" : 18,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 18
+      },
+      "lineNumbers" : [
+        107,
+        108,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.baseUrlMapping:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        133
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.corsConfigurer:()Lorg/springframework/web/servlet/config/annotation/WebMvcConfigurer;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        124
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.integrationMetricsFilterRegistration:()Lorg/springframework/boot/web/servlet/FilterRegistrationBean;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.webhookCheckOriginFilterRegistration:()Lorg/springframework/boot/web/servlet/FilterRegistrationBean;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        64,
+        65,
+        67,
+        68,
+        70
+      ]
+    },
+    "org.symphonyoss.integration.web.register.WebResourcesRegistration.webhookTracingFilterRegistration:()Lorg/springframework/boot/web/servlet/FilterRegistrationBean;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        54
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.authenticate:(Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        93,
+        94,
+        96,
+        99,
+        100,
+        101,
+        102,
+        105,
+        107,
+        108,
+        110
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.getIntegrationComponent:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        176,
+        178,
+        179,
+        180,
+        181,
+        184
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.getJsonNode:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        189,
+        190,
+        191,
+        192,
+        193,
+        195
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.validate:(Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        121,
+        122,
+        124,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.validateRequiredParameter:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        200,
+        201,
+        202,
+        203,
+        205,
+        207
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource.validateTokens:(Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        146,
+        148,
+        149,
+        151,
+        152,
+        154,
+        157,
+        158,
+        160,
+        161,
+        164,
+        165,
+        166,
+        167
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.<init>:(Lorg/symphonyoss/integration/service/IntegrationBridge;Lorg/symphonyoss/integration/logging/LogMessageSource;Lorg/symphonyoss/integration/authentication/api/jwt/JwtAuthentication;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        78,
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.authorize:(Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        162,
+        163,
+        168,
+        169,
+        184,
+        170,
+        171,
+        172,
+        173,
+        175,
+        176,
+        177,
+        178,
+        180,
+        181,
+        182,
+        183,
+        187,
+        188,
+        191
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.getAuthorizationPayload:(Ljavax/servlet/http/HttpServletRequest;Ljava/lang/String;)Lorg/symphonyoss/integration/authorization/AuthorizationPayload;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        220,
+        221,
+        223,
+        224,
+        225,
+        226,
+        227,
+        229,
+        230,
+        231,
+        232,
+        233,
+        235
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.getAuthorizationProperties:(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        93,
+        94,
+        96,
+        97,
+        100
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.getAuthorizedIntegration:(Ljava/lang/String;)Lorg/symphonyoss/integration/authorization/AuthorizedIntegration;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        201,
+        202,
+        203,
+        204,
+        205,
+        208,
+        209,
+        210,
+        211,
+        213
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource.getUserAuthorizationData:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        118,
+        120,
+        123,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        131,
+        132,
+        135,
+        145,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        147
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleFormRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleFormRequest:(Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        94
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleHeadRequest:(Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        180,
+        182,
+        184,
+        185,
+        187
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleHeadRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        168
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleMultiPartFormDataRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        206
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleMultiPartFormDataRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        223,
+        225,
+        227,
+        228,
+        229,
+        231
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleRemoteApiException:(Lorg/symphonyoss/integration/exception/RemoteApiException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        236,
+        237
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        111
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        126,
+        128,
+        129,
+        131
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookDispatcherResource.handleRequest:(Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/webhook/WebHookIntegration;Lorg/symphonyoss/integration/webhook/WebHookPayload;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        137,
+        138,
+        139,
+        138,
+        140,
+        141,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        153
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource$1.<init>:(Lorg/symphonyoss/integration/web/resource/WebHookResource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        204
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource$1.run:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        207,
+        208
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        73,
+        97,
+        107
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.access$000:(Lorg/symphonyoss/integration/web/resource/WebHookResource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        73
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.checkIntegrationAvailability:(Ljava/lang/String;)Lorg/symphonyoss/integration/webhook/WebHookIntegration;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        129,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        139
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.checkIntegrationBridgeAvailability:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R026",
+      "lineNumbers" : [
+        191,
+        192,
+        193,
+        194,
+        196
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.closeCircuit:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        183,
+        184
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.getConfigurationInstance:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        154
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.getWebHookIntegration:(Ljava/lang/String;)Lorg/symphonyoss/integration/webhook/WebHookIntegration;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        116,
+        117
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleBadRequest:(Ljava/lang/Exception;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        221,
+        222,
+        223
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleConnectivityException:(Lorg/symphonyoss/integration/exception/authentication/ConnectivityException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        246,
+        247,
+        249,
+        251
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleNotFound:(Ljava/lang/Exception;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        234,
+        235
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleServiceUnavailableException:(Ljava/lang/Exception;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        265,
+        266,
+        267
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleUnexpectedException:(Ljava/lang/Exception;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        292,
+        293
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.handleWebHookUnprocessableEntityException:(Lorg/symphonyoss/integration/webhook/exception/WebHookUnprocessableEntityException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        279,
+        280,
+        281
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.openCircuit:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        203,
+        204,
+        210
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookResource.retrieveWebHookPayload:(Ljavax/servlet/http/HttpServletRequest;Ljava/lang/String;)Lorg/symphonyoss/integration/webhook/WebHookPayload;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        164,
+        165,
+        167,
+        168,
+        169,
+        170,
+        171,
+        173,
+        174,
+        175,
+        176,
+        177,
+        179
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookWelcomeResource.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.resource.WebHookWelcomeResource.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookWelcomeResource.handleWelcomeRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        70,
+        72,
+        74,
+        75,
+        76,
+        78,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebHookWelcomeResource.handleWelcomeRequest:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        55
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.buildErrorResponse:(ILjava/lang/String;)Lorg/symphonyoss/integration/model/ErrorResponse;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        101
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.handleForbiddenException:(Lorg/symphonyoss/integration/exception/authentication/AuthenticationException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        91,
+        92,
+        94,
+        95,
+        97
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.handleMissingRequiredParameterException:(Lorg/symphonyoss/integration/exception/authentication/MissingRequiredParameterException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        112,
+        113
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.handleRemoteAPIException:(Lorg/symphonyoss/integration/exception/RemoteApiException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        57,
+        58,
+        60,
+        61,
+        63
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.handleUnauthorizedException:(Lorg/symphonyoss/integration/exception/authentication/UnauthorizedUserException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        74,
+        75,
+        77,
+        78,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.web.resource.WebResourceExceptionHandler.handleUnavailableException:(Lorg/symphonyoss/integration/exception/IntegrationUnavailableException;)Lorg/springframework/http/ResponseEntity;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        37,
+        38,
+        40,
+        41,
+        43
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

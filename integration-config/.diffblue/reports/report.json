@@ -1,0 +1,917 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-07T14:05:16.07Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name with-diffblue-tests",
+    "totalTime" : 199.51,
+    "environmentDetectionTime" : 0.059,
+    "indexingTime" : 0.392,
+    "entryPointsTime" : 0.045,
+    "generationTime" : 797.245,
+    "timeToFirstTest" : 1048.787,
+    "timeToLastTest" : 985.1,
+    "indexQueryTime" : 3.982,
+    "verificationTime" : 42.138,
+    "validationTime" : 10.442
+  },
+  "codes" : {
+    "F009" : "Internal error",
+    "R000" : "Success",
+    "R004" : "No meaningful assertions found",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "W002" : "Test compiled, but did not pass"
+  },
+  "summary" : {
+    "classesCount" : 12,
+    "methodsCount" : 45,
+    "cumulativeDiffblueTestCount" : 17,
+    "cumulativeManualTestCount" : 36,
+    "completeTestCount" : 29,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 554,
+    "perMethodTestability" : {
+      "T000" : 29,
+      "T003" : 11,
+      "T005" : 4,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "F009" : 5,
+      "R000" : 23,
+      "R004" : 1,
+      "T003" : 11,
+      "T005" : 4,
+      "T023" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 29
+    },
+    "perTestValidation" : {
+      "V000" : 29
+    },
+    "warnings" : {
+      "W002" : 2
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.config.LocalIntegrationService" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 10,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T003" : 3,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 6,
+        "T003" : 3,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 10
+      },
+      "warnings" : {
+        "W002" : 2
+      }
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService" : {
+      "methodsCount" : 15,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 6,
+        "T003" : 8,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 5,
+        "R004" : 1,
+        "T003" : 8,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.ConfigurationNotFoundException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.InitializationConfigException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.InstanceNotFoundException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.InvalidConfigurationIdException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.InvalidInstanceIdException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.SaveConfigurationException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.exception.SaveInstanceException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 12,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 9,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 10
+      },
+      "perTestOutcome" : {
+        "R000" : 12
+      }
+    },
+    "org.symphonyoss.integration.config.properties.LocalIntegrationServiceProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.config.properties.RemoteIntegrationServiceProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.config.LocalIntegrationService.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        82,
+        104
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.closeStream:(Ljava/io/Closeable;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        303,
+        305,
+        308,
+        306,
+        307,
+        310
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.getInputStream:()Ljava/io/InputStream;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        145,
+        148,
+        150,
+        151,
+        156,
+        157,
+        163,
+        158,
+        159,
+        160,
+        162,
+        166
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.getInstanceById:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        255,
+        256,
+        257,
+        259,
+        262,
+        264,
+        265,
+        266,
+        268,
+        271
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.getIntegrationById:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        171,
+        172,
+        173,
+        175,
+        178,
+        179,
+        180,
+        181,
+        183,
+        186
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.getIntegrationByType:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        191,
+        192,
+        193,
+        195,
+        198,
+        199,
+        200,
+        201,
+        203,
+        205,
+        206,
+        207
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.init:()V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        117,
+        118,
+        119,
+        121,
+        124,
+        126,
+        128,
+        135,
+        136,
+        129,
+        130,
+        131,
+        133,
+        135,
+        136,
+        137
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.save:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        276,
+        277,
+        278,
+        280,
+        284,
+        285,
+        287,
+        289,
+        290,
+        291,
+        292,
+        294
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.save:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        212,
+        213,
+        214,
+        216,
+        220,
+        221,
+        223,
+        225,
+        226,
+        227,
+        228,
+        230
+      ]
+    },
+    "org.symphonyoss.integration.config.LocalIntegrationService.saveRepository:(Lorg/symphonyoss/integration/config/model/IntegrationRepository;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        240,
+        241,
+        243,
+        244,
+        245,
+        247,
+        248,
+        247,
+        248,
+        250
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.buildIntegrationSubmission:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;)Lorg/symphonyoss/integration/pod/api/model/IntegrationSubmissionCreate;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        224
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.checkExceptionCodeForbidden:(Lorg/symphonyoss/integration/exception/RemoteApiException;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        102,
+        103,
+        104,
+        106,
+        108
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.createIntegration:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        176,
+        179,
+        181,
+        182,
+        184,
+        185,
+        186,
+        188,
+        191
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.getInstanceById:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        149,
+        151,
+        152,
+        154,
+        155,
+        156,
+        158,
+        161
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.getIntegrationById:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        85,
+        87,
+        88,
+        90,
+        91,
+        92,
+        94,
+        97
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.getIntegrationByType:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        120,
+        122,
+        123,
+        125,
+        126,
+        127,
+        129,
+        132
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.getUnknownException:(Lorg/symphonyoss/integration/exception/RemoteApiException;)Lorg/symphonyoss/integration/exception/config/RemoteConfigurationException;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        111,
+        112,
+        114
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        78,
+        79,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.instanceExists:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        269,
+        270,
+        269,
+        271,
+        272,
+        273,
+        275,
+        276,
+        278
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.integrationExists:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        230,
+        231,
+        230,
+        232,
+        233,
+        234,
+        236,
+        237,
+        239
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.save:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        167,
+        168,
+        170
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.save:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        138,
+        139,
+        141
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.updateInstance:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        245,
+        246,
+        247,
+        248,
+        249,
+        252,
+        253,
+        254,
+        256,
+        257,
+        258,
+        260,
+        263
+      ]
+    },
+    "org.symphonyoss.integration.config.RemoteIntegrationService.updateIntegration:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        197,
+        200,
+        201,
+        200,
+        202,
+        203,
+        205,
+        206,
+        207,
+        209,
+        212
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.ConfigurationNotFoundException.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        30,
+        31
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.InitializationConfigException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.InstanceNotFoundException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.InvalidConfigurationIdException.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        30,
+        31
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.InvalidInstanceIdException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        30,
+        31
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.SaveConfigurationException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.config.exception.SaveInstanceException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        38,
+        34,
+        36,
+        38
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.<init>:(Lorg/symphonyoss/integration/config/model/IntegrationRepository;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        40,
+        34,
+        36,
+        41,
+        42,
+        43
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.getInstanceById:(Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        74
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.getInstances:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.getIntegrationById:(Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        56
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.getIntegrations:()Ljava/util/List;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.putInstance:(Lorg/symphonyoss/integration/model/config/IntegrationInstance;)Lorg/symphonyoss/integration/model/config/IntegrationInstance;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.putIntegration:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.setConfigurations:(Ljava/util/List;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    "org.symphonyoss.integration.config.model.IntegrationRepository.setInstances:(Ljava/util/List;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    "org.symphonyoss.integration.config.properties.LocalIntegrationServiceProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "org.symphonyoss.integration.config.properties.RemoteIntegrationServiceProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        24
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}
