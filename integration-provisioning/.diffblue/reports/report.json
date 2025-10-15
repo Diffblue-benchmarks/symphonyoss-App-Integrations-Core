@@ -4,24 +4,20 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-07T14:05:16.07Z",
-    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name with-diffblue-tests",
-    "totalTime" : 404.589,
-    "environmentDetectionTime" : 0.089,
-    "indexingTime" : 0.404,
-    "entryPointsTime" : 0.08,
-    "generationTime" : 2265.125,
-    "timeToFirstTest" : 3013.284,
-    "timeToLastTest" : 2813.807,
-    "indexQueryTime" : 5.149,
-    "verificationTime" : 396.567,
-    "validationTime" : 14.516
+    "creationTimestamp" : "2025-10-15T15:39:10.46Z",
+    "command" : "dcover coverage-reports upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name baseline-no-diffblue-tests",
+    "totalTime" : 35.851,
+    "environmentDetectionTime" : 22.475,
+    "indexingTime" : 0.0,
+    "entryPointsTime" : 0.0,
+    "generationTime" : 0.0,
+    "timeToFirstTest" : 35.851,
+    "timeToLastTest" : 35.851,
+    "indexQueryTime" : 0.0,
+    "verificationTime" : 0.0,
+    "validationTime" : 0.0
   },
   "codes" : {
-    "F009" : "Internal error",
-    "R000" : "Success",
-    "R004" : "No meaningful assertions found",
-    "R011" : "Sandboxing policy violation",
     "T000" : "Method eligible for test creation",
     "T001" : "Trivial getter",
     "T002" : "Trivial setter",
@@ -30,16 +26,14 @@
     "T006" : "Main method",
     "T008" : "Private and never called",
     "T010" : "Abstract or interface method",
-    "T023" : "Testability unknown",
-    "V000" : "Validated successfully",
-    "W001" : "Test did not compile"
+    "T023" : "Testability unknown"
   },
   "summary" : {
     "classesCount" : 31,
     "methodsCount" : 154,
-    "cumulativeDiffblueTestCount" : 48,
+    "cumulativeDiffblueTestCount" : 0,
     "cumulativeManualTestCount" : 83,
-    "completeTestCount" : 65,
+    "completeTestCount" : 0,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 1696,
@@ -55,25 +49,15 @@
       "T023" : 9
     },
     "perMethodOutcome" : {
-      "F009" : 16,
-      "R000" : 63,
-      "R004" : 3,
-      "R011" : 3,
+      "T000" : 44,
+      "T001" : 18,
+      "T002" : 18,
       "T003" : 41,
-      "T005" : 16,
+      "T005" : 21,
       "T006" : 1,
       "T008" : 1,
       "T010" : 1,
       "T023" : 9
-    },
-    "perTestOutcome" : {
-      "R000" : 65
-    },
-    "perTestValidation" : {
-      "V000" : 65
-    },
-    "warnings" : {
-      "W001" : 4
     }
   },
   "classes" : {
@@ -89,7 +73,7 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R011" : 1,
+        "T000" : 1,
         "T003" : 1,
         "T005" : 1,
         "T006" : 1,
@@ -98,7 +82,7 @@
     },
     "org.symphonyoss.integration.provisioning.IntegrationProvisioningService" : {
       "methodsCount" : 11,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -107,13 +91,10 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1,
+        "T000" : 1,
         "T003" : 8,
         "T005" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.client.AppRepositoryClient" : {
@@ -126,14 +107,14 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "F009" : 4,
+        "T000" : 4,
         "T003" : 2,
         "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper" : {
       "methodsCount" : 5,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T001" : 2,
@@ -141,15 +122,14 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 5
-      },
-      "perTestOutcome" : {
-        "R000" : 1
+        "T001" : 2,
+        "T002" : 2,
+        "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreBuilder" : {
       "methodsCount" : 4,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -157,16 +137,14 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 2,
-        "T003" : 2
-      },
-      "perTestOutcome" : {
-        "R000" : 1
+        "T000" : 1,
+        "T003" : 2,
+        "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper" : {
       "methodsCount" : 9,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T001" : 4,
@@ -174,15 +152,14 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 9
-      },
-      "perTestOutcome" : {
-        "R000" : 1
+        "T001" : 4,
+        "T002" : 4,
+        "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper" : {
       "methodsCount" : 25,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T001" : 12,
@@ -190,148 +167,108 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 25
-      },
-      "perTestOutcome" : {
-        "R000" : 1
+        "T001" : 12,
+        "T002" : 12,
+        "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.exception.AppRepositoryClientException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 1
+        "T005" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.exception.ApplicationProvisioningException" : {
       "methodsCount" : 2,
-      "completeTestCount" : 6,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2
       },
       "perMethodOutcome" : {
-        "R000" : 2
-      },
-      "perTestOutcome" : {
-        "R000" : 6
-      },
-      "warnings" : {
-        "W001" : 1
+        "T000" : 2
       }
     },
     "org.symphonyoss.integration.provisioning.exception.CompanyCertificateException" : {
       "methodsCount" : 2,
-      "completeTestCount" : 6,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2
       },
       "perMethodOutcome" : {
-        "R000" : 2
-      },
-      "perTestOutcome" : {
-        "R000" : 6
-      },
-      "warnings" : {
-        "W001" : 1
+        "T000" : 2
       }
     },
     "org.symphonyoss.integration.provisioning.exception.ConfigurationProvisioningException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 4
+        "T000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.exception.IntegrationProvisioningAuthException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 4
+        "T000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.exception.KeyPairException" : {
       "methodsCount" : 2,
-      "completeTestCount" : 6,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2
       },
       "perMethodOutcome" : {
-        "R000" : 2
-      },
-      "perTestOutcome" : {
-        "R000" : 6
-      },
-      "warnings" : {
-        "W001" : 1
+        "T000" : 2
       }
     },
     "org.symphonyoss.integration.provisioning.exception.UpdateUserException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 4
+        "T000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.exception.UserSearchException" : {
       "methodsCount" : 2,
-      "completeTestCount" : 6,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2
       },
       "perMethodOutcome" : {
-        "R000" : 2
-      },
-      "perTestOutcome" : {
-        "R000" : 6
-      },
-      "warnings" : {
-        "W001" : 1
+        "T000" : 2
       }
     },
     "org.symphonyoss.integration.provisioning.exception.UsernameMismatchException" : {
       "methodsCount" : 1,
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 3
+        "T000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.properties.ApplicationProperties" : {
@@ -413,7 +350,7 @@
     },
     "org.symphonyoss.integration.provisioning.service.AppKeyPairService" : {
       "methodsCount" : 7,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -422,13 +359,10 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1,
+        "T000" : 1,
         "T003" : 4,
         "T005" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.service.ApplicationService" : {
@@ -442,8 +376,7 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "F009" : 2,
-        "R004" : 1,
+        "T000" : 3,
         "T003" : 2,
         "T005" : 1,
         "T023" : 1
@@ -451,7 +384,7 @@
     },
     "org.symphonyoss.integration.provisioning.service.AuthenticationService" : {
       "methodsCount" : 3,
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -459,12 +392,9 @@
         "T005" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1,
+        "T000" : 1,
         "T003" : 1,
         "T005" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 4
       }
     },
     "org.symphonyoss.integration.provisioning.service.CompanyCertificateService" : {
@@ -478,8 +408,7 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "F009" : 6,
-        "R004" : 1,
+        "T000" : 7,
         "T003" : 10,
         "T005" : 1,
         "T023" : 1
@@ -487,7 +416,7 @@
     },
     "org.symphonyoss.integration.provisioning.service.ConfigurationProvisioningService" : {
       "methodsCount" : 5,
-      "completeTestCount" : 9,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 2,
@@ -496,18 +425,15 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 2,
+        "T000" : 2,
         "T003" : 1,
         "T005" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 9
       }
     },
     "org.symphonyoss.integration.provisioning.service.KeyPairService" : {
       "methodsCount" : 8,
-      "completeTestCount" : 5,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 5,
@@ -516,19 +442,15 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 3,
-        "R011" : 2,
+        "T000" : 5,
         "T003" : 1,
         "T010" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 5
       }
     },
     "org.symphonyoss.integration.provisioning.service.UserKeyPairService" : {
       "methodsCount" : 6,
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -537,13 +459,10 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "R000" : 1,
+        "T000" : 1,
         "T003" : 3,
         "T005" : 1,
         "T023" : 1
-      },
-      "perTestOutcome" : {
-        "R000" : 1
       }
     },
     "org.symphonyoss.integration.provisioning.service.UserService" : {
@@ -557,8 +476,7 @@
         "T023" : 1
       },
       "perMethodOutcome" : {
-        "F009" : 4,
-        "R004" : 1,
+        "T000" : 5,
         "T003" : 6,
         "T005" : 1,
         "T023" : 1
@@ -612,7 +530,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R011",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         106,
         107,
@@ -655,13 +573,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.IntegrationProvisioningService.configure:()Z" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         119,
         121,
@@ -854,7 +769,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         122,
         123,
@@ -875,7 +790,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         98,
         100,
@@ -891,7 +806,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         74,
         78,
@@ -934,7 +849,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         151,
         152,
@@ -954,87 +869,66 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper.<init>:()V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T005",
       "lineNumbers" : [
         23
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper.getIconUrl:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         38
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper.getLoadUrl:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper.setIconUrl:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         42,
         43
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper.setLoadUrl:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         34,
         35
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreBuilder.<init>:()V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T005",
       "lineNumbers" : [
         29
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreBuilder.build:(Lorg/symphonyoss/integration/model/yaml/Application;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/provisioning/client/model/AppStoreWrapper;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         41,
         42,
@@ -1097,605 +991,452 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.<init>:()V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T005",
       "lineNumbers" : [
         23
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.getAppType:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         42
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.isEnabled:()Z" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         50
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.isInstall:()Z" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         34
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.isVisible:()Z" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         58
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.setAppType:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         46,
         47
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.setEnabled:(Z)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         54,
         55
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.setInstall:(Z)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         38,
         39
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper.setVisible:(Z)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         62,
         63
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.<init>:()V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T005",
       "lineNumbers" : [
         29
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getAppGroupId:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         100
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getAssets:()Lorg/symphonyoss/integration/provisioning/client/model/AppStoreAssetsWrapper;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         140
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getDescription:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         124
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getDomain:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         72
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getEnabled:()Ljava/lang/Boolean;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         64
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getId:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         80
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getName:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         108
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getPublisher:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         132
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getSettings:()Lorg/symphonyoss/integration/provisioning/client/model/AppStoreSettingsWrapper;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         144
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getSymphonyManaged:()Ljava/lang/Boolean;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         56
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getType:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         116
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.getVersion:()Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T001",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T001",
       "lineNumbers" : [
         88
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setAppGroupId:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         96,
         97
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setAssets:(Lorg/symphonyoss/integration/provisioning/client/model/AppStoreAssetsWrapper;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         136,
         137
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setDescription:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         120,
         121
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setDomain:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         76,
         77
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setEnabled:(Ljava/lang/Boolean;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         68,
         69
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setId:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         84,
         85
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setName:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         104,
         105
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setPublisher:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         128,
         129
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setSettings:(Lorg/symphonyoss/integration/provisioning/client/model/AppStoreSettingsWrapper;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         149,
         150
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setSymphonyManaged:(Ljava/lang/Boolean;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         60,
         61
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setType:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         112,
         113
       ]
     },
     "org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper.setVersion:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T002",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T002",
       "lineNumbers" : [
         92,
         93
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.AppRepositoryClientException.<init>:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T005",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T005",
       "lineNumbers" : [
         25,
         26
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.ApplicationProvisioningException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
-      "warnings" : {
-        "W001" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         33,
         34
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.ApplicationProvisioningException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.CompanyCertificateException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
-      "warnings" : {
-        "W001" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         33,
         34
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.CompanyCertificateException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.ConfigurationProvisioningException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 4
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.IntegrationProvisioningAuthException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 4
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.KeyPairException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
-      "warnings" : {
-        "W001" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         33,
         34
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.KeyPairException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.UpdateUserException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 4
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.UserSearchException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
-      "warnings" : {
-        "W001" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         33,
         34
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.UserSearchException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         29,
         30
       ]
     },
     "org.symphonyoss.integration.provisioning.exception.UsernameMismatchException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         14,
         15
@@ -1783,13 +1524,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.AppKeyPairService.exportCertificate:(Lorg/symphonyoss/integration/model/yaml/Application;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         70,
         71,
@@ -1909,7 +1647,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R004",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         99,
         100
@@ -1919,7 +1657,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         108,
         110,
@@ -1959,7 +1697,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         174,
         175,
@@ -2000,13 +1738,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.AuthenticationService.authenticate:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
-      "completeTestCount" : 4,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 4
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         68,
         70,
@@ -2102,7 +1837,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         265,
         267,
@@ -2118,7 +1853,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         289,
         291,
@@ -2135,7 +1870,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         219,
         221,
@@ -2205,7 +1940,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         150,
         151,
@@ -2227,7 +1962,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         114,
         115,
@@ -2254,7 +1989,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         123,
         125,
@@ -2275,7 +2010,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R004",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         105,
         106,
@@ -2399,13 +2134,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.ConfigurationProvisioningService.getIntegrationByType:(Ljava/lang/String;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 3
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         93,
         94,
@@ -2417,13 +2149,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.ConfigurationProvisioningService.setupConfiguration:(Lorg/symphonyoss/integration/model/yaml/Application;)Lorg/symphonyoss/integration/model/config/IntegrationSettings;" : {
-      "completeTestCount" : 6,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 6
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         64,
         66,
@@ -2461,7 +2190,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R011",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         91,
         92,
@@ -2476,7 +2205,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R011",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         76,
         77,
@@ -2488,25 +2217,19 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.KeyPairService.getTempPassword:(Lorg/symphonyoss/integration/model/yaml/Application;)Ljava/lang/String;" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         125
       ]
     },
     "org.symphonyoss.integration.provisioning.service.KeyPairService.shouldGenerateCertificate:()Z" : {
-      "completeTestCount" : 2,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 2
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         61,
         63,
@@ -2515,13 +2238,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.KeyPairService.throwKeyPairException:(Ljava/lang/String;)V" : {
-      "completeTestCount" : 2,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 2
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         129,
         130,
@@ -2564,13 +2284,10 @@
       ]
     },
     "org.symphonyoss.integration.provisioning.service.UserKeyPairService.exportCertificate:(Lorg/symphonyoss/integration/model/config/IntegrationSettings;Lorg/symphonyoss/integration/model/yaml/Application;)V" : {
-      "completeTestCount" : 1,
+      "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R000",
-      "perTestOutcome" : {
-        "R000" : 1
-      },
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         69,
         70,
@@ -2719,7 +2436,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         145,
         148,
@@ -2733,7 +2450,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         128,
         131,
@@ -2747,7 +2464,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         242,
         243,
@@ -2762,7 +2479,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "R004",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         90,
         91
@@ -2772,7 +2489,7 @@
       "completeTestCount" : 0,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
-      "perMethodOutcome" : "F009",
+      "perMethodOutcome" : "T000",
       "lineNumbers" : [
         99,
         101,
