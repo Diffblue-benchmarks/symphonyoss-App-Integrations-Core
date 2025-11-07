@@ -1,0 +1,1922 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-11-07T14:28:31.79Z",
+    "command" : "dcover coverage-reports ",
+    "totalTime" : 35.54,
+    "environmentDetectionTime" : 22.468,
+    "indexingTime" : 0.0,
+    "entryPointsTime" : 0.0,
+    "generationTime" : 0.0,
+    "timeToFirstTest" : 35.54,
+    "timeToLastTest" : 35.54,
+    "indexQueryTime" : 0.0,
+    "verificationTime" : 0.0,
+    "validationTime" : 0.0
+  },
+  "codes" : {
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T020" : "Other trivial method"
+  },
+  "summary" : {
+    "classesCount" : 28,
+    "methodsCount" : 139,
+    "cumulativeDiffblueTestCount" : 1,
+    "cumulativeManualTestCount" : 85,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 1021,
+    "perMethodTestability" : {
+      "T000" : 65,
+      "T001" : 21,
+      "T002" : 2,
+      "T003" : 12,
+      "T005" : 18,
+      "T010" : 10,
+      "T012" : 10,
+      "T020" : 1
+    },
+    "perMethodOutcome" : {
+      "T000" : 65,
+      "T001" : 21,
+      "T002" : 2,
+      "T003" : 12,
+      "T005" : 18,
+      "T010" : 10,
+      "T012" : 10,
+      "T020" : 1
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.healthcheck.CompositeHealthEndpoint" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 5,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 2,
+        "T003" : 5,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthAggregator" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthIndicator" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "T000" : 2
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.config.CachingConfiguration" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.config.NamedThreadFactory" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "T000" : 2
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.config.RuntimeCacheResolver" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T001" : 3,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.properties.HealthCheckProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T003" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthIndicator" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "T000" : 2
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T001" : 1,
+        "T002" : 2,
+        "T020" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 7,
+        "T001" : 1,
+        "T002" : 2,
+        "T020" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 3
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T001" : 1,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T001" : 1,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmHealthIndicator" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T001" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodHealthIndicator" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T001" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T001" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T001" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T010" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T010" : 2,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker" : {
+      "methodsCount" : 8,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T010" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 5,
+        "T010" : 2,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T001" : 3,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 5,
+        "T001" : 3,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 3,
+        "T001" : 2,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T001" : 3,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 3,
+        "T001" : 3,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker" : {
+      "methodsCount" : 20,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 12,
+        "T003" : 1,
+        "T010" : 6,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 12,
+        "T003" : 1,
+        "T010" : 6,
+        "T012" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.healthcheck.CompositeHealthEndpoint.<init>:(Lorg/symphonyoss/integration/healthcheck/IntegrationBridgeHealthAggregator;Lorg/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicator;Lorg/symphonyoss/integration/healthcheck/services/CompositeServiceHealthIndicator;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51,
+        53,
+        54,
+        55,
+        57
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        41,
+        42,
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        69,
+        70,
+        71
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.aggregate:(Ljava/util/Map;)Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        75,
+        76,
+        78,
+        80,
+        81,
+        83,
+        84,
+        85,
+        86,
+        83
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.down:(Ljava/lang/String;)Lorg/springframework/boot/actuate/health/Health$Builder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        119
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.getApplicationsHealth:(Lorg/springframework/boot/actuate/health/Health;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        128,
+        129,
+        131,
+        132,
+        133,
+        134,
+        136
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.getServicesHealth:(Lorg/springframework/boot/actuate/health/Health;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        145,
+        146,
+        148,
+        149,
+        150,
+        151,
+        153
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.retrieveIntegrationBridgeStatus:(Lorg/springframework/boot/actuate/health/Health;Lorg/springframework/boot/actuate/health/Health;)Lorg/springframework/boot/actuate/health/Health$Builder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        96,
+        98,
+        101,
+        102,
+        105
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator.up:()Lorg/springframework/boot/actuate/health/Health$Builder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        112
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter.<init>:(Lorg/symphonyoss/integration/Integration;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        38,
+        39,
+        40
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter.health:()Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        44,
+        45
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthAggregator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthAggregator.aggregate:(Ljava/util/Map;)Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        36,
+        37,
+        39,
+        40,
+        42,
+        43,
+        46,
+        47,
+        49,
+        50
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        50,
+        51
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.application.ApplicationsHealthIndicator.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        55,
+        57,
+        59,
+        60,
+        62,
+        63,
+        66,
+        68,
+        69,
+        71,
+        75
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.CachingConfiguration.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        13
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.CachingConfiguration.cacheManager:()Lorg/springframework/cache/CacheManager;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.CachingConfiguration.cacheResolver:(Lorg/springframework/cache/CacheManager;)Lorg/springframework/cache/interceptor/CacheResolver;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.NamedThreadFactory.<init>:(Ljava/lang/String;Z)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        11,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.NamedThreadFactory.newThread:(Ljava/lang/Runnable;)Ljava/lang/Thread;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        17,
+        18,
+        19
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.RuntimeCacheResolver.<init>:(Lorg/springframework/cache/CacheManager;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        13,
+        14
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.RuntimeCacheResolver.getCacheNames:(Lorg/springframework/cache/interceptor/CacheOperationInvocationContext;)Ljava/util/Collection;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration.configureTasks:(Lorg/springframework/scheduling/config/ScheduledTaskRegistrar;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        21,
+        22
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration.taskExecutor:()Ljava/util/concurrent/Executor;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        26
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData.<init>:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData.getNewVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData.getOldVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        48
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData.getServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.properties.HealthCheckProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        6
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator.aggregate:(Ljava/util/Map;)Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        41,
+        43,
+        44,
+        45,
+        47,
+        49,
+        50,
+        53,
+        54,
+        56,
+        58
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator.isServiceDown:(Lorg/springframework/boot/actuate/health/Status;Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        69,
+        70,
+        73,
+        74
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        43,
+        44
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthIndicator.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        38,
+        39,
+        40,
+        37
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability.<init>:(Ljava/lang/String;I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability.valueOf:(Ljava/lang/String;)Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo$Compability;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability.values:()[Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo$Compability;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51,
+        43,
+        52,
+        53,
+        54
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        113,
+        114,
+        117,
+        118,
+        121,
+        123,
+        124,
+        127,
+        128,
+        131
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.getCompatibility:()Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo$Compability;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        85,
+        86,
+        89,
+        90,
+        94,
+        95,
+        97,
+        98,
+        100,
+        102,
+        103
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.getConnectivity:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        57
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.getCurrentVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        65,
+        66,
+        69
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        77,
+        78,
+        81
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.getUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        108
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.hashCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        136,
+        137,
+        138,
+        139
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.setConnectivity:(Lorg/springframework/boot/actuate/health/Status;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "T002",
+      "lineNumbers" : [
+        61,
+        62
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.setCurrentVersion:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "T002",
+      "lineNumbers" : [
+        73,
+        74
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T020",
+      "perMethodOutcome" : "T020",
+      "lineNumbers" : [
+        144
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        33
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        37
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.KmHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        34
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        34
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        34
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        39
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        117
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.getServiceInfo:()Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        85
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.health:()Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        57,
+        60
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.mountUserFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        99,
+        100,
+        101,
+        103
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.reportServiceHealth:(Ljava/lang/String;Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;)Lorg/springframework/boot/actuate/health/Health;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        72,
+        73,
+        76,
+        77,
+        78,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator.setServiceInfo:(Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        90,
+        91
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        56
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        42,
+        43,
+        42
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        40
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        49
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.getServiceField:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.handleHealthResponse:(Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        65,
+        66,
+        68,
+        69,
+        71,
+        76,
+        73,
+        74,
+        75,
+        77
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.handleServiceVersionUpdatedEvent:(Lorg/symphonyoss/integration/healthcheck/event/ServiceVersionUpdatedEventData;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        88,
+        89,
+        91
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.retrieveCurrentVersion:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        54
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker.retrieveHealthResponse:(Ljavax/ws/rs/core/Response;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        59
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        75
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        38
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        43
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        80,
+        81,
+        84
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        48
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getServiceField:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        53
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.handleHealthResponse:(Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        58,
+        60,
+        61,
+        64,
+        65,
+        66
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.parseJsonResponse:(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        94,
+        95,
+        96,
+        99
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.readAggregatedHC:()Lcom/fasterxml/jackson/databind/JsonNode;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        107,
+        108,
+        110,
+        111,
+        114
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker.retrieveConnectivityStatus:(Lcom/fasterxml/jackson/databind/JsonNode;)Lorg/springframework/boot/actuate/health/Status;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        124,
+        125,
+        128,
+        130,
+        131,
+        134
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        56
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        56
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        65
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        51,
+        52,
+        55
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getServiceField:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        70
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        41
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        48
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        47
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.fireUpdatedServiceVersionEvent:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        251,
+        252,
+        254,
+        255,
+        257,
+        259,
+        260
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getCurrentVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        263
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        277
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getHealthCheckUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getHealthIndicator:()Lorg/symphonyoss/integration/healthcheck/services/indicators/ServiceHealthIndicator;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getHealthResponse:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        158,
+        160,
+        161,
+        162,
+        165,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        174,
+        176,
+        177,
+        181,
+        182,
+        177,
+        178,
+        179,
+        181,
+        182,
+        181,
+        182,
+        184,
+        186
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getHttpClient:()Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        81,
+        82,
+        83,
+        87,
+        88,
+        89,
+        91,
+        93
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getMinVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getSemanticVersion:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        239,
+        240,
+        243
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getServiceBaseUrl:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.getServiceName:()Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.handleHealthCheckEvent:(Lorg/symphonyoss/integration/event/HealthCheckEventData;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        107,
+        109,
+        111,
+        112,
+        114
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.handleHealthResponse:(Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        230,
+        231
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.mountUserFriendlyServiceName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        195,
+        196,
+        197,
+        199
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.retrieveCurrentVersion:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        211,
+        212,
+        214,
+        215,
+        219,
+        217,
+        218,
+        221
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.retrieveHealthResponse:(Ljavax/ws/rs/core/Response;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        97,
+        98
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.retrieveServiceInfo:()Lorg/symphonyoss/integration/healthcheck/services/IntegrationBridgeServiceInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        127,
+        128,
+        130,
+        131,
+        133,
+        134,
+        136,
+        137,
+        139,
+        141,
+        143,
+        144,
+        147,
+        150
+      ]
+    },
+    "org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker.updateServiceHealth:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        118,
+        119,
+        120
+      ]
+    }
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-11-07T14:27:25.954Z",
+    "command" : "dcover coverage-reports ",
+    "totalTime" : 34.254,
+    "environmentDetectionTime" : 22.454,
+    "indexingTime" : 0.0,
+    "entryPointsTime" : 0.0,
+    "generationTime" : 0.0,
+    "timeToFirstTest" : 34.253,
+    "timeToLastTest" : 34.253,
+    "indexQueryTime" : 0.0,
+    "verificationTime" : 0.0,
+    "validationTime" : 0.0
+  },
+  "codes" : {
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method"
+  },
+  "summary" : {
+    "classesCount" : 15,
+    "methodsCount" : 65,
+    "cumulativeDiffblueTestCount" : 1,
+    "cumulativeManualTestCount" : 43,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 665,
+    "perMethodTestability" : {
+      "T000" : 35,
+      "T001" : 5,
+      "T002" : 1,
+      "T003" : 10,
+      "T004" : 2,
+      "T005" : 6,
+      "T010" : 1,
+      "T012" : 5
+    },
+    "perMethodOutcome" : {
+      "T000" : 35,
+      "T001" : 5,
+      "T002" : 1,
+      "T003" : 10,
+      "T004" : 2,
+      "T005" : 6,
+      "T010" : 1,
+      "T012" : 5
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.authentication.AppAuthenticationContext" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T001" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T001" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 5,
+        "T003" : 1,
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationContext" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 1,
+        "T010" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1,
+        "T003" : 1,
+        "T010" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl" : {
+      "methodsCount" : 20,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 13,
+        "T003" : 5,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 13,
+        "T003" : 5,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext" : {
+      "methodsCount" : 7,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T001" : 4,
+        "T002" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 2,
+        "T001" : 4,
+        "T002" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.exception.MissingClientException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.exception.MissingServiceConfigurationException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredAppAuthException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredSessionTokenException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredUserAuthException" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1
+      },
+      "perMethodOutcome" : {
+        "T000" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl" : {
+      "methodsCount" : 14,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 8,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "T000" : 8,
+        "T003" : 3,
+        "T005" : 1,
+        "T012" : 2
+      }
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl$1" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T004" : 2,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.properties.AppAuthenticationProxyProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.properties.AuthenticationContextProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.authentication.properties.AuthenticationProxyProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.authentication.AppAuthenticationContext.<init>:(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;Lorg/symphonyoss/integration/model/yaml/HttpClientConfig;Lorg/symphonyoss/integration/model/yaml/IntegrationProperties;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        44,
+        45,
+        46
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationContext.getApplicationId:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        49
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        50,
+        52
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.authenticate:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/AppToken;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        108
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.contextForApplication:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/AppAuthenticationContext;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        95,
+        97,
+        98,
+        99,
+        100,
+        103
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.getPodPublicCertificate:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/PodCertificate;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        113
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.httpClientForApplication:(Ljava/lang/String;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        84
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        70,
+        71
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl.registerApplication:(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        75,
+        77,
+        79,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationContext.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        59
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationContext.<init>:(Ljava/security/KeyStore;Ljava/lang/String;Lorg/symphonyoss/integration/model/yaml/HttpClientConfig;Lorg/symphonyoss/integration/model/yaml/IntegrationProperties;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        70,
+        61,
+        71,
+        72,
+        75,
+        78,
+        79,
+        80,
+        82,
+        86,
+        87,
+        88,
+        90,
+        91,
+        90,
+        92,
+        94
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationContext.buildClient:(Ljava/security/KeyStore;Ljava/lang/String;Lorg/symphonyoss/integration/model/yaml/HttpClientConfig;Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        105,
+        106,
+        109,
+        110,
+        115,
+        116,
+        118,
+        119,
+        120,
+        122,
+        126,
+        127,
+        128,
+        129,
+        132,
+        134,
+        135,
+        139,
+        140,
+        141,
+        142,
+        145,
+        147,
+        148,
+        149,
+        151,
+        152,
+        155,
+        156,
+        159,
+        160,
+        165,
+        167
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationContext.httpClientForContext:(Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        175,
+        176,
+        178
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        78,
+        80
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        76,
+        92
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.authenticate:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        117,
+        119,
+        120,
+        123,
+        124,
+        126,
+        127,
+        126,
+        136,
+        128,
+        129,
+        136,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        139
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.checkAndThrowException:(Lorg/symphonyoss/integration/exception/RemoteApiException;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        233,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        242,
+        243
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.contextForSessionToken:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/UserAuthenticationContext;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        161,
+        162,
+        163,
+        165,
+        167,
+        168,
+        169,
+        171,
+        173,
+        174
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.contextForUser:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/UserAuthenticationContext;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        146,
+        148,
+        149,
+        150,
+        153
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.getSessionToken:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        209
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.getToken:(Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/AuthenticationToken;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        199
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.httpClientForSessionToken:(Ljava/lang/String;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        314
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.httpClientForUser:(Ljava/lang/String;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)Ljavax/ws/rs/client/Client;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        306
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        111,
+        112,
+        113
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.invalidate:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        188,
+        189,
+        190
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.isAuthenticated:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        179
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.reAuthOrThrow:(Ljava/lang/String;Lorg/symphonyoss/integration/exception/RemoteApiException;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        222,
+        223,
+        224,
+        225,
+        228,
+        230
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.reAuthSessionOrThrow:(Ljava/lang/String;Lorg/symphonyoss/integration/exception/RemoteApiException;)Lorg/symphonyoss/integration/authentication/AuthenticationToken;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        250,
+        251,
+        252
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.registerUser:(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        297,
+        298,
+        297,
+        299
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.sessionNoLongerEntitled:(I)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        273
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.sessionUnauthorized:(I)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        284
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.shouldInvalidateSession:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        261,
+        262
+      ]
+    },
+    "org.symphonyoss.integration.authentication.AuthenticationProxyImpl.validateResponseCode:(Ljavax/ws/rs/core/Response$Status;I)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        288,
+        289
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.<init>:(Ljava/lang/String;Ljava/security/KeyStore;Ljava/lang/String;Lorg/symphonyoss/integration/model/yaml/HttpClientConfig;Lorg/symphonyoss/integration/model/yaml/IntegrationProperties;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        55,
+        33,
+        35,
+        42,
+        57,
+        58
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.getPreviousToken:()Lorg/symphonyoss/integration/authentication/AuthenticationToken;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        69
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.getToken:()Lorg/symphonyoss/integration/authentication/AuthenticationToken;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        65
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.getUserId:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        61
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.invalidateAuthentication:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "T002",
+      "lineNumbers" : [
+        86,
+        87
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.isAuthenticated:()Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "T001",
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "org.symphonyoss.integration.authentication.UserAuthenticationContext.setToken:(Lorg/symphonyoss/integration/authentication/AuthenticationToken;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        73,
+        77,
+        79,
+        80,
+        81,
+        83
+      ]
+    },
+    "org.symphonyoss.integration.authentication.exception.MissingClientException.<init>:(Ljava/lang/String;Lorg/symphonyoss/integration/authentication/api/enums/ServiceName;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        12,
+        13
+      ]
+    },
+    "org.symphonyoss.integration.authentication.exception.MissingServiceConfigurationException.<init>:(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        12,
+        13
+      ]
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredAppAuthException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredSessionTokenException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        30,
+        31
+      ]
+    },
+    "org.symphonyoss.integration.authentication.exception.UnregisteredUserAuthException.<init>:(Ljava/lang/String;[Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl$1.<init>:(Lorg/symphonyoss/integration/authentication/jwt/JwtAuthenticationImpl;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        123
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl$1.load:(Ljava/lang/Object;)Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        123
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl$1.load:(Ljava/lang/String;)Ljava/security/PublicKey;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        131,
+        132,
+        133
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.access$000:(Lorg/symphonyoss/integration/authentication/jwt/JwtAuthenticationImpl;)Lorg/symphonyoss/integration/authentication/api/AppAuthenticationProxy;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.access$100:(Lorg/symphonyoss/integration/authentication/jwt/JwtAuthenticationImpl;)Lorg/symphonyoss/integration/utils/RsaKeyUtils;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        52
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.authenticate:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        202,
+        203,
+        205,
+        206,
+        208,
+        209,
+        211
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.checkPodInfo:(Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        274,
+        275,
+        278,
+        279,
+        282
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.getIntegrationAndCheckAvailability:(Ljava/lang/String;)Lorg/symphonyoss/integration/Integration;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        144,
+        145,
+        146,
+        147,
+        148,
+        150
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.getJwtToken:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/JwtPayload;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        173,
+        174,
+        175,
+        176,
+        178
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.getPodInfo:(Ljava/lang/String;)Lorg/symphonyoss/integration/pod/api/model/PodInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        286,
+        287,
+        289
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.getUserId:(Lorg/symphonyoss/integration/authentication/api/model/JwtPayload;)Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        187,
+        188,
+        189,
+        190,
+        193
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.getUserIdFromAuthorizationHeader:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        161,
+        162
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.init:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.initializeCache:(I)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        122,
+        123,
+        136
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.isValidTokenPair:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        223,
+        224,
+        226,
+        228,
+        229,
+        231
+      ]
+    },
+    "org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl.parseJwtPayload:(Ljava/lang/String;Ljava/lang/String;)Lorg/symphonyoss/integration/authentication/api/model/JwtPayload;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T000",
+      "lineNumbers" : [
+        241,
+        242,
+        244,
+        245,
+        247,
+        252,
+        248,
+        249,
+        250,
+        251,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268
+      ]
+    },
+    "org.symphonyoss.integration.authentication.properties.AppAuthenticationProxyProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.authentication.properties.AuthenticationContextProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25
+      ]
+    },
+    "org.symphonyoss.integration.authentication.properties.AuthenticationProxyProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        25
+      ]
+    }
+  }
+}
