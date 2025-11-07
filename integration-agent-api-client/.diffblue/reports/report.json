@@ -1,0 +1,379 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2024.10.01-2ee2e3d-licensed",
+    "creationTimestamp" : "2025-11-07T14:11:19.719Z",
+    "command" : "dcover create --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name with-diffblue-tests",
+    "totalTime" : 348.641,
+    "environmentDetectionTime" : 0.204,
+    "indexingTime" : 0.219,
+    "entryPointsTime" : 0.196,
+    "generationTime" : 156.184,
+    "timeToFirstTest" : 78.156,
+    "timeToLastTest" : 95.43,
+    "indexQueryTime" : 4.805,
+    "verificationTime" : 13.043,
+    "validationTime" : 9.653
+  },
+  "codes" : {
+    "F009" : "Internal error",
+    "R000" : "Success",
+    "T000" : "Method eligible for test creation",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully",
+    "W002" : "Test compiled, but did not pass"
+  },
+  "summary" : {
+    "classesCount" : 8,
+    "methodsCount" : 15,
+    "cumulativeDiffblueTestCount" : 3,
+    "cumulativeManualTestCount" : 10,
+    "completeTestCount" : 3,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 181,
+    "perMethodTestability" : {
+      "T000" : 8,
+      "T005" : 3,
+      "T010" : 2,
+      "T012" : 2
+    },
+    "perMethodOutcome" : {
+      "F009" : 2,
+      "R000" : 3,
+      "T005" : 4,
+      "T010" : 2,
+      "T012" : 2,
+      "W002" : 2
+    },
+    "perTestOutcome" : {
+      "R000" : 3
+    },
+    "perTestValidation" : {
+      "V000" : 3
+    },
+    "warnings" : {
+      "W002" : 2
+    }
+  },
+  "classes" : {
+    "org.symphonyoss.integration.agent.api.client.AgentApiClient" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "F009" : 2,
+        "T005" : 1,
+        "T012" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.BaseMessageApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T010" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.MessageApiClient" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.V2MessageApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "W002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.V4MessageApiClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "W002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "warnings" : {
+        "W002" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.AgentApiClientProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.BaseMessageApiClientProperties" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.V4MessageApiClientProperties" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1,
+        "T012" : 1
+      }
+    }
+  },
+  "methods" : {
+    "org.symphonyoss.integration.agent.api.client.AgentApiClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        42
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.AgentApiClient.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        53,
+        54
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.AgentApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        58,
+        60,
+        61,
+        62,
+        64,
+        67
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.AgentApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "F009",
+      "lineNumbers" : [
+        72
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.BaseMessageApiClient.<init>:(Lorg/symphonyoss/integration/logging/LogMessageSource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        43,
+        44,
+        45
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.BaseMessageApiClient.validateParams:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/model/message/Message;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        60,
+        61,
+        62,
+        64,
+        67,
+        68,
+        69,
+        71,
+        74,
+        75,
+        76,
+        78,
+        82,
+        83,
+        84,
+        86,
+        88
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.MessageApiClient.postMessage:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/model/message/Message;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "org.symphonyoss.integration.agent.api.client.V2MessageApiClient.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;Lorg/symphonyoss/integration/logging/LogMessageSource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        75,
+        76,
+        77,
+        78
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.V2MessageApiClient.postMessage:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/model/message/Message;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        90,
+        92,
+        94,
+        95,
+        96,
+        98
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.V4MessageApiClient.<init>:(Lorg/symphonyoss/integration/api/client/HttpApiClient;Lorg/symphonyoss/integration/logging/LogMessageSource;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "W002",
+      "warnings" : {
+        "W002" : 1
+      },
+      "lineNumbers" : [
+        91,
+        92,
+        93,
+        94
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.V4MessageApiClient.postMessage:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/model/message/Message;)Lorg/symphonyoss/integration/model/message/Message;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        107,
+        109,
+        111,
+        112,
+        113,
+        115,
+        116,
+        118,
+        120,
+        121,
+        124,
+        125,
+        124,
+        115,
+        125,
+        126,
+        127,
+        129
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.AgentApiClientProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.BaseMessageApiClientProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.V4MessageApiClientProperties.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        26,
+        28
+      ]
+    },
+    "org.symphonyoss.integration.agent.api.client.properties.V4MessageApiClientProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        24
+      ]
+    }
+  }
+}

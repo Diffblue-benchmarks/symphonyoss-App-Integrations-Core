@@ -1,0 +1,26 @@
+package org.symphonyoss.integration.authentication.exception;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import org.junit.Test;
+
+public class UnregisteredUserAuthExceptionDiffblueTest {
+  /**
+   * Method under test:
+   * {@link UnregisteredUserAuthException#UnregisteredUserAuthException(String, String[])}
+   */
+  @Test
+  public void testNewUnregisteredUserAuthException() {
+    // Arrange and Act
+    UnregisteredUserAuthException actualUnregisteredUserAuthException = new UnregisteredUserAuthException(
+        "0123456789ABCDEF", "0123456789ABCDEF");
+
+    // Assert
+    assertEquals("\nComponent: Authentication Proxy\nMessage: 0123456789ABCDEF\nSolutions: \n0123456789ABCDEF\n",
+        actualUnregisteredUserAuthException.getLocalizedMessage());
+    assertEquals("\nComponent: Authentication Proxy\nMessage: 0123456789ABCDEF\nSolutions: \n0123456789ABCDEF\n",
+        actualUnregisteredUserAuthException.getMessage());
+    assertNull(actualUnregisteredUserAuthException.getCause());
+    assertEquals(0, actualUnregisteredUserAuthException.getSuppressed().length);
+  }
+}
