@@ -1,0 +1,88 @@
+package com.symphony.security.clientsdk.transport;
+
+import com.diffblue.cover.annotations.ManagedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.exceptions.OnTheWireFormatException;
+import java.io.UnsupportedEncodingException;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
+public class OnTheWireFormatDiffblueTest {
+  @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test {@link OnTheWireFormat#OnTheWireFormat(byte[])}.
+   *
+   * <p>Method under test: {@link OnTheWireFormat#OnTheWireFormat(byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void OnTheWireFormat.<init>(byte[])"})
+  public void testNewOnTheWireFormat()
+      throws OnTheWireFormatException, UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(OnTheWireFormatException.class);
+    new OnTheWireFormat("AXAXAXAX".getBytes("UTF-8"));
+  }
+
+  /**
+   * Test {@link OnTheWireFormat#OnTheWireFormat(byte[], byte, byte, byte[], byte[], byte[],
+   * byte[])}.
+   *
+   * <ul>
+   *   <li>When array of {@code byte} with {@code A} and sixteen.
+   * </ul>
+   *
+   * <p>Method under test: {@link OnTheWireFormat#OnTheWireFormat(byte[], byte, byte, byte[],
+   * byte[], byte[], byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void OnTheWireFormat.<init>(byte[], byte, byte, byte[], byte[], byte[], byte[])"
+  })
+  public void testNewOnTheWireFormat_whenArrayOfByteWithAAndSixteen()
+      throws OnTheWireFormatException, UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(OnTheWireFormatException.class);
+    new OnTheWireFormat(
+        "AXAXAXAX".getBytes("UTF-8"),
+        (byte) 'A',
+        (byte) 'A',
+        "AXAXAXAX".getBytes("UTF-8"),
+        new byte[] {'A', 16, 'A', 16, 'A', 16, 'A', 16, 'A', 16, 'A', 16, 'A', 16, 'A', 16},
+        "AXAXAXAX".getBytes("UTF-8"),
+        "AXAXAXAX".getBytes("UTF-8"));
+  }
+
+  /**
+   * Test {@link OnTheWireFormat#OnTheWireFormat(byte[], byte, byte, byte[], byte[], byte[],
+   * byte[])}.
+   *
+   * <ul>
+   *   <li>When {@code AXAXAXAX} Bytes is {@code UTF-8}.
+   * </ul>
+   *
+   * <p>Method under test: {@link OnTheWireFormat#OnTheWireFormat(byte[], byte, byte, byte[],
+   * byte[], byte[], byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void OnTheWireFormat.<init>(byte[], byte, byte, byte[], byte[], byte[], byte[])"
+  })
+  public void testNewOnTheWireFormat_whenAxaxaxaxBytesIsUtf8()
+      throws OnTheWireFormatException, UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(OnTheWireFormatException.class);
+    new OnTheWireFormat(
+        "AXAXAXAX".getBytes("UTF-8"),
+        (byte) 'A',
+        (byte) 'A',
+        "AXAXAXAX".getBytes("UTF-8"),
+        "AXAXAXAX".getBytes("UTF-8"),
+        "AXAXAXAX".getBytes("UTF-8"),
+        "AXAXAXAX".getBytes("UTF-8"));
+  }
+}

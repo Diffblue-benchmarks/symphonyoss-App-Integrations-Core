@@ -1,0 +1,67 @@
+package org.symphonyoss.integration.authentication;
+
+import com.diffblue.cover.annotations.ManagedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.security.KeyStore;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.symphonyoss.integration.authentication.exception.MissingServiceConfigurationException;
+import org.symphonyoss.integration.model.yaml.HttpClientConfig;
+import org.symphonyoss.integration.model.yaml.IntegrationProperties;
+
+public class AppAuthenticationContextDiffblueTest {
+  @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test {@link AppAuthenticationContext#AppAuthenticationContext(String, KeyStore, String,
+   * HttpClientConfig, IntegrationProperties)}.
+   *
+   * <ul>
+   *   <li>Then throw {@link MissingServiceConfigurationException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AppAuthenticationContext#AppAuthenticationContext(String,
+   * KeyStore, String, HttpClientConfig, IntegrationProperties)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AppAuthenticationContext.<init>(String, KeyStore, String, HttpClientConfig, IntegrationProperties)"
+  })
+  public void testNewAppAuthenticationContext_thenThrowMissingServiceConfigurationException() {
+    // Arrange
+    HttpClientConfig httpClientConfig = new HttpClientConfig();
+    httpClientConfig.setConnectTimeout(10);
+    httpClientConfig.setMaxConnections(3);
+    httpClientConfig.setMaxConnectionsPerRoute(3);
+    httpClientConfig.setReadTimeout(10);
+
+    // Act and Assert
+    thrown.expect(MissingServiceConfigurationException.class);
+    new AppAuthenticationContext(
+        "42", null, "iloveyou", httpClientConfig, new IntegrationProperties());
+  }
+
+  /**
+   * Test {@link AppAuthenticationContext#AppAuthenticationContext(String, KeyStore, String,
+   * HttpClientConfig, IntegrationProperties)}.
+   *
+   * <ul>
+   *   <li>Then throw {@link MissingServiceConfigurationException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AppAuthenticationContext#AppAuthenticationContext(String,
+   * KeyStore, String, HttpClientConfig, IntegrationProperties)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AppAuthenticationContext.<init>(String, KeyStore, String, HttpClientConfig, IntegrationProperties)"
+  })
+  public void testNewAppAuthenticationContext_thenThrowMissingServiceConfigurationException2() {
+    // Arrange, Act and Assert
+    thrown.expect(MissingServiceConfigurationException.class);
+    new AppAuthenticationContext("42", null, "iloveyou", null, new IntegrationProperties());
+  }
+}

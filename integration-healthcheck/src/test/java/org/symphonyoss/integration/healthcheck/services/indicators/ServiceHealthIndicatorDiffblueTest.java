@@ -1,0 +1,149 @@
+package org.symphonyoss.integration.healthcheck.services.indicators;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.util.Map;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.health.Health;
+import org.springframework.boot.actuate.health.Status;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.DirtiesContext.ClassMode;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo;
+import org.symphonyoss.integration.logging.LogMessageSource;
+import org.symphonyoss.integration.model.yaml.IntegrationProperties;
+
+@ContextConfiguration(classes = {AgentHealthIndicator.class, IntegrationProperties.class})
+@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
+@RunWith(SpringJUnit4ClassRunner.class)
+public class ServiceHealthIndicatorDiffblueTest {
+  @Autowired private IntegrationProperties integrationProperties;
+
+  @MockBean private LogMessageSource logMessageSource;
+
+  @Autowired private ServiceHealthIndicator serviceHealthIndicator;
+
+  /**
+   * Test {@link ServiceHealthIndicator#health()}.
+   *
+   * <ul>
+   *   <li>Given {@link ServiceHealthIndicator}.
+   *   <li>Then return Status Description is empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link ServiceHealthIndicator#health()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Health ServiceHealthIndicator.health()"})
+  public void testHealth_givenServiceHealthIndicator_thenReturnStatusDescriptionIsEmptyString() {
+    // Arrange and Act
+    Health actualHealthResult = serviceHealthIndicator.health();
+
+    // Assert
+    Status status = actualHealthResult.getStatus();
+    assertEquals("", status.getDescription());
+    assertEquals("DOWN", status.getCode());
+    assertEquals("DOWN", status.toString());
+    assertTrue(actualHealthResult.getDetails().isEmpty());
+  }
+
+  /**
+   * Test {@link ServiceHealthIndicator#health()}.
+   *
+   * <ul>
+   *   <li>Then return Details size is one.
+   * </ul>
+   *
+   * <p>Method under test: {@link ServiceHealthIndicator#health()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Health ServiceHealthIndicator.health()"})
+  public void testHealth_thenReturnDetailsSizeIsOne() {
+    // Arrange
+    IntegrationBridgeServiceInfo serviceInfo =
+        new IntegrationBridgeServiceInfo("1.0.2", "https://example.org/example");
+    Status connectivity = new Status("Code");
+    serviceInfo.setConnectivity(connectivity);
+    serviceHealthIndicator.setServiceInfo(serviceInfo);
+
+    // Act
+    Health actualHealthResult = serviceHealthIndicator.health();
+
+    // Assert
+    Map<String, Object> details = actualHealthResult.getDetails();
+    assertEquals(1, details.size());
+    assertEquals(connectivity, actualHealthResult.getStatus());
+    assertSame(serviceInfo, details.get("AGENT"));
+  }
+
+  /**
+   * Test {@link ServiceHealthIndicator#getServiceInfo()}.
+   *
+   * <p>Method under test: {@link ServiceHealthIndicator#getServiceInfo()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"IntegrationBridgeServiceInfo ServiceHealthIndicator.getServiceInfo()"})
+  public void testGetServiceInfo() {
+    // Arrange, Act and Assert
+    assertNull(serviceHealthIndicator.getServiceInfo());
+  }
+
+  /**
+   * Test {@link ServiceHealthIndicator#setServiceInfo(IntegrationBridgeServiceInfo)}.
+   *
+   * <p>Method under test: {@link
+   * ServiceHealthIndicator#setServiceInfo(IntegrationBridgeServiceInfo)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void ServiceHealthIndicator.setServiceInfo(IntegrationBridgeServiceInfo)"})
+  public void testSetServiceInfo() {
+    // Arrange
+    IntegrationBridgeServiceInfo serviceInfo =
+        new IntegrationBridgeServiceInfo("1.0.2", "https://example.org/example");
+
+    // Act
+    serviceHealthIndicator.setServiceInfo(serviceInfo);
+
+    // Assert
+    assertTrue(serviceHealthIndicator instanceof AgentHealthIndicator);
+    assertSame(serviceInfo, serviceHealthIndicator.getServiceInfo());
+  }
+
+  /**
+   * Test {@link ServiceHealthIndicator#mountUserFriendlyServiceName()}.
+   *
+   * <p>Method under test: {@link ServiceHealthIndicator#mountUserFriendlyServiceName()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String ServiceHealthIndicator.mountUserFriendlyServiceName()"})
+  public void testMountUserFriendlyServiceName() {
+    // Arrange, Act and Assert
+    assertEquals("AGENT", serviceHealthIndicator.mountUserFriendlyServiceName());
+  }
+
+  /**
+   * Test {@link ServiceHealthIndicator#getFriendlyServiceName()}.
+   *
+   * <p>Method under test: {@link ServiceHealthIndicator#getFriendlyServiceName()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String ServiceHealthIndicator.getFriendlyServiceName()"})
+  public void testGetFriendlyServiceName() {
+    // Arrange, Act and Assert
+    assertEquals("AGENT", serviceHealthIndicator.getFriendlyServiceName());
+  }
+}
