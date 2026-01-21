@@ -1,0 +1,5 @@
+name: com.diffblue.cover.refactoring.Recipe
+recipeList:
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter,
+    fieldName: integration}
+type: specs.openrewrite.org/v1beta/recipe

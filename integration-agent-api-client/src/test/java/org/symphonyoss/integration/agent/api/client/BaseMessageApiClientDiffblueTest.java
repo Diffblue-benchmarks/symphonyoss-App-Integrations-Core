@@ -143,32 +143,4 @@ public class BaseMessageApiClientDiffblueTest {
     thrown.expect(RemoteApiException.class);
     v2MessageApiClient.validateParams("ABC123", null, "42", null);
   }
-
-  /**
-   * Test {@link BaseMessageApiClient#validateParams(String, String, String, Message)}.
-   *
-   * <ul>
-   *   <li>Then throw {@link RemoteApiException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link BaseMessageApiClient#validateParams(String, String, String,
-   * Message)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void BaseMessageApiClient.validateParams(String, String, String, Message)"})
-  public void testValidateParams_thenThrowRemoteApiException4() throws RemoteApiException {
-    // Arrange
-    AppAuthenticationProxyApiClient apiClient =
-        new AppAuthenticationProxyApiClient(
-            mock(EntitySerializer.class),
-            mock(AppAuthenticationProxy.class),
-            ServiceName.POD_SESSION_MANAGER);
-    V2MessageApiClient v2MessageApiClient =
-        new V2MessageApiClient(apiClient, mock(LogMessageSource.class));
-
-    // Act and Assert
-    thrown.expect(RemoteApiException.class);
-    v2MessageApiClient.validateParams("ABC123", "ABC123", null, null);
-  }
 }

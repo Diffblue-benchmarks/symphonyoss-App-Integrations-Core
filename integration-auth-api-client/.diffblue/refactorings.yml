@@ -1,0 +1,9 @@
+name: com.diffblue.cover.refactoring.Recipe
+recipeList:
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.auth.api.client.AuthenticationApiClient,
+    fieldName: apiClient}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient,
+    fieldName: apiClient}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient,
+    fieldName: logMessage}
+type: specs.openrewrite.org/v1beta/recipe

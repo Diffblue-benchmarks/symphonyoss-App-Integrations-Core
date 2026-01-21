@@ -1,0 +1,13 @@
+name: com.diffblue.cover.refactoring.Recipe
+recipeList:
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: com.symphony.security.helper.CDecryptionHelper,
+    fieldName: clientCryptoHandler}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: com.symphony.security.helper.CDecryptionHelper,
+    fieldName: secretKey}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: com.symphony.security.helper.CDecryptionHelper,
+    fieldName: clientCryptoHandler}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: com.symphony.security.helper.CDecryptionHelper,
+    fieldName: secretKey}
+- com.diffblue.cover.refactoring.recipes.AddGetter: {className: com.symphony.security.helper.ClientCryptoHandler,
+    fieldName: LOG}
+type: specs.openrewrite.org/v1beta/recipe
