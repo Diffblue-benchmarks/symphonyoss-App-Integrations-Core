@@ -282,6 +282,21 @@ public class WebHookOriginCheckFilter implements Filter {
     return remoteAddress != null ? remoteAddress : StringUtils.EMPTY;
   }
 
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
+
+  /** For testing purposes only */
+  public IntegrationProperties getProperties() {
+    return properties;
+  }
+
+  /** For testing purposes only */
+  public WebApplicationContext getSpringContext() {
+    return springContext;
+  }
+
   /**
    * Write the http error response.
    * @param response Http response

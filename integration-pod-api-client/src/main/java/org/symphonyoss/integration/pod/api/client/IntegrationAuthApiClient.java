@@ -309,4 +309,9 @@ public class IntegrationAuthApiClient extends BasePodApiClient {
           logMessage.getMessage(API_MSG_SOLUTION));
     }
   }
+
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
 }

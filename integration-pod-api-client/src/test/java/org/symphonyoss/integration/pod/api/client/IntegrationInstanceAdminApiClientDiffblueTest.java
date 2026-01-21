@@ -1,6 +1,7 @@
 package org.symphonyoss.integration.pod.api.client;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
@@ -28,12 +29,14 @@ public class IntegrationInstanceAdminApiClientDiffblueTest {
   public void testGettersAndSetters() {
     // Arrange
     IntegrationHttpApiClient apiClient = new IntegrationHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
 
     // Act
     IntegrationInstanceAdminApiClient actualIntegrationInstanceAdminApiClient =
-        new IntegrationInstanceAdminApiClient(apiClient, new LogMessageSource());
+        new IntegrationInstanceAdminApiClient(apiClient, logMessage);
 
     // Assert
     assertEquals("/v1/admin", actualIntegrationInstanceAdminApiClient.getApiPathPrefix());
+    assertSame(logMessage, actualIntegrationInstanceAdminApiClient.getLogMessage());
   }
 }

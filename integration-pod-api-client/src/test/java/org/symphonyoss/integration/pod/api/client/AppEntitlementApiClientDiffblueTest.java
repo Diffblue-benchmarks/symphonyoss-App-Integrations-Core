@@ -1,6 +1,8 @@
 package org.symphonyoss.integration.pod.api.client;
 
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Rule;
@@ -26,6 +28,38 @@ public class AppEntitlementApiClientDiffblueTest {
   @MockBean private LogMessageSource logMessageSource;
 
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link AppEntitlementApiClient#AppEntitlementApiClient(HttpApiClient, LogMessageSource)}
+   *   <li>{@link AppEntitlementApiClient#getApiClient()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AppEntitlementApiClient.<init>(HttpApiClient, LogMessageSource)",
+    "HttpApiClient AppEntitlementApiClient.getApiClient()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    IntegrationHttpApiClient apiClient = new IntegrationHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
+
+    // Act
+    AppEntitlementApiClient actualAppEntitlementApiClient =
+        new AppEntitlementApiClient(apiClient, logMessage);
+    HttpApiClient actualApiClient = actualAppEntitlementApiClient.getApiClient();
+
+    // Assert
+    assertTrue(actualApiClient instanceof IntegrationHttpApiClient);
+    assertSame(logMessage, actualAppEntitlementApiClient.getLogMessage());
+    assertSame(apiClient, actualApiClient);
+  }
 
   /**
    * Test {@link AppEntitlementApiClient#updateAppEntitlement(String, AppEntitlement)}.

@@ -1,6 +1,7 @@
 package org.symphonyoss.integration.auth.api.client;
 
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -11,10 +12,39 @@ import java.util.Map;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient;
+import org.symphonyoss.integration.api.client.HttpApiClient;
 import org.symphonyoss.integration.auth.api.model.Token;
 import org.symphonyoss.integration.exception.RemoteApiException;
 
 public class AuthenticationApiClientDiffblueTest {
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link AuthenticationApiClient#AuthenticationApiClient(HttpApiClient)}
+   *   <li>{@link AuthenticationApiClient#getApiClient()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AuthenticationApiClient.<init>(HttpApiClient)",
+    "HttpApiClient AuthenticationApiClient.getApiClient()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    KmAuthHttpApiClient apiClient = new KmAuthHttpApiClient();
+
+    // Act
+    HttpApiClient actualApiClient = new AuthenticationApiClient(apiClient).getApiClient();
+
+    // Assert
+    assertTrue(actualApiClient instanceof KmAuthHttpApiClient);
+    assertSame(apiClient, actualApiClient);
+  }
+
   /**
    * Test {@link AuthenticationApiClient#authenticate(String)}.
    *

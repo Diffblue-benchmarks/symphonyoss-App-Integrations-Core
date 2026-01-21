@@ -1,35 +1,3 @@
 name: com.diffblue.cover.refactoring.Recipe
-recipeList:
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.AppEntitlementApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.IntegrationApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.IntegrationAuthApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.PodInfoClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.PodInfoClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.RelayApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.SecurityApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.StreamApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.UserApiClient,
-    fieldName: apiClient}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.pod.api.client.BasePodApiClient,
-    fieldName: logMessage}
+recipeList: []
 type: specs.openrewrite.org/v1beta/recipe

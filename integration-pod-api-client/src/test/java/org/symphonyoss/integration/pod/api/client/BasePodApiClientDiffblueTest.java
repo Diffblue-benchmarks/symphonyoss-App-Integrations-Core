@@ -1,5 +1,6 @@
 package org.symphonyoss.integration.pod.api.client;
 
+import static org.junit.Assert.assertSame;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Rule;
@@ -60,5 +61,21 @@ public class BasePodApiClientDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(RemoteApiException.class);
     basePodApiClient.checkAuthToken(null);
+  }
+
+  /**
+   * Test {@link BasePodApiClient#getLogMessage()}.
+   *
+   * <p>Method under test: {@link BasePodApiClient#getLogMessage()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"LogMessageSource BasePodApiClient.getLogMessage()"})
+  public void testGetLogMessage() {
+    // Arrange and Act
+    LogMessageSource actualLogMessage = basePodApiClient.getLogMessage();
+
+    // Assert
+    assertSame(basePodApiClient.logMessage, actualLogMessage);
   }
 }

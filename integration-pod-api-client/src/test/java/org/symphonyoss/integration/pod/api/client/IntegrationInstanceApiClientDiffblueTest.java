@@ -55,13 +55,15 @@ public class IntegrationInstanceApiClientDiffblueTest {
   public void testGettersAndSetters() {
     // Arrange
     IntegrationHttpApiClient apiClient = new IntegrationHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
 
     // Act
     IntegrationInstanceApiClient actualIntegrationInstanceApiClient =
-        new IntegrationInstanceApiClient(apiClient, new LogMessageSource());
+        new IntegrationInstanceApiClient(apiClient, logMessage);
 
     // Assert
     assertEquals("/v1", actualIntegrationInstanceApiClient.getApiPathPrefix());
+    assertSame(logMessage, actualIntegrationInstanceApiClient.getLogMessage());
   }
 
   /**

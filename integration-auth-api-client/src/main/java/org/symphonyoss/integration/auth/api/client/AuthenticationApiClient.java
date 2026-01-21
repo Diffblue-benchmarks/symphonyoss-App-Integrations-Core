@@ -35,6 +35,11 @@ public class AuthenticationApiClient {
     this.apiClient = apiClient;
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   public Token authenticate(String userId) throws RemoteApiException {
     String path = "/v1/authenticate";
 

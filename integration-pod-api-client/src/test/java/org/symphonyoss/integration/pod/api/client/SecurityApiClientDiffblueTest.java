@@ -1,6 +1,7 @@
 package org.symphonyoss.integration.pod.api.client;
 
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -37,6 +38,37 @@ public class SecurityApiClientDiffblueTest {
   @Autowired private SecurityApiClient securityApiClient;
 
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link SecurityApiClient#SecurityApiClient(HttpApiClient, LogMessageSource)}
+   *   <li>{@link SecurityApiClient#getApiClient()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void SecurityApiClient.<init>(HttpApiClient, LogMessageSource)",
+    "HttpApiClient SecurityApiClient.getApiClient()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    IntegrationHttpApiClient apiClient = new IntegrationHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
+
+    // Act
+    SecurityApiClient actualSecurityApiClient = new SecurityApiClient(apiClient, logMessage);
+    HttpApiClient actualApiClient = actualSecurityApiClient.getApiClient();
+
+    // Assert
+    assertTrue(actualApiClient instanceof IntegrationHttpApiClient);
+    assertSame(logMessage, actualSecurityApiClient.getLogMessage());
+    assertSame(apiClient, actualApiClient);
+  }
 
   /**
    * Test {@link SecurityApiClient#createCompanyCert(String, CompanyCert)}.

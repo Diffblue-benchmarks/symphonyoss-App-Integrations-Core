@@ -1,15 +1,3 @@
 name: com.diffblue.cover.refactoring.Recipe
-recipeList:
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.IntegrationMetricsFilter,
-    fieldName: ignoreList}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.IntegrationMetricsFilter,
-    fieldName: integrationUrlParam}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.IntegrationMetricsFilter,
-    fieldName: metricsController}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter,
-    fieldName: logMessage}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter,
-    fieldName: properties}
-- com.diffblue.cover.refactoring.recipes.AddGetter: {className: org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter,
-    fieldName: springContext}
+recipeList: []
 type: specs.openrewrite.org/v1beta/recipe

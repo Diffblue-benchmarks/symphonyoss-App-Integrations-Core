@@ -1,6 +1,8 @@
 package org.symphonyoss.integration.auth.api.client;
 
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -13,6 +15,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 import org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient;
+import org.symphonyoss.integration.api.client.HttpApiClient;
 import org.symphonyoss.integration.auth.api.exception.InvalidAppTokenException;
 import org.symphonyoss.integration.auth.api.exception.UnauthorizedAppException;
 import org.symphonyoss.integration.auth.api.exception.UnexpectedAppAuthenticationException;
@@ -23,6 +26,41 @@ import org.symphonyoss.integration.logging.LogMessageSource;
 
 public class AuthenticationAppApiClientDiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link AuthenticationAppApiClient#AuthenticationAppApiClient(HttpApiClient,
+   *       LogMessageSource)}
+   *   <li>{@link AuthenticationAppApiClient#getApiClient()}
+   *   <li>{@link AuthenticationAppApiClient#getLogMessage()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void AuthenticationAppApiClient.<init>(HttpApiClient, LogMessageSource)",
+    "HttpApiClient AuthenticationAppApiClient.getApiClient()",
+    "LogMessageSource AuthenticationAppApiClient.getLogMessage()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    KmAuthHttpApiClient apiClient = new KmAuthHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
+
+    // Act
+    AuthenticationAppApiClient actualAuthenticationAppApiClient =
+        new AuthenticationAppApiClient(apiClient, logMessage);
+    HttpApiClient actualApiClient = actualAuthenticationAppApiClient.getApiClient();
+
+    // Assert
+    assertTrue(actualApiClient instanceof KmAuthHttpApiClient);
+    assertSame(apiClient, actualApiClient);
+    assertSame(logMessage, actualAuthenticationAppApiClient.getLogMessage());
+  }
 
   /**
    * Test {@link AuthenticationAppApiClient#authenticate(String, String)}.

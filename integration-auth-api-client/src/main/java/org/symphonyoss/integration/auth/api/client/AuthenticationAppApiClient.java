@@ -134,4 +134,14 @@ public class AuthenticationAppApiClient {
       throw new UnexpectedAppAuthenticationException(message, e, solution);
     }
   }
+
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
 }

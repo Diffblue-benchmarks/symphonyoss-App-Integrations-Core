@@ -57,4 +57,9 @@ public abstract class BasePodApiClient {
     }
   }
 
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
+
 }

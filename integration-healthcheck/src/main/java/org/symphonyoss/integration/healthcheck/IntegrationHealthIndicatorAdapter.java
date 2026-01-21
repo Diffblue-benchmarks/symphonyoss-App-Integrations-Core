@@ -39,6 +39,11 @@ public class IntegrationHealthIndicatorAdapter implements HealthIndicator {
     this.integration = integration;
   }
 
+  /** For testing purposes only */
+  public Integration getIntegration() {
+    return integration;
+  }
+
   @Override
   public Health health() {
     IntegrationHealth healthStatus = integration.getHealthStatus();

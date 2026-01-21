@@ -1,5 +1,6 @@
 package org.symphonyoss.integration.web.filter;
 
+import static org.junit.Assert.assertNull;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
@@ -145,5 +146,40 @@ public class IntegrationMetricsFilterDiffblueTest {
     integrationMetricsFilter.doFilter(servletRequest, servletResponse, filterChain);
     verify(list).isEmpty();
     verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
+  }
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>default or parameterless constructor of {@link IntegrationMetricsFilter}
+   *   <li>{@link IntegrationMetricsFilter#destroy()}
+   *   <li>{@link IntegrationMetricsFilter#getIgnoreList()}
+   *   <li>{@link IntegrationMetricsFilter#getIntegrationUrlParam()}
+   *   <li>{@link IntegrationMetricsFilter#getMetricsController()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationMetricsFilter.<init>()",
+    "void IntegrationMetricsFilter.destroy()",
+    "List IntegrationMetricsFilter.getIgnoreList()",
+    "String IntegrationMetricsFilter.getIntegrationUrlParam()",
+    "org.symphonyoss.integration.web.metrics.RequestMetricsController IntegrationMetricsFilter.getMetricsController()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange and Act
+    IntegrationMetricsFilter actualIntegrationMetricsFilter = new IntegrationMetricsFilter();
+    actualIntegrationMetricsFilter.destroy();
+    List<String> actualIgnoreList = actualIntegrationMetricsFilter.getIgnoreList();
+    String actualIntegrationUrlParam = actualIntegrationMetricsFilter.getIntegrationUrlParam();
+
+    // Assert
+    assertNull(actualIntegrationUrlParam);
+    assertNull(actualIgnoreList);
+    assertNull(actualIntegrationMetricsFilter.getMetricsController());
   }
 }

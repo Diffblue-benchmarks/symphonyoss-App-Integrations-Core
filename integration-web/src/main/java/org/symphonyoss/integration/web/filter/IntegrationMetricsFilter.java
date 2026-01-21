@@ -142,6 +142,21 @@ public class IntegrationMetricsFilter implements Filter {
     return Arrays.asList(list);
   }
 
+  /** For testing purposes only */
+  public String getIntegrationUrlParam() {
+    return integrationUrlParam;
+  }
+
+  /** For testing purposes only */
+  public RequestMetricsController getMetricsController() {
+    return metricsController;
+  }
+
+  /** For testing purposes only */
+  public List<String> getIgnoreList() {
+    return ignoreList;
+  }
+
   /**
    * Validates if the request path is a webhook resource path.
    * @param pathInfo Request path info

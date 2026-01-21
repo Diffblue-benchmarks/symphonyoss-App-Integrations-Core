@@ -135,6 +135,11 @@ public class IntegrationApiClient extends BasePodApiClient {
         IntegrationSettings.class);
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   /**
    * Creates a new integration.
    * @param sessionToken Session authentication token.

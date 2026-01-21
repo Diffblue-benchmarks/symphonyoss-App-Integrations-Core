@@ -45,6 +45,11 @@ public class SecurityApiClient extends BasePodApiClient {
     this.logMessage = logMessage;
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   public CompanyCertDetail createCompanyCert(String sessionToken, CompanyCert cert)
       throws RemoteApiException {
     checkAuthToken(sessionToken);

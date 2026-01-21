@@ -47,6 +47,11 @@ public class AppEntitlementApiClient extends BasePodApiClient {
     this.logMessage = logMessage;
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   public AppEntitlement updateAppEntitlement(String sessionToken, AppEntitlement entitlement)
       throws RemoteApiException {
     checkAuthToken(sessionToken);

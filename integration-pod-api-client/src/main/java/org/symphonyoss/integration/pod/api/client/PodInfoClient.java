@@ -88,4 +88,14 @@ public class PodInfoClient {
     }
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
+
 }

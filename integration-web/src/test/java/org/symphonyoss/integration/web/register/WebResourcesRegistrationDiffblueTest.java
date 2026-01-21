@@ -2,12 +2,14 @@ package org.symphonyoss.integration.web.register;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
+import javax.servlet.Filter;
 import javax.servlet.MultipartConfigElement;
 import org.junit.Test;
 import org.springframework.boot.autoconfigure.web.MultipartProperties;
@@ -45,9 +47,11 @@ public class WebResourcesRegistrationDiffblueTest {
     Collection urlPatterns = actualWebhookCheckOriginFilterRegistrationResult.getUrlPatterns();
     assertEquals(1, urlPatterns.size());
     assertTrue(urlPatterns instanceof Set);
-    assertTrue(
-        actualWebhookCheckOriginFilterRegistrationResult.getFilter()
-            instanceof WebHookOriginCheckFilter);
+    Filter filter = actualWebhookCheckOriginFilterRegistrationResult.getFilter();
+    assertTrue(filter instanceof WebHookOriginCheckFilter);
+    assertNull(((WebHookOriginCheckFilter) filter).getSpringContext());
+    assertNull(((WebHookOriginCheckFilter) filter).getLogMessage());
+    assertNull(((WebHookOriginCheckFilter) filter).getProperties());
     assertFalse(actualWebhookCheckOriginFilterRegistrationResult.isMatchAfter());
     assertTrue(servletNames.isEmpty());
     assertTrue(actualWebhookCheckOriginFilterRegistrationResult.getInitParameters().isEmpty());
@@ -121,14 +125,16 @@ public class WebResourcesRegistrationDiffblueTest {
     Collection urlPatterns = actualIntegrationMetricsFilterRegistrationResult.getUrlPatterns();
     assertEquals(1, urlPatterns.size());
     assertTrue(urlPatterns instanceof Set);
-    assertTrue(
-        actualIntegrationMetricsFilterRegistrationResult.getFilter()
-            instanceof IntegrationMetricsFilter);
+    Filter filter = actualIntegrationMetricsFilterRegistrationResult.getFilter();
+    assertTrue(filter instanceof IntegrationMetricsFilter);
     Map<String, String> initParameters =
         actualIntegrationMetricsFilterRegistrationResult.getInitParameters();
     assertEquals(2, initParameters.size());
     assertEquals("/integration/metrics/", initParameters.get("ignore-url"));
     assertEquals("/integration/v1/whi/", initParameters.get("webhook-url"));
+    assertNull(((IntegrationMetricsFilter) filter).getIntegrationUrlParam());
+    assertNull(((IntegrationMetricsFilter) filter).getIgnoreList());
+    assertNull(((IntegrationMetricsFilter) filter).getMetricsController());
     assertFalse(actualIntegrationMetricsFilterRegistrationResult.isMatchAfter());
     assertTrue(servletNames.isEmpty());
     assertTrue(actualIntegrationMetricsFilterRegistrationResult.isAsyncSupported());

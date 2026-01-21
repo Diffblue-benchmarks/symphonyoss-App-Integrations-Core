@@ -1,5 +1,7 @@
 package org.symphonyoss.integration.pod.api.client;
 
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -12,6 +14,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 import org.symphonyoss.integration.api.client.AppAuthenticationProxyApiClient;
+import org.symphonyoss.integration.api.client.HttpApiClient;
 import org.symphonyoss.integration.exception.IntegrationRuntimeException;
 import org.symphonyoss.integration.exception.RemoteApiException;
 import org.symphonyoss.integration.exception.authentication.UnauthorizedUserException;
@@ -20,6 +23,39 @@ import org.symphonyoss.integration.pod.api.model.Envelope;
 
 public class PodInfoClientDiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link PodInfoClient#PodInfoClient(HttpApiClient, LogMessageSource)}
+   *   <li>{@link PodInfoClient#getApiClient()}
+   *   <li>{@link PodInfoClient#getLogMessage()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void PodInfoClient.<init>(HttpApiClient, LogMessageSource)",
+    "HttpApiClient PodInfoClient.getApiClient()",
+    "LogMessageSource PodInfoClient.getLogMessage()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    IntegrationHttpApiClient apiClient = new IntegrationHttpApiClient();
+    LogMessageSource logMessage = new LogMessageSource();
+
+    // Act
+    PodInfoClient actualPodInfoClient = new PodInfoClient(apiClient, logMessage);
+    HttpApiClient actualApiClient = actualPodInfoClient.getApiClient();
+
+    // Assert
+    assertTrue(actualApiClient instanceof IntegrationHttpApiClient);
+    assertSame(logMessage, actualPodInfoClient.getLogMessage());
+    assertSame(apiClient, actualApiClient);
+  }
 
   /**
    * Test {@link PodInfoClient#getPodInfo(String)}.

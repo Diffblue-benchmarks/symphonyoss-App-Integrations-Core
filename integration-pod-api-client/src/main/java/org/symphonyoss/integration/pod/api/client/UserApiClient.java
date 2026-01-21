@@ -142,6 +142,11 @@ public class UserApiClient extends BasePodApiClient {
     return apiClient.doGet(path, headerParams, queryParams, User.class);
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   public UserDetail createUser(String sessionToken, UserCreate userInfo) throws RemoteApiException {
     checkAuthToken(sessionToken);
 

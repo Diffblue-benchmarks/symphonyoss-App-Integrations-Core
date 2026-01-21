@@ -45,6 +45,11 @@ public class StreamApiClient extends BasePodApiClient {
     this.logMessage = logMessage;
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   /**
    * Create a new single or multi party instant message conversation between the caller and specified users.
    * @param sessionToken Session authentication token.

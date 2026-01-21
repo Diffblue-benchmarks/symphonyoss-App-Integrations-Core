@@ -99,6 +99,11 @@ public class RelayApiClient extends BasePodApiClient {
     }
   }
 
+  /** For testing purposes only */
+  public HttpApiClient getApiClient() {
+    return apiClient;
+  }
+
   /**
    * Check the required KM authentication token.
    * @param kmSession KM Session authentication token.

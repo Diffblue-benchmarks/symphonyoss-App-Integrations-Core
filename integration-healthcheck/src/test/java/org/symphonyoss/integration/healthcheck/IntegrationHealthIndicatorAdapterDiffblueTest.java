@@ -2,6 +2,7 @@ package org.symphonyoss.integration.healthcheck;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -9,10 +10,35 @@ import java.util.Map;
 import org.junit.Test;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
+import org.symphonyoss.integration.Integration;
 import org.symphonyoss.integration.healthcheck.application.TestWebHookIntegration;
 import org.symphonyoss.integration.model.healthcheck.IntegrationHealth;
 
 public class IntegrationHealthIndicatorAdapterDiffblueTest {
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link IntegrationHealthIndicatorAdapter#IntegrationHealthIndicatorAdapter(Integration)}
+   *   <li>{@link IntegrationHealthIndicatorAdapter#getIntegration()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void IntegrationHealthIndicatorAdapter.<init>(Integration)",
+    "Integration IntegrationHealthIndicatorAdapter.getIntegration()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange
+    TestWebHookIntegration integration = new TestWebHookIntegration();
+
+    // Act and Assert
+    assertSame(integration, new IntegrationHealthIndicatorAdapter(integration).getIntegration());
+  }
+
   /**
    * Test {@link IntegrationHealthIndicatorAdapter#health()}.
    *
