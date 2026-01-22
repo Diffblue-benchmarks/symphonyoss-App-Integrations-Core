@@ -27,16 +27,14 @@ public class ClientCryptoHandlerDiffblueTest {
       throws CiphertextTransportVersionException, SymphonyEncryptionException,
           SymphonyInputException, UnsupportedEncodingException {
     // Arrange
-    ClientCryptoHandler clientCryptoHandler = new ClientCryptoHandler();
+    ClientCryptoHandler createClientCryptoHandlerResult =
+        ClientCryptoHandlerFactory.createClientCryptoHandler();
     byte[] key = "AXAXAXAX".getBytes("UTF-8");
 
     // Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
-    clientCryptoHandler.encryptMsg(
-        key,
-        new KeyIdentifier("AXAXAXAX".getBytes("UTF-8"), 1L, 1L),
-        "AXAXAXAX".getBytes("UTF-8"),
-        (byte) 'A');
+    createClientCryptoHandlerResult.encryptMsg(
+        key, KeyIdentifierFactory.createKeyIdentifier(), "AXAXAXAX".getBytes("UTF-8"), (byte) 'A');
   }
 
   /**
@@ -53,14 +51,13 @@ public class ClientCryptoHandlerDiffblueTest {
       throws CiphertextTransportVersionException, SymphonyEncryptionException,
           SymphonyInputException, UnsupportedEncodingException {
     // Arrange
-    ClientCryptoHandler clientCryptoHandler = new ClientCryptoHandler();
+    ClientCryptoHandler createClientCryptoHandlerResult =
+        ClientCryptoHandlerFactory.createClientCryptoHandler();
+    byte[] key = "AXAXAXAX".getBytes("UTF-8");
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    clientCryptoHandler.encryptMsg(
-        new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        new KeyIdentifier("AXAXAXAX".getBytes("UTF-8"), 1L, 0L),
-        new byte[] {'A', 'X', 'A', 'X', 'A', 'X', 'A', 'X'},
-        (byte) 1);
+    createClientCryptoHandlerResult.encryptMsg(
+        key, KeyIdentifierFactory.createKeyIdentifier(), "AXAXAXAX".getBytes("UTF-8"), (byte) 1);
   }
 }

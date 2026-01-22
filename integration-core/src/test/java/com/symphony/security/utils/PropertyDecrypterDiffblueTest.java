@@ -30,9 +30,12 @@ public class PropertyDecrypterDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"char[] ConsoleUserInput.getSecret(String)"})
   public void testConsoleUserInputGetSecret() {
-    // Arrange, Act and Assert
+    // Arrange
+    ConsoleUserInput consoleUserInput = new ConsoleUserInput();
+
+    // Act and Assert
     thrown.expect(RuntimeException.class);
-    new ConsoleUserInput().getSecret("Prompt");
+    consoleUserInput.getSecret(ValidateFactory.createNonNullString());
   }
 
   /**

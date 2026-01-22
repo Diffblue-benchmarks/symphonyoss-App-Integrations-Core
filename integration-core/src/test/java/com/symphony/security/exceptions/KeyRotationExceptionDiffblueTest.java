@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class KeyRotationExceptionDiffblueTest {
@@ -17,10 +18,11 @@ public class KeyRotationExceptionDiffblueTest {
   @MethodsUnderTest({"void KeyRotationException.<init>(String)"})
   public void testNewKeyRotationException() {
     // Arrange and Act
-    KeyRotationException actualKeyRotationException = new KeyRotationException("foo");
+    KeyRotationException actualKeyRotationException =
+        new KeyRotationException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("foo", actualKeyRotationException.getMessage());
+    assertEquals("validString", actualKeyRotationException.getMessage());
     assertNull(actualKeyRotationException.getCause());
     assertEquals(0, actualKeyRotationException.getSuppressed().length);
   }

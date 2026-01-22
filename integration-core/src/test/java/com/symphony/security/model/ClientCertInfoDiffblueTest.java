@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
-import com.symphony.security.exceptions.ClientCertException;
-import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import org.junit.Test;
 
@@ -30,10 +28,9 @@ public class ClientCertInfoDiffblueTest {
     "long ClientCertInfo.getNotAfter()",
     "long ClientCertInfo.getNotBefore()"
   })
-  public void testGettersAndSetters() throws ClientCertException, UnsupportedEncodingException {
+  public void testGettersAndSetters() {
     // Arrange
-    ClientCert clientCert =
-        new ClientCert(1L, 1L, 1, "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
+    ClientCert clientCert = ClientCertFactory.createClientCert();
     BigInteger serialNumber = BigInteger.valueOf(1L);
     CertStatus certStatus = new CertStatus(serialNumber, 1L, 1, 1L);
 
@@ -59,10 +56,9 @@ public class ClientCertInfoDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void ClientCertInfo.<init>(ClientCert, CertStatus, long, long)"})
-  public void testNewClientCertInfo() throws ClientCertException, UnsupportedEncodingException {
+  public void testNewClientCertInfo() {
     // Arrange
-    ClientCert clientCert =
-        new ClientCert(1L, 1L, 1, "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
+    ClientCert clientCert = ClientCertFactory.createClientCert();
     BigInteger serialNumber = BigInteger.valueOf(1L);
     CertStatus certStatus = new CertStatus(serialNumber, 1L, 1, 1L);
 

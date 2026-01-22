@@ -17,176 +17,152 @@ public class CiphertextTransportV3DiffblueTest {
   /**
    * Test {@link CiphertextTransportV3#getAuthData()}.
    *
-   * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
-   * </ul>
-   *
    * <p>Method under test: {@link CiphertextTransportV3#getAuthData()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CiphertextTransportV3.getAuthData()"})
-  public void testGetAuthData_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
-
-    // Act and Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), ciphertextTransportV3.getAuthData());
+  public void testGetAuthData() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {'\n', 11, '\f', '\r', 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25},
+        CiphertextTransportV3Factory.createCiphertextTransportV3().getAuthData());
   }
 
   /**
    * Test {@link CiphertextTransportV3#getCiphertext()}.
-   *
-   * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV3#getCiphertext()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CiphertextTransportV3.getCiphertext()"})
-  public void testGetCiphertext_thenReturnAxaxaxaxBytesIsUtf8()
-      throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
+  public void testGetCiphertext() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          CiphertextTransportEncryptionMode.AES_CBC,
+          CiphertextTransportEncryptionMode.RSA_OAEP,
+          CiphertextTransportV3.EXPECTED_VERSION,
+          4,
+          5,
+          6,
+          7,
+          '\b',
+          '\t',
+          '\n',
+          11,
+          '\f',
+          '\r',
+          14,
+          15,
+          16
+        },
+        CiphertextTransportV3Factory.createCiphertextTransportV3().getCiphertext());
+  }
 
-    // Act and Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), ciphertextTransportV3.getCiphertext());
+  /**
+   * Test {@link CiphertextTransportV3#getCiphertextAndTag()}.
+   *
+   * <p>Method under test: {@link CiphertextTransportV3#getCiphertextAndTag()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"byte[] CiphertextTransportV3.getCiphertextAndTag()"})
+  public void testGetCiphertextAndTag() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          CiphertextTransportEncryptionMode.AES_CBC,
+          CiphertextTransportEncryptionMode.RSA_OAEP,
+          CiphertextTransportV3.EXPECTED_VERSION,
+          4,
+          5,
+          6,
+          7,
+          '\b',
+          '\t',
+          '\n',
+          11,
+          '\f',
+          '\r',
+          14,
+          15,
+          16,
+          30,
+          31,
+          ' ',
+          '!',
+          '"',
+          '#',
+          '$',
+          '%',
+          '&',
+          '\'',
+          '(',
+          ')',
+          '*',
+          '+',
+          ',',
+          '-'
+        },
+        CiphertextTransportV3Factory.createCiphertextTransportV3().getCiphertextAndTag());
   }
 
   /**
    * Test {@link CiphertextTransportV3#getIV()}.
-   *
-   * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV3#getIV()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CiphertextTransportV3.getIV()"})
-  public void testGetIV_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
-
-    // Act and Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), ciphertextTransportV3.getIV());
+  public void testGetIV() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, ' ', '!', '"', '#'},
+        CiphertextTransportV3Factory.createCiphertextTransportV3().getIV());
   }
 
   /**
    * Test {@link CiphertextTransportV3#getPodId()}.
-   *
-   * <ul>
-   *   <li>Then return one.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV3#getPodId()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"int CiphertextTransportV3.getPodId()"})
-  public void testGetPodId_thenReturnOne() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
-
-    // Act and Assert
-    assertEquals(1, ciphertextTransportV3.getPodId());
+  public void testGetPodId() {
+    // Arrange, Act and Assert
+    assertEquals(1, CiphertextTransportV3Factory.createCiphertextTransportV3().getPodId());
   }
 
   /**
    * Test {@link CiphertextTransportV3#getRotationId()}.
-   *
-   * <ul>
-   *   <li>Then return one.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV3#getRotationId()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"long CiphertextTransportV3.getRotationId()"})
-  public void testGetRotationId_thenReturnOne() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
-
-    // Act and Assert
-    assertEquals(1L, ciphertextTransportV3.getRotationId());
+  public void testGetRotationId() {
+    // Arrange, Act and Assert
+    assertEquals(1L, CiphertextTransportV3Factory.createCiphertextTransportV3().getRotationId());
   }
 
   /**
    * Test {@link CiphertextTransportV3#getTag()}.
-   *
-   * <ul>
-   *   <li>Then return {@code AXAXAXAX} Bytes is {@code UTF-8}.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV3#getTag()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CiphertextTransportV3.getTag()"})
-  public void testGetTag_thenReturnAxaxaxaxBytesIsUtf8() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV3 ciphertextTransportV3 =
-        new CiphertextTransportV3(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            1,
-            1L,
-            "AXAXAXAX".getBytes("UTF-8"),
-            (byte) 'A');
-
-    // Act and Assert
-    assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), ciphertextTransportV3.getTag());
+  public void testGetTag() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {30, 31, ' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-'},
+        CiphertextTransportV3Factory.createCiphertextTransportV3().getTag());
   }
 
   /**
@@ -225,6 +201,8 @@ public class CiphertextTransportV3DiffblueTest {
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCiphertextTransportV3.getIV());
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCiphertextTransportV3.getKeyId());
     assertArrayEquals("AXAXAXAX".getBytes("UTF-8"), actualCiphertextTransportV3.getTag());
+    assertArrayEquals(
+        "AXAXAXAXAXAXAXAX".getBytes("UTF-8"), actualCiphertextTransportV3.getCiphertextAndTag());
   }
 
   /**

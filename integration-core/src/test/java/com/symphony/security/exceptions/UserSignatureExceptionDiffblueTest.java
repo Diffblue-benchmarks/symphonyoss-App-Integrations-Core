@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class UserSignatureExceptionDiffblueTest {
@@ -18,10 +19,10 @@ public class UserSignatureExceptionDiffblueTest {
   public void testNewUserSignatureException() {
     // Arrange and Act
     UserSignatureException actualUserSignatureException =
-        new UserSignatureException("An error occurred");
+        new UserSignatureException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("An error occurred", actualUserSignatureException.getMessage());
+    assertEquals("validString", actualUserSignatureException.getMessage());
     assertNull(actualUserSignatureException.getCause());
     assertEquals(0, actualUserSignatureException.getSuppressed().length);
   }

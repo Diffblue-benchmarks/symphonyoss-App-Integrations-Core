@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class OnTheWireFormatExceptionDiffblueTest {
@@ -17,10 +18,11 @@ public class OnTheWireFormatExceptionDiffblueTest {
   @MethodsUnderTest({"void OnTheWireFormatException.<init>(String)"})
   public void testNewOnTheWireFormatException() {
     // Arrange and Act
-    OnTheWireFormatException actualOnTheWireFormatException = new OnTheWireFormatException("foo");
+    OnTheWireFormatException actualOnTheWireFormatException =
+        new OnTheWireFormatException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("foo", actualOnTheWireFormatException.getMessage());
+    assertEquals("validString", actualOnTheWireFormatException.getMessage());
     assertNull(actualOnTheWireFormatException.getCause());
     assertEquals(0, actualOnTheWireFormatException.getSuppressed().length);
   }

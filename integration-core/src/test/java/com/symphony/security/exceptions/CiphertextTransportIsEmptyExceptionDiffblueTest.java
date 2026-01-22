@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class CiphertextTransportIsEmptyExceptionDiffblueTest {
@@ -19,10 +20,10 @@ public class CiphertextTransportIsEmptyExceptionDiffblueTest {
   public void testNewCiphertextTransportIsEmptyException() {
     // Arrange and Act
     CiphertextTransportIsEmptyException actualCiphertextTransportIsEmptyException =
-        new CiphertextTransportIsEmptyException("Msg");
+        new CiphertextTransportIsEmptyException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("Msg", actualCiphertextTransportIsEmptyException.getMessage());
+    assertEquals("validString", actualCiphertextTransportIsEmptyException.getMessage());
     assertNull(actualCiphertextTransportIsEmptyException.getCause());
     assertEquals(0, actualCiphertextTransportIsEmptyException.getSuppressed().length);
   }

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class UnsupportedKeyDerivationAlgorithmExceptionDiffblueTest {
@@ -20,10 +21,10 @@ public class UnsupportedKeyDerivationAlgorithmExceptionDiffblueTest {
   public void testNewUnsupportedKeyDerivationAlgorithmException() {
     // Arrange and Act
     UnsupportedKeyDerivationAlgorithmException actualUnsupportedKeyDerivationAlgorithmException =
-        new UnsupportedKeyDerivationAlgorithmException("foo");
+        new UnsupportedKeyDerivationAlgorithmException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("foo", actualUnsupportedKeyDerivationAlgorithmException.getMessage());
+    assertEquals("validString", actualUnsupportedKeyDerivationAlgorithmException.getMessage());
     assertNull(actualUnsupportedKeyDerivationAlgorithmException.getCause());
     assertEquals(0, actualUnsupportedKeyDerivationAlgorithmException.getSuppressed().length);
   }

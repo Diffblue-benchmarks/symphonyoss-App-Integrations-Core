@@ -5,6 +5,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.SymphonyEncryptionException;
 import com.symphony.security.exceptions.SymphonyInputException;
 import com.symphony.security.exceptions.SymphonyPEMFormatException;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -50,14 +51,14 @@ public class RSADiffblueTest {
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    RSA.Decrypt("RSAPrivate Key PEM", "AXAXAXAX".getBytes("UTF-8"), -1);
+    RSA.Decrypt(ValidateFactory.createNonNullString(), "AXAXAXAX".getBytes("UTF-8"), -1);
   }
 
   /**
    * Test {@link RSA#Decrypt(String, byte[], int)}.
    *
    * <ul>
-   *   <li>When {@code RSAPrivate Key PEM}.
+   *   <li>When createNonNullString.
    * </ul>
    *
    * <p>Method under test: {@link RSA#Decrypt(String, byte[], int)}
@@ -65,12 +66,12 @@ public class RSADiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RSA.Decrypt(String, byte[], int)"})
-  public void testDecrypt_whenRSAPrivateKeyPem()
+  public void testDecrypt_whenCreateNonNullString()
       throws SymphonyEncryptionException, SymphonyInputException, SymphonyPEMFormatException,
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    RSA.Decrypt("RSAPrivate Key PEM", null, 0);
+    RSA.Decrypt(ValidateFactory.createNonNullString(), null, 0);
   }
 
   /**
@@ -266,14 +267,14 @@ public class RSADiffblueTest {
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    RSA.Sign("RSAPrivate Key PEM", "AXAXAXAX".getBytes("UTF-8"), -1);
+    RSA.Sign(ValidateFactory.createNonNullString(), "AXAXAXAX".getBytes("UTF-8"), -1);
   }
 
   /**
    * Test {@link RSA#Sign(String, byte[], int)}.
    *
    * <ul>
-   *   <li>When {@code RSAPrivate Key PEM}.
+   *   <li>When createNonNullString.
    * </ul>
    *
    * <p>Method under test: {@link RSA#Sign(String, byte[], int)}
@@ -281,12 +282,12 @@ public class RSADiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] RSA.Sign(String, byte[], int)"})
-  public void testSign_whenRSAPrivateKeyPem()
+  public void testSign_whenCreateNonNullString()
       throws SymphonyEncryptionException, SymphonyInputException, SymphonyPEMFormatException,
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    RSA.Sign("RSAPrivate Key PEM", null, 0);
+    RSA.Sign(ValidateFactory.createNonNullString(), null, 0);
   }
 
   /**

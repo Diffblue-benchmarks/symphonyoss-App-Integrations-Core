@@ -1,0 +1,134 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: issues
+INFO  Output a prioritized list of issues.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-core
+INFO  
+INFO  
+INFO  [1/1] Diagnosing issues for module: org.symphonyoss.symphony.integrations:integration-core
+INFO  ==========================================================================================
+INFO  
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Reading report file '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report.json'
+INFO  Copied report file to '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report-20260122T105850.json'
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.bouncycastle.pkcs.PKCS10CertificationRequest
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.apache.commons.lang.ArrayUtils
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.apache.commons.lang.ArrayUtils
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.bouncycastle.openssl.PEMParser
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  4 issues were found and displayed
+INFO  Rerun without --prompts to summarise all the issues
+INFO  Actioning all 4 listed issues via agent
+INFO  Executing prompt with Claude Code agent...
+INFO  [Claude Code] Excellent! I have successfully resolved all four R005 issues by adding the missing test dependencies to the `integration-core/pom.xml` file:
+INFO  [Claude Code] 
+INFO  [Claude Code] ## Summary of Changes
+INFO  [Claude Code] 
+INFO  [Claude Code] I've added two test dependencies to `/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/pom.xml`:
+INFO  [Claude Code] 
+INFO  [Claude Code] 1. **org.bouncycastle:bcpkix-jdk15on:1.51** (test scope)
+INFO  [Claude Code]    - Resolves Issue 1: Provides `org.bouncycastle.pkcs.PKCS10CertificationRequest`
+INFO  [Claude Code]    - Resolves Issue 4: Provides `org.bouncycastle.openssl.PEMParser`
+INFO  [Claude Code] 
+INFO  [Claude Code] 2. **commons-lang:commons-lang:2.6** (test scope)
+INFO  [Claude Code]    - Resolves Issues 2 & 3: Provides `org.apache.commons.lang.ArrayUtils`
+INFO  [Claude Code] 
+INFO  [Claude Code] Both dependencies are correctly scoped as `test` dependencies since they're only needed for test generation. The Maven build completed successfully with all 539 tests passing.
+INFO  [Claude Code] 
+INFO  [Claude Code] The classpath has been updated via `mvn install -DskipTests`, so the Cover tool should now be able to access these classes during test generation.
+INFO  Claude Code agent completed successfully.
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T112018.log
+INFO  Finished in 1m 22s

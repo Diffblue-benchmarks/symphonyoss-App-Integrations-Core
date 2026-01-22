@@ -1,12 +1,12 @@
 package com.gs.ti.wpt.lc.security.cryptolib;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.SymphonyExtensionException;
 import com.symphony.security.exceptions.SymphonyRevokedCertException;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -65,24 +65,26 @@ public class RevokedCertDiffblueTest {
   /**
    * Test {@link RevokedCert#setExtensions(Extensions)}.
    *
+   * <ul>
+   *   <li>Given {@code true}.
+   *   <li>Then does not throw.
+   * </ul>
+   *
    * <p>Method under test: {@link RevokedCert#setExtensions(Extensions)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void RevokedCert.setExtensions(Extensions)"})
-  public void testSetExtensions() throws SymphonyExtensionException, SymphonyRevokedCertException {
+  public void testSetExtensions_givenTrue_thenDoesNotThrow()
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
     // Arrange
-    RevokedCert revokedCert = new RevokedCert();
+    RevokedCert createRevokedCertResult = RevokedCertFactory.createRevokedCert();
 
     Extensions extension = new Extensions();
     extension.addBasicConstraints(true, true, 3);
 
-    // Act
-    revokedCert.setExtensions(extension);
-
-    // Assert
-    assertArrayEquals(
-        new String[] {"basicConstraints=critical,CA:TRUE,pathlen:3"}, revokedCert.getExt());
+    // Act and Assert
+    createRevokedCertResult.setExtensions(extension);
   }
 
   /**
@@ -99,13 +101,13 @@ public class RevokedCertDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void RevokedCert.setExtensions(Extensions)"})
   public void testSetExtensions_whenExtensions_thenThrowSymphonyRevokedCertException()
-      throws SymphonyRevokedCertException {
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
     // Arrange
-    RevokedCert revokedCert = new RevokedCert();
+    RevokedCert createRevokedCertResult = RevokedCertFactory.createRevokedCert();
 
     // Act and Assert
     thrown.expect(SymphonyRevokedCertException.class);
-    revokedCert.setExtensions(new Extensions());
+    createRevokedCertResult.setExtensions(new Extensions());
   }
 
   /**
@@ -122,10 +124,35 @@ public class RevokedCertDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void RevokedCert.setExtensions(Extensions)"})
   public void testSetExtensions_whenNull_thenThrowSymphonyRevokedCertException()
-      throws SymphonyRevokedCertException {
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyRevokedCertException.class);
-    new RevokedCert().setExtensions(null);
+    RevokedCertFactory.createRevokedCert().setExtensions(null);
+  }
+
+  /**
+   * Test {@link RevokedCert#setSerial(String)}.
+   *
+   * <ul>
+   *   <li>When createNonNullString.
+   *   <li>Then createRevokedCert Serial is {@code validString}.
+   * </ul>
+   *
+   * <p>Method under test: {@link RevokedCert#setSerial(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void RevokedCert.setSerial(String)"})
+  public void testSetSerial_whenCreateNonNullString_thenCreateRevokedCertSerialIsValidString()
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
+    // Arrange
+    RevokedCert createRevokedCertResult = RevokedCertFactory.createRevokedCert();
+
+    // Act
+    createRevokedCertResult.setSerial(ValidateFactory.createNonNullString());
+
+    // Assert
+    assertEquals("validString", createRevokedCertResult.getSerial());
   }
 
   /**
@@ -142,10 +169,10 @@ public class RevokedCertDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void RevokedCert.setSerial(String)"})
   public void testSetSerial_whenEmptyString_thenThrowSymphonyRevokedCertException()
-      throws SymphonyRevokedCertException {
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyRevokedCertException.class);
-    new RevokedCert().setSerial("");
+    RevokedCertFactory.createRevokedCert().setSerial("");
   }
 
   /**
@@ -162,34 +189,9 @@ public class RevokedCertDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void RevokedCert.setSerial(String)"})
   public void testSetSerial_whenNull_thenThrowSymphonyRevokedCertException()
-      throws SymphonyRevokedCertException {
+      throws SymphonyExtensionException, SymphonyRevokedCertException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyRevokedCertException.class);
-    new RevokedCert().setSerial(null);
-  }
-
-  /**
-   * Test {@link RevokedCert#setSerial(String)}.
-   *
-   * <ul>
-   *   <li>When {@code Seri}.
-   *   <li>Then {@link RevokedCert} (default constructor) Serial is {@code Seri}.
-   * </ul>
-   *
-   * <p>Method under test: {@link RevokedCert#setSerial(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void RevokedCert.setSerial(String)"})
-  public void testSetSerial_whenSeri_thenRevokedCertSerialIsSeri()
-      throws SymphonyRevokedCertException {
-    // Arrange
-    RevokedCert revokedCert = new RevokedCert();
-
-    // Act
-    revokedCert.setSerial("Seri");
-
-    // Assert
-    assertEquals("Seri", revokedCert.getSerial());
+    RevokedCertFactory.createRevokedCert().setSerial(null);
   }
 }

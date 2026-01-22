@@ -2,6 +2,7 @@ package org.symphonyoss.integration.core.service;
 
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -26,6 +27,24 @@ public class CryptoServiceImplDiffblueTest {
    * Test {@link CryptoServiceImpl#encrypt(String, String)}.
    *
    * <ul>
+   *   <li>When createNonNullString.
+   * </ul>
+   *
+   * <p>Method under test: {@link CryptoServiceImpl#encrypt(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String CryptoServiceImpl.encrypt(String, String)"})
+  public void testEncrypt_whenCreateNonNullString() throws CryptoException {
+    // Arrange, Act and Assert
+    thrown.expect(CryptoException.class);
+    cryptoServiceImpl.encrypt(ValidateFactory.createNonNullString(), "");
+  }
+
+  /**
+   * Test {@link CryptoServiceImpl#encrypt(String, String)}.
+   *
+   * <ul>
    *   <li>When empty string.
    * </ul>
    *
@@ -41,21 +60,60 @@ public class CryptoServiceImplDiffblueTest {
   }
 
   /**
-   * Test {@link CryptoServiceImpl#encrypt(String, String)}.
+   * Test {@link CryptoServiceImpl#decrypt(String, String)}.
    *
    * <ul>
-   *   <li>When {@code plainText}.
+   *   <li>When {@code 42}.
    * </ul>
    *
-   * <p>Method under test: {@link CryptoServiceImpl#encrypt(String, String)}
+   * <p>Method under test: {@link CryptoServiceImpl#decrypt(String, String)}
    */
   @Test
   @ManagedByDiffblue
-  @MethodsUnderTest({"String CryptoServiceImpl.encrypt(String, String)"})
-  public void testEncrypt_whenPlainText() throws CryptoException {
+  @MethodsUnderTest({"String CryptoServiceImpl.decrypt(String, String)"})
+  public void testDecrypt_when42() throws CryptoException {
     // Arrange, Act and Assert
     thrown.expect(CryptoException.class);
-    cryptoServiceImpl.encrypt("plainText", "");
+    cryptoServiceImpl.decrypt("42", ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link CryptoServiceImpl#decrypt(String, String)}.
+   *
+   * <ul>
+   *   <li>When {@code Component:}.
+   * </ul>
+   *
+   * <p>Method under test: {@link CryptoServiceImpl#decrypt(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String CryptoServiceImpl.decrypt(String, String)"})
+  public void testDecrypt_whenComponent() throws CryptoException {
+    // Arrange, Act and Assert
+    thrown.expect(CryptoException.class);
+    cryptoServiceImpl.decrypt("Component: ", ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link CryptoServiceImpl#decrypt(String, String)}.
+   *
+   * <ul>
+   *   <li>When createNonNullString.
+   * </ul>
+   *
+   * <p>Method under test: {@link CryptoServiceImpl#decrypt(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String CryptoServiceImpl.decrypt(String, String)"})
+  public void testDecrypt_whenCreateNonNullString() throws CryptoException {
+    // Arrange
+    String encryptedText = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(CryptoException.class);
+    cryptoServiceImpl.decrypt(encryptedText, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -73,14 +131,14 @@ public class CryptoServiceImplDiffblueTest {
   public void testDecrypt_whenEmptyString() throws CryptoException {
     // Arrange, Act and Assert
     thrown.expect(CryptoException.class);
-    cryptoServiceImpl.decrypt("", "");
+    cryptoServiceImpl.decrypt("", ValidateFactory.createNonNullString());
   }
 
   /**
    * Test {@link CryptoServiceImpl#decrypt(String, String)}.
    *
    * <ul>
-   *   <li>When {@code encryptedText}.
+   *   <li>When empty string.
    * </ul>
    *
    * <p>Method under test: {@link CryptoServiceImpl#decrypt(String, String)}
@@ -88,9 +146,27 @@ public class CryptoServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String CryptoServiceImpl.decrypt(String, String)"})
-  public void testDecrypt_whenEncryptedText() throws CryptoException {
+  public void testDecrypt_whenEmptyString2() throws CryptoException {
     // Arrange, Act and Assert
     thrown.expect(CryptoException.class);
-    cryptoServiceImpl.decrypt("encryptedText", "");
+    cryptoServiceImpl.decrypt(ValidateFactory.createNonNullString(), "");
+  }
+
+  /**
+   * Test {@link CryptoServiceImpl#decrypt(String, String)}.
+   *
+   * <ul>
+   *   <li>When lf.
+   * </ul>
+   *
+   * <p>Method under test: {@link CryptoServiceImpl#decrypt(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String CryptoServiceImpl.decrypt(String, String)"})
+  public void testDecrypt_whenLf() throws CryptoException {
+    // Arrange, Act and Assert
+    thrown.expect(CryptoException.class);
+    cryptoServiceImpl.decrypt("\n", ValidateFactory.createNonNullString());
   }
 }

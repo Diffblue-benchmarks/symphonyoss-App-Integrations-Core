@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class CertificateAuthorityExceptionDiffblueTest {
@@ -19,10 +20,10 @@ public class CertificateAuthorityExceptionDiffblueTest {
   public void testNewCertificateAuthorityException() {
     // Arrange and Act
     CertificateAuthorityException actualCertificateAuthorityException =
-        new CertificateAuthorityException("Msg");
+        new CertificateAuthorityException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("Msg", actualCertificateAuthorityException.getMessage());
+    assertEquals("validString", actualCertificateAuthorityException.getMessage());
     assertNull(actualCertificateAuthorityException.getCause());
     assertEquals(0, actualCertificateAuthorityException.getSuppressed().length);
   }

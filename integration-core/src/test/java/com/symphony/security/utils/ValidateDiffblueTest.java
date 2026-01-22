@@ -25,9 +25,12 @@ public class ValidateDiffblueTest {
   @MethodsUnderTest({"void Validate.isCorrectLength(byte[], int, String)"})
   public void testIsCorrectLength_whenAxaxaxaxBytesIsUtf8_thenThrowIllegalArgumentException()
       throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    byte[] object = "AXAXAXAX".getBytes("UTF-8");
+
+    // Act and Assert
     thrown.expect(IllegalArgumentException.class);
-    Validate.isCorrectLength("AXAXAXAX".getBytes("UTF-8"), 3, "Name");
+    Validate.isCorrectLength(object, 3, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -44,8 +47,11 @@ public class ValidateDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"void Validate.isCorrectLength(byte[], int, String)"})
   public void testIsCorrectLength_whenEight_thenDoesNotThrow() throws UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    Validate.isCorrectLength("AXAXAXAX".getBytes("UTF-8"), 8, "Name");
+    // Arrange
+    byte[] object = "AXAXAXAX".getBytes("UTF-8");
+
+    // Act and Assert
+    Validate.isCorrectLength(object, 8, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -64,7 +70,7 @@ public class ValidateDiffblueTest {
   public void testIsTrue_whenFalse_thenThrowIllegalArgumentException() {
     // Arrange, Act and Assert
     thrown.expect(IllegalArgumentException.class);
-    Validate.isTrue(false, "Msg", "Args");
+    Validate.isTrue(false, ValidateFactory.createNonNullString(), "Args");
   }
 
   /**
@@ -82,6 +88,6 @@ public class ValidateDiffblueTest {
   @MethodsUnderTest({"void Validate.isTrue(boolean, String, Object[])"})
   public void testIsTrue_whenTrue_thenDoesNotThrow() {
     // Arrange, Act and Assert
-    Validate.isTrue(true, "Msg", "Args");
+    Validate.isTrue(true, ValidateFactory.createNonNullString(), "Args");
   }
 }

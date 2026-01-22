@@ -3,6 +3,7 @@ package org.symphonyoss.integration.core.bootstrap;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,7 @@ public class IntegrationBootstrapContextDiffblueTest {
   })
   public void testGetIntegrationById() throws IllegalStateException {
     // Arrange, Act and Assert
-    assertNull(integrationBootstrapContext.getIntegrationById("42"));
+    assertNull(
+        integrationBootstrapContext.getIntegrationById(ValidateFactory.createNonNullString()));
   }
 }

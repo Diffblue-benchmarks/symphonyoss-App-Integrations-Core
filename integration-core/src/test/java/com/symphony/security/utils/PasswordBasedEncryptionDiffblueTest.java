@@ -35,6 +35,52 @@ public class PasswordBasedEncryptionDiffblueTest {
    * Test {@link PasswordBasedEncryption#decrypt(char[], String)}.
    *
    * <ul>
+   *   <li>When createNonNullString.
+   *   <li>Then throw {@link SymphonyEncryptionException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link PasswordBasedEncryption#decrypt(char[], String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String PasswordBasedEncryption.decrypt(char[], String)"})
+  public void testDecrypt_whenCreateNonNullString_thenThrowSymphonyEncryptionException()
+      throws SymphonyEncryptionException {
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    PasswordBasedEncryption.decrypt(password, ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link PasswordBasedEncryption#decrypt(char[], String)}.
+   *
+   * <ul>
+   *   <li>When createValidX509CertificateString.
+   * </ul>
+   *
+   * <p>Method under test: {@link PasswordBasedEncryption#decrypt(char[], String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String PasswordBasedEncryption.decrypt(char[], String)"})
+  public void testDecrypt_whenCreateValidX509CertificateString()
+      throws SymphonyEncryptionException {
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    PasswordBasedEncryption.decrypt(
+        password, SecurityKeyUtilsFactory.createValidX509CertificateString());
+  }
+
+  /**
+   * Test {@link PasswordBasedEncryption#decrypt(char[], String)}.
+   *
+   * <ul>
    *   <li>When {@code Encrypted Text}.
    *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
@@ -75,7 +121,7 @@ public class PasswordBasedEncryptionDiffblueTest {
    * Test {@link PasswordBasedEncryption#encrypt(char[], String)}.
    *
    * <ul>
-   *   <li>When {@code AZAZ} toCharArray.
+   *   <li>When createNonNullString.
    *   <li>Then does not throw.
    * </ul>
    *
@@ -84,10 +130,36 @@ public class PasswordBasedEncryptionDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String PasswordBasedEncryption.encrypt(char[], String)"})
-  public void testEncrypt_whenAzazToCharArray_thenDoesNotThrow()
+  public void testEncrypt_whenCreateNonNullString_thenDoesNotThrow()
       throws SymphonyEncryptionException {
-    // Arrange, Act and Assert
-    PasswordBasedEncryption.encrypt("AZAZ".toCharArray(), "Plain Text");
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act
+    PasswordBasedEncryption.encrypt(password, ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link PasswordBasedEncryption#encrypt(char[], String)}.
+   *
+   * <ul>
+   *   <li>When createValidX509CertificateString.
+   *   <li>Then does not throw.
+   * </ul>
+   *
+   * <p>Method under test: {@link PasswordBasedEncryption#encrypt(char[], String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String PasswordBasedEncryption.encrypt(char[], String)"})
+  public void testEncrypt_whenCreateValidX509CertificateString_thenDoesNotThrow()
+      throws SymphonyEncryptionException {
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act
+    PasswordBasedEncryption.encrypt(
+        password, SecurityKeyUtilsFactory.createValidX509CertificateString());
   }
 
   /**
@@ -107,7 +179,7 @@ public class PasswordBasedEncryptionDiffblueTest {
       throws SymphonyEncryptionException {
     // Arrange, Act and Assert
     thrown.expect(IllegalArgumentException.class);
-    PasswordBasedEncryption.encrypt(null, "Plain Text");
+    PasswordBasedEncryption.encrypt(null, ValidateFactory.createNonNullString());
   }
 
   /**

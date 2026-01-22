@@ -3,6 +3,7 @@ package com.symphony.security.helper;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.SymphonyEncryptionException;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -24,7 +25,8 @@ public class CDecryptionHelperDiffblueTest {
       throws SymphonyEncryptionException, UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
-    new CDecryptionHelper("Room Key").encrypt("AXAXAXAX".getBytes("UTF-8"), 1, 1, 1L);
+    new CDecryptionHelper(ValidateFactory.createNonNullString())
+        .encrypt("AXAXAXAX".getBytes("UTF-8"), 1, 1, 1L);
   }
 
   /**
@@ -44,7 +46,8 @@ public class CDecryptionHelperDiffblueTest {
       throws SymphonyEncryptionException, UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
-    new CDecryptionHelper("Room Key").encrypt("AXAXAXAX".getBytes("UTF-8"), 1, 1, 1L, (byte) 1);
+    new CDecryptionHelper(ValidateFactory.createNonNullString())
+        .encrypt("AXAXAXAX".getBytes("UTF-8"), 1, 1, 1L, (byte) 1);
   }
 
   /**
@@ -57,8 +60,12 @@ public class CDecryptionHelperDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"String CDecryptionHelper.encrypt(String, int, int, long)"})
   public void testEncryptWithStringIntIntLong() throws SymphonyEncryptionException {
-    // Arrange, Act and Assert
+    // Arrange
+    CDecryptionHelper cDecryptionHelper =
+        new CDecryptionHelper(ValidateFactory.createNonNullString());
+
+    // Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
-    new CDecryptionHelper("Room Key").encrypt("Not all who wander are lost", 1, 1, 1L);
+    cDecryptionHelper.encrypt(ValidateFactory.createNonNullString(), 1, 1, 1L);
   }
 }

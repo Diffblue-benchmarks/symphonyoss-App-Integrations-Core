@@ -4,6 +4,8 @@ import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.SymphonyEncryptionException;
 import com.symphony.security.exceptions.SymphonyInputException;
+import com.symphony.security.utils.SecurityKeyUtilsFactory;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -16,8 +18,7 @@ public class BCryptDiffblueTest {
    * Test {@link BCrypt#checkPassword(String, String)}.
    *
    * <ul>
-   *   <li>When {@code iloveyou}.
-   *   <li>Then throw {@link SymphonyInputException}.
+   *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
    *
    * <p>Method under test: {@link BCrypt#checkPassword(String, String)}
@@ -25,11 +26,14 @@ public class BCryptDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean BCrypt.checkPassword(String, String)"})
-  public void testCheckPassword_whenIloveyou_thenThrowSymphonyInputException()
+  public void testCheckPassword_thenThrowSymphonyEncryptionException()
       throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    BCrypt.checkPassword("iloveyou", null);
+    // Arrange
+    String Password = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    BCrypt.checkPassword(Password, SecurityKeyUtilsFactory.createValidX509CertificateString());
   }
 
   /**
@@ -49,7 +53,27 @@ public class BCryptDiffblueTest {
       throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    BCrypt.checkPassword(null, "Hash");
+    BCrypt.checkPassword(ValidateFactory.createNonNullString(), null);
+  }
+
+  /**
+   * Test {@link BCrypt#checkPassword(String, String)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link SymphonyInputException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link BCrypt#checkPassword(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean BCrypt.checkPassword(String, String)"})
+  public void testCheckPassword_whenNull_thenThrowSymphonyInputException2()
+      throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    BCrypt.checkPassword(null, ValidateFactory.createNonNullString());
   }
 
   /**

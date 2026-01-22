@@ -3,6 +3,7 @@ package com.gs.ti.wpt.lc.security.cryptolib;
 import static org.junit.Assert.assertEquals;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import org.junit.Test;
@@ -45,6 +46,6 @@ public class UtilsDiffblueTest {
   @MethodsUnderTest({"void Utils.validateCString(String)"})
   public void testValidateCString() throws UnsupportedEncodingException {
     // Arrange, Act and Assert
-    Utils.validateCString("In");
+    Utils.validateCString(ValidateFactory.createNonNullString());
   }
 }

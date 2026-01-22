@@ -1,0 +1,1707 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: issues
+INFO  Output a prioritized list of issues.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-core
+INFO  
+INFO  
+INFO  [1/1] Diagnosing issues for module: org.symphonyoss.symphony.integrations:integration-core
+INFO  ==========================================================================================
+INFO  
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Reading report file '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report.json'
+INFO  Copied report file to '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report-20260122T105850.json'
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.bouncycastle.pkcs.PKCS10CertificationRequest
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.apache.commons.lang.ArrayUtils
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.apache.commons.lang.ArrayUtils
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R005: Unable to load class
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      R005: Unable to load class: org.bouncycastle.openssl.PEMParser
+      
+      This class is required for test generation but is not available on the test runtime classpath.
+      
+      Note: You are testing module 'org.symphonyoss.symphony.integrations:integration-core'
+      
+      
+      RESOLUTION:
+      
+      Add the missing dependency as a test dependency.
+      
+      IMPORTANT: Always use test scope for dependencies needed only for testing.
+      
+      If it exists but isn't on the classpath, it may be optional, excluded,
+      or only in dependency management.
+      
+      See https://diff.blue/R005 for more information.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.OnTheWireFormat.entireMessage:()[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.OnTheWireFormatException: Raw bytes too small to be OnTheWireFormat
+        at com.symphony.security.clientsdk.transport.OnTheWireFormat.<init>(OnTheWireFormat.java:13)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.delete:(I)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: secureDirPath does not exist, validate secureDir param in configuration
+        at com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.init(SecureLocalPersistence.java:48)
+        at com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.<init>(SecureLocalPersistence.java:23)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.constructEntityString:()Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Entity should start with !
+        at com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.<init>(EntityCiphertextTransportV2.java:47)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.Crl.createCRL:(Ljava/lang/String;Ljava/lang/String;II[Lcom/gs/ti/wpt/lc/security/cryptolib/RevokedCert;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyRevokedCertException: Entry extensions can not be null or empty.
+        at com.gs.ti.wpt.lc.security.cryptolib.RevokedCert.setExtensions(RevokedCert.java:45)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.equals:(Ljava/lang/Object;)Z`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Entity should start with !
+        at com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.<init>(EntityCiphertextTransportV2.java:47)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV1.equals:(Ljava/lang/Object;)Z`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Expected version 1 but found 65.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV1.<init>(CiphertextTransportV1.java:68)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV2.equals:(Ljava/lang/Object;)Z`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Expected version 2 but found 65.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV2.<init>(CiphertextTransportV2.java:66)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.Crl.createCRL:(Ljava/lang/String;Ljava/lang/String;IILcom/gs/ti/wpt/lc/security/cryptolib/Extensions;[Lcom/gs/ti/wpt/lc/security/cryptolib/RevokedCert;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyRevokedCertException: Entry extensions can not be null or empty.
+        at com.gs.ti.wpt.lc.security.cryptolib.RevokedCert.setExtensions(RevokedCert.java:45)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintCert:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.UnsatisfiedLinkError: com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintCert(Ljava/lang/String;)Ljava/lang/String;
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintCert(Native Method)
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintCert(PrettyPrint.java:61)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintCrl:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.UnsatisfiedLinkError: com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintCrl(Ljava/lang/String;)Ljava/lang/String;
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintCrl(Native Method)
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintCrl(PrettyPrint.java:67)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintReq:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.UnsatisfiedLinkError: com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintReq(Ljava/lang/String;)Ljava/lang/String;
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.nativePrettyPrintReq(Native Method)
+        at com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrintReq(PrettyPrint.java:73)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.close:()V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: secureDirPath does not exist, validate secureDir param in configuration
+        at com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.init(SecureLocalPersistence.java:48)
+        at com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.<init>(SecureLocalPersistence.java:23)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.gs.ti.wpt.lc.security.cryptolib.Version.get:()Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.UnsatisfiedLinkError: com.gs.ti.wpt.lc.security.cryptolib.Version.nativeGetVersion()Ljava/lang/String;
+        at com.gs.ti.wpt.lc.security.cryptolib.Version.nativeGetVersion(Native Method)
+        at com.gs.ti.wpt.lc.security.cryptolib.Version.get(Version.java:18)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.cache.SecurePersister.persist:([B[B)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.UnsatisfiedLinkError: com.gs.ti.wpt.lc.security.cryptolib.SHA.nativeSHA2x256([B[B)I
+        at com.gs.ti.wpt.lc.security.cryptolib.SHA.nativeSHA2x256(Native Method)
+        at com.gs.ti.wpt.lc.security.cryptolib.SHA.SHA2x256(SHA.java:25)
+        at com.symphony.security.cache.SecurePersister.getKey(SecurePersister.java:40)
+        at com.symphony.security.cache.SecurePersister.persist(SecurePersister.java:57)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.entity.EntityCryptoHandler.decrypt:(Ljava/lang/String;[B)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Expected version 1 but found -118.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV1.<init>(CiphertextTransportV1.java:68)
+        at com.symphony.security.clientsdk.entity.EntityCryptoHandler.decrypt(EntityCryptoHandler.java:63)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport:(Ljava/lang/String;)Lcom/symphony/security/clientsdk/transport/ICiphertextTransport;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NoSuchMethodError: org.apache.commons.codec.binary.Base64.isBase64(Ljava/lang/String;)Z
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:22)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV1.getCiphertextAndTag:()[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Expected version 1 but found 65.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV1.<init>(CiphertextTransportV1.java:68)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV2.getCiphertextAndTag:()[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: Expected version 2 but found 65.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV2.<init>(CiphertextTransportV2.java:66)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV3.getCiphertextAndTag:()[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.InvalidDataException: This is not a V3 CiphertextTransport.
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV3.<init>(CiphertextTransportV3.java:29)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.clientsdk.transport.CiphertextTransportV3.getRawData:()[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.ArrayIndexOutOfBoundsException
+        at com.symphony.security.clientsdk.transport.CiphertextTransportV3.getRawData(CiphertextTransportV3.java:109)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.CDecryptionHelper.decrypt:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NoSuchMethodError: org.apache.commons.codec.binary.Base64.isBase64(Ljava/lang/String;)Z
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:22)
+        at com.symphony.security.helper.CDecryptionHelper.decrypt(CDecryptionHelper.java:39)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.CDecryptionHelper.decrypt:([B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.CiphertextTransportVersionException: Version 65 of CiphertextTransport is not supported. transportableBytes = QTBBMEEwQTBBMEEwQTBBMEEwQTBBMEEw
+      
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:64)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:136)
+        at com.symphony.security.helper.CDecryptionHelper.decrypt(CDecryptionHelper.java:51)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.decryptMsg:([BLjava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.CiphertextTransportVersionException: Version 85 of CiphertextTransport is not supported. transportableBytes = Verssion
+      
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:64)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:136)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:118)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.decryptMsg:([B[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.CiphertextTransportVersionException: Version 65 of CiphertextTransport is not supported. transportableBytes = QTBBMEEwQTBBMEEwQTBBMEEwQTBBMEEw
+      
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:64)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:136)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.encryptMsg:([BLcom/symphony/security/helper/KeyIdentifier;[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: Invalid Key length of 8 detected
+        at com.gs.ti.wpt.lc.security.cryptolib.AES.EncryptGCM(AES.java:53)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:159)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:220)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.encryptMsgWithRotationIdZero:([B[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: Invalid Key length of 8 detected
+        at com.gs.ti.wpt.lc.security.cryptolib.AES.EncryptGCM(AES.java:53)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:159)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsgWithRotationIdZero(ClientCryptoHandler.java:203)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.KeyIdentifier.<init>:([BLjava/lang/Long;Ljava/lang/String;Ljava/lang/Boolean;)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NoSuchMethodError: org.apache.commons.codec.binary.Base64.isBase64(Ljava/lang/String;)Z
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:22)
+        at com.symphony.security.helper.KeyIdentifier.<init>(KeyIdentifier.java:76)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptProperty:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.IllegalArgumentException: password is a required parameter
+        at com.symphony.security.utils.PasswordBasedEncryption.notNull(PasswordBasedEncryption.java:70)
+        at com.symphony.security.utils.PasswordBasedEncryption.encrypt(PasswordBasedEncryption.java:39)
+        at com.symphony.security.utils.PropertyDecrypter.encryptProperty(PropertyDecrypter.java:98)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt:([C)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.RuntimeException: Console is not available
+        at com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput.getSecret(PropertyDecrypter.java:147)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:116)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:106)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt:()Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.RuntimeException: Console is not available
+        at com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput.getSecret(PropertyDecrypter.java:147)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:111)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:102)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate:(Ljava/lang/String;)Ljava/security/cert/X509Certificate;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.security.cert.CertificateException: Could not parse certificate: java.io.IOException: Empty input
+        at sun.security.provider.X509Factory.engineGenerateCertificate(X509Factory.java:110)
+        at java.security.cert.CertificateFactory.generateCertificate(CertificateFactory.java:339)
+        at com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate(SecurityKeyUtils.java:144)
+      java.io.IOException: Empty input
+        at sun.security.provider.X509Factory.engineGenerateCertificate(X509Factory.java:106)
+        at java.security.cert.CertificateFactory.generateCertificate(CertificateFactory.java:339)
+        at com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate(SecurityKeyUtils.java:144)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.Validate.notNull:(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NullPointerException: Msg
+        at com.symphony.security.utils.Validate.notNull(Validate.java:33)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `org.symphonyoss.integration.core.bootstrap.IntegrationBootstrapContext.shutdown:()V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NullPointerException
+        at org.symphonyoss.integration.core.bootstrap.IntegrationBootstrapContext.shutdown(IntegrationBootstrapContext.java:309)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `org.symphonyoss.integration.core.bridge.IntegrationBridgeExceptionHandler.handleRemoteApiException:(Lorg/symphonyoss/integration/exception/RemoteApiException;Lorg/symphonyoss/integration/model/config/IntegrationInstance;Ljava/lang/String;Ljava/lang/String;)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NullPointerException
+        at org.symphonyoss.integration.core.bridge.IntegrationBridgeExceptionHandler.isForbiddenError(IntegrationBridgeExceptionHandler.java:155)
+        at org.symphonyoss.integration.core.bridge.IntegrationBridgeExceptionHandler.handleRemoteApiException(IntegrationBridgeExceptionHandler.java:134)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R002: Missing observers
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.core.authorization.LocalAuthorizationRepoServiceCondition.<init>:()V
+      
+      Diffblue Cover was unable to create an assertion.
+      There are no fields that could be asserted on.
+      
+INFO  
+INFO  R002: Missing observers
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.clientsdk.search.ClientTokenizer_v2.<init>:()V
+      
+      Diffblue Cover was unable to create an assertion.
+      There are no fields that could be asserted on.
+      
+INFO  
+INFO  R002: Missing observers
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.core.authorization.RemoteAuthorizationRepoServiceCondition.<init>:()V
+      
+      Diffblue Cover was unable to create an assertion.
+      There are no fields that could be asserted on.
+      
+INFO  
+INFO  R002: Missing observers
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput.<init>:()V
+      
+      Diffblue Cover was unable to create an assertion.
+      There are no fields that could be asserted on.
+      
+INFO  
+INFO  R002: Missing observers
+      Diffblue Cover was unable to create an assertion.
+      Add getters for the following fields or make them package-private:
+      CDecryptionHelper.clientCryptoHandler
+      CDecryptionHelper.secretKey
+      
+INFO  Affected methods:
+      com.symphony.security.helper.CDecryptionHelper.<init>:(Ljava/lang/String;)V
+      com.symphony.security.helper.CDecryptionHelper.<init>:([B)V
+      
+INFO  To resolve the issue, run the following command in your terminal:
+      
+      dcover refactor
+      
+INFO  
+INFO  R002: Missing observers
+      Diffblue Cover was unable to create an assertion.
+      Add getters for the following fields or make them package-private:
+      ClientCryptoHandler.LOG
+      
+INFO  Affected methods:
+      com.symphony.security.helper.ClientCryptoHandler.<init>:()V
+      
+INFO  To resolve the issue, run the following command in your terminal:
+      
+      dcover refactor
+      
+INFO  
+INFO  R011: Sandboxing policy violation
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint.prettyPrint:(Ljava/lang/String;)Ljava/lang/String;
+      
+      Diffblue Cover ran code in your project that tried
+      to access temporary files created outside of the test (file '/tmp/libsymphony-crypto-jni-.so', permission 'write').
+      Diffblue Cover's default sandboxing policy disallows this in order to prevent
+      your code from damaging your system environment.
+      See https://diff.blue/R011 to resolve this issue.
+      
+INFO  
+INFO  R011: Sandboxing policy violation
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.gs.ti.wpt.lc.security.cryptolib.Utils.loadCryptoLib:()V
+      
+      Diffblue Cover ran code in your project that tried
+      to access temporary files created outside of the test (file '/tmp/libsymphony-crypto-jni-.so', permission 'write').
+      Diffblue Cover's default sandboxing policy disallows this in order to prevent
+      your code from damaging your system environment.
+      See https://diff.blue/R011 to resolve this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.<init>:([BLjava/lang/String;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.<init>(byte[], String).
+      The arrange section threw
+      com.diffblue.cover.exception.BaseException: Sandboxing policy violation
+          at java.lang.SecurityManager.checkWrite(SecurityManager.java:979)
+          at java.io.File.createNewFile(File.java:1019)
+          at com.symphony.security.utils.DynamicLibraryLoader.getOuptuFile(DynamicLibraryLoader.java:86)
+          at com.symphony.security.utils.DynamicLibraryLoader.loadLibrary(DynamicLibraryLoader.java:56)
+          at com.gs.ti.wpt.lc.security.cryptolib.Utils.loadCryptoLib(Utils.java:69)
+          at com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence.<clinit>(SecureLocalPersistence.java:16)
+          at java.lang.Class.forName0(Native Method)
+          at java.lang.Class.forName(Class.java:348)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getCipherText:()[B
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getIv:()[B
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getRotationId:()J
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getTag:()[B
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getTokenNumber:()I
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getTokens:()Ljava/util/List;
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getVersion:()B
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.getCipherText().
+      The arrange section threw
+      com.symphony.security.exceptions.InvalidDataException: Entity should start with !
+          at com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2.<init>(EntityCiphertextTransportV2.java:47)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getAuthData:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getCiphertext:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getEncryptionMode:()B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getIV:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getKeyId:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getTag:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.getVersion:()B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.hasKeyId:()Z
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.toString:()Ljava/lang/String;
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.clientsdk.transport.CiphertextTransportV2.toString().
+      The arrange section threw
+      com.symphony.security.exceptions.InvalidDataException: Expected version 2 but found 65.
+          at com.symphony.security.clientsdk.transport.CiphertextTransportV2.<init>(CiphertextTransportV2.java:66)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.getEncryptionMode:()B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.getKeyId:()[B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.getVersion:()B
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.hasKeyId:()Z
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.toString:()Ljava/lang/String;
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.clientsdk.transport.CiphertextTransportV3.toString().
+      The arrange section threw
+      com.symphony.security.exceptions.InvalidDataException: This is not a V3 CiphertextTransport.
+          at com.symphony.security.clientsdk.transport.CiphertextTransportV3.<init>(CiphertextTransportV3.java:29)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.ClientCertException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.ClientCertException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.ClientCertException.<init>(String, Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.InvalidDataException.<init>:()V
+      com.symphony.security.exceptions.InvalidDataException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.InvalidDataException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.InvalidDataException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.InvalidDataException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.InvalidDataException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.KeyStoreException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.KeyStoreException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.KeyStoreException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.KeyStoreException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>:()V
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonyEncryptionException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonyHSMException.<init>:()V
+      com.symphony.security.exceptions.SymphonyHSMException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonyHSMException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonyHSMException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonyHSMException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonyHSMException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonyInputException.<init>:()V
+      com.symphony.security.exceptions.SymphonyInputException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonyInputException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonyInputException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonyInputException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonyInputException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonyNativeException.<init>:()V
+      com.symphony.security.exceptions.SymphonyNativeException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonyNativeException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonyNativeException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonyNativeException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonyNativeException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>:()V
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonyPEMFormatException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.exceptions.SymphonySignatureException.<init>:()V
+      com.symphony.security.exceptions.SymphonySignatureException.<init>:(Ljava/lang/String;)V
+      com.symphony.security.exceptions.SymphonySignatureException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V
+      com.symphony.security.exceptions.SymphonySignatureException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+      com.symphony.security.exceptions.SymphonySignatureException.<init>:(Ljava/lang/Throwable;)V
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.exceptions.SymphonySignatureException.<init>(Throwable).
+      The arrange section threw
+      java.lang.NullPointerException
+          at com.google.api.client.http.HttpResponseException$Builder.<init>(HttpResponseException.java:172)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R081: Exception in arrange section
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.hsm.TransportableWrappedKey.getIv:()[B
+      com.symphony.security.hsm.TransportableWrappedKey.getTransportableBytes:()[B
+      com.symphony.security.hsm.TransportableWrappedKey.getWrappedKeyBytes:()[B
+      com.symphony.security.hsm.TransportableWrappedKey.toString:()Ljava/lang/String;
+      
+      Diffblue Cover was unable to construct an instance of the class under test using
+      com.symphony.security.hsm.TransportableWrappedKey.toString().
+      The arrange section threw
+      java.io.IOException: Note enough transportable bytes (8), must have at least 16
+          at com.symphony.security.hsm.TransportableWrappedKey.validateInput(TransportableWrappedKey.java:42)
+          at com.symphony.security.hsm.TransportableWrappedKey.<init>(TransportableWrappedKey.java:31)
+      More information about the exception is provided in the support log.
+      See https://diff.blue/R081 for further troubleshooting of this issue.
+      
+INFO  
+INFO  R031: Method may be time-sensitive
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.model.CertStatus.toString:()Ljava/lang/String;
+      
+      Diffblue Cover was only able to write tests that are time-sensitive.
+      The assertions don't pass when run at an alternate date, time, and
+      timezone. Try refactoring the method to take a 'java.time.Clock' instance so
+      that the time can be parameterized during testing.
+      See Working with code R031 (https://diff.blue/R031) for details.
+      
+INFO  
+INFO  R011: Sandboxing policy violation
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      com.symphony.security.utils.Bytes$LexicographicalComparerHolder$UnsafeComparer.compareTo:([BII[BII)I
+      com.symphony.security.utils.Bytes$LexicographicalComparerHolder$UnsafeComparer.lessThanUnsigned:(JJ)Z
+      
+      Diffblue Cover ran code in your project that tried
+      to access 'sun.misc' from calling class 'com.symphony.security.utils.Bytes$LexicographicalComparerHolder$UnsafeComparer$1'.
+      Diffblue Cover's default sandboxing policy disallows this in order to prevent
+      your code from damaging your system environment.
+      See https://diff.blue/R011 to resolve this issue.
+      
+INFO  
+INFO  R027: Missing beans when creating Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.core.authorization.LocalAuthorizationRepositoryService.save:(Ljava/lang/String;Ljava/lang/String;Lorg/symphonyoss/integration/authorization/UserAuthorizationData;)V
+      
+      Failed to create Spring context due to missing beans
+      in the current Spring profile:
+      - org.symphonyoss.integration.core.authorization.LocalAuthorizationRepositoryService
+      when running class:
+      package org.symphonyoss.integration.core.authorization;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.core.authorization.LocalAuthorizationRepositoryService.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass1931 {
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.core.authorization.LocalAuthorizationRepositoryService localAuthorizationRepositoryService;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      See https://diff.blue/R027 to resolve this issue.
+      
+INFO  
+INFO  R027: Missing beans when creating Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.core.bootstrap.IntegrationLogging.logHealth:()V
+      
+      Failed to create Spring context due to missing beans
+      in the current Spring profile:
+      - java.util.Map
+      when running class:
+      package org.symphonyoss.integration.core.bootstrap;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.core.bootstrap.IntegrationLogging.class,org.springframework.boot.actuate.endpoint.HealthEndpoint.class,java.util.Map.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass3036 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.springframework.boot.actuate.health.HealthAggregator healthAggregator;
+        @org.springframework.beans.factory.annotation.Autowired org.springframework.boot.actuate.endpoint.HealthEndpoint healthEndpoint;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.core.bootstrap.IntegrationLogging integrationLogging;
+        @org.springframework.beans.factory.annotation.Autowired java.util.List list;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.logging.LogMessageSource logMessageSource;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker serviceHealthInvoker;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      See https://diff.blue/R027 to resolve this issue.
+      
+INFO  
+INFO  64 issues were found and displayed
+INFO  Rerun with --prompts --limit 10 --skip 10 to focus on a subset of the issues
+INFO  Rerun without --prompts to summarise all the issues
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T111120.log
+INFO  Finished in 3s

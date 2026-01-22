@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class SymphonyExtensionExceptionDiffblueTest {
@@ -18,10 +19,10 @@ public class SymphonyExtensionExceptionDiffblueTest {
   public void testNewSymphonyExtensionException() {
     // Arrange and Act
     SymphonyExtensionException actualSymphonyExtensionException =
-        new SymphonyExtensionException("An error occurred");
+        new SymphonyExtensionException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("An error occurred", actualSymphonyExtensionException.getMessage());
+    assertEquals("validString", actualSymphonyExtensionException.getMessage());
     assertNull(actualSymphonyExtensionException.getCause());
     assertEquals(0, actualSymphonyExtensionException.getSuppressed().length);
   }

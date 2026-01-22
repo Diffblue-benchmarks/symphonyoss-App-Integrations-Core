@@ -3,11 +3,13 @@ package com.symphony.security.clientsdk.transport;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.InvalidDataException;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,120 +19,251 @@ public class CiphertextTransportV1DiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
 
   /**
-   * Test {@link CiphertextTransportV1#getPodId()}.
+   * Test {@link CiphertextTransportV1#equals(Object)}, and {@link
+   * CiphertextTransportV1#hashCode()}.
    *
    * <ul>
-   *   <li>Then throw {@link IllegalStateException}.
+   *   <li>When other is equal.
+   *   <li>Then return equal.
    * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link CiphertextTransportV1#equals(Object)}
+   *   <li>{@link CiphertextTransportV1#hashCode()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "boolean CiphertextTransportV1.equals(Object)",
+    "int CiphertextTransportV1.hashCode()"
+  })
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
+    // Arrange
+    CiphertextTransportV1 createCiphertextTransportV1Result =
+        CiphertextTransportV1Factory.createCiphertextTransportV1();
+    CiphertextTransportV1 createCiphertextTransportV1Result2 =
+        CiphertextTransportV1Factory.createCiphertextTransportV1();
+
+    // Act and Assert
+    assertEquals(createCiphertextTransportV1Result, createCiphertextTransportV1Result2);
+    assertEquals(
+        createCiphertextTransportV1Result.hashCode(),
+        createCiphertextTransportV1Result2.hashCode());
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#equals(Object)}, and {@link
+   * CiphertextTransportV1#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is same.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link CiphertextTransportV1#equals(Object)}
+   *   <li>{@link CiphertextTransportV1#hashCode()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "boolean CiphertextTransportV1.equals(Object)",
+    "int CiphertextTransportV1.hashCode()"
+  })
+  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
+    // Arrange
+    CiphertextTransportV1 createCiphertextTransportV1Result =
+        CiphertextTransportV1Factory.createCiphertextTransportV1();
+
+    // Act and Assert
+    assertEquals(createCiphertextTransportV1Result, createCiphertextTransportV1Result);
+    int expectedHashCodeResult = createCiphertextTransportV1Result.hashCode();
+    assertEquals(expectedHashCodeResult, createCiphertextTransportV1Result.hashCode());
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link CiphertextTransportV1#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "boolean CiphertextTransportV1.equals(Object)",
+    "int CiphertextTransportV1.hashCode()"
+  })
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
+    // Arrange
+    CiphertextTransportV1 createCiphertextTransportV1Result =
+        CiphertextTransportV1Factory.createCiphertextTransportV1();
+
+    // Act and Assert
+    assertNotEquals(createCiphertextTransportV1Result, ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link CiphertextTransportV1#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "boolean CiphertextTransportV1.equals(Object)",
+    "int CiphertextTransportV1.hashCode()"
+  })
+  public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
+    // Arrange, Act and Assert
+    assertNotEquals(CiphertextTransportV1Factory.createCiphertextTransportV1(), null);
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link CiphertextTransportV1#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "boolean CiphertextTransportV1.equals(Object)",
+    "int CiphertextTransportV1.hashCode()"
+  })
+  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
+    // Arrange, Act and Assert
+    assertNotEquals(
+        CiphertextTransportV1Factory.createCiphertextTransportV1(),
+        "Different type to CiphertextTransportV1");
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#getCiphertextAndTag()}.
+   *
+   * <p>Method under test: {@link CiphertextTransportV1#getCiphertextAndTag()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"byte[] CiphertextTransportV1.getCiphertextAndTag()"})
+  public void testGetCiphertextAndTag() {
+    // Arrange, Act and Assert
+    assertArrayEquals(
+        new byte[] {
+          CiphertextTransportEncryptionMode.AES_CBC,
+          CiphertextTransportEncryptionMode.RSA_OAEP,
+          CiphertextTransportEncryptionMode.RSA_PSS,
+          4,
+          5,
+          6,
+          7,
+          '\b',
+          30,
+          31,
+          ' ',
+          '!',
+          '"',
+          '#',
+          '$',
+          '%'
+        },
+        CiphertextTransportV1Factory.createCiphertextTransportV1().getCiphertextAndTag());
+  }
+
+  /**
+   * Test {@link CiphertextTransportV1#getPodId()}.
    *
    * <p>Method under test: {@link CiphertextTransportV1#getPodId()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"int CiphertextTransportV1.getPodId()"})
-  public void testGetPodId_thenThrowIllegalStateException() throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV1 ciphertextTransportV1 =
-        new CiphertextTransportV1(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"));
-
-    // Act and Assert
+  public void testGetPodId() {
+    // Arrange, Act and Assert
     thrown.expect(IllegalStateException.class);
-    ciphertextTransportV1.getPodId();
+    CiphertextTransportV1Factory.createCiphertextTransportV1().getPodId();
   }
 
   /**
    * Test {@link CiphertextTransportV1#getRawData()}.
-   *
-   * <ul>
-   *   <li>Then return array of {@code byte} with {@link CiphertextTransportEncryptionMode#AES_CBC}
-   *       and {@link CiphertextTransportEncryptionMode#AES_GCM}.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV1#getRawData()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] CiphertextTransportV1.getRawData()"})
-  public void testGetRawData_thenReturnArrayOfByteWithAes_cbcAndAes_gcm()
-      throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV1 ciphertextTransportV1 =
-        new CiphertextTransportV1(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"));
-
-    // Act and Assert
+  public void testGetRawData() {
+    // Arrange, Act and Assert
     assertArrayEquals(
         new byte[] {
           CiphertextTransportEncryptionMode.AES_CBC,
           CiphertextTransportEncryptionMode.AES_GCM,
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X',
-          'A',
-          'X'
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          '\n',
+          11,
+          '\f',
+          '\r',
+          14,
+          15,
+          16,
+          17,
+          CiphertextTransportEncryptionMode.AES_CBC,
+          CiphertextTransportEncryptionMode.RSA_OAEP,
+          CiphertextTransportEncryptionMode.RSA_PSS,
+          4,
+          5,
+          6,
+          7,
+          '\b',
+          30,
+          31,
+          ' ',
+          '!',
+          '"',
+          '#',
+          '$',
+          '%'
         },
-        ciphertextTransportV1.getRawData());
+        CiphertextTransportV1Factory.createCiphertextTransportV1().getRawData());
   }
 
   /**
    * Test {@link CiphertextTransportV1#getRotationId()}.
-   *
-   * <ul>
-   *   <li>Then throw {@link IllegalStateException}.
-   * </ul>
    *
    * <p>Method under test: {@link CiphertextTransportV1#getRotationId()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"long CiphertextTransportV1.getRotationId()"})
-  public void testGetRotationId_thenThrowIllegalStateException()
-      throws UnsupportedEncodingException {
-    // Arrange
-    CiphertextTransportV1 ciphertextTransportV1 =
-        new CiphertextTransportV1(
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"),
-            "AXAXAXAX".getBytes("UTF-8"));
-
-    // Act and Assert
+  public void testGetRotationId() {
+    // Arrange, Act and Assert
     thrown.expect(IllegalStateException.class);
-    ciphertextTransportV1.getRotationId();
+    CiphertextTransportV1Factory.createCiphertextTransportV1().getRotationId();
   }
 
   /**

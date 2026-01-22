@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class KeyInfoNotFoundExceptionDiffblueTest {
@@ -17,10 +18,11 @@ public class KeyInfoNotFoundExceptionDiffblueTest {
   @MethodsUnderTest({"void KeyInfoNotFoundException.<init>(String)"})
   public void testNewKeyInfoNotFoundException() {
     // Arrange and Act
-    KeyInfoNotFoundException actualKeyInfoNotFoundException = new KeyInfoNotFoundException("foo");
+    KeyInfoNotFoundException actualKeyInfoNotFoundException =
+        new KeyInfoNotFoundException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("foo", actualKeyInfoNotFoundException.getMessage());
+    assertEquals("validString", actualKeyInfoNotFoundException.getMessage());
     assertNull(actualKeyInfoNotFoundException.getCause());
     assertEquals(0, actualKeyInfoNotFoundException.getSuppressed().length);
   }

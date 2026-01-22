@@ -5,6 +5,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.SymphonyInputException;
 import com.symphony.security.exceptions.SymphonyPEMFormatException;
 import com.symphony.security.exceptions.SymphonySignatureException;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import org.junit.Rule;
@@ -13,27 +14,6 @@ import org.junit.rules.ExpectedException;
 
 public class CertDiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
-
-  /**
-   * Test {@link Cert#createCSR(String, String)}.
-   *
-   * <ul>
-   *   <li>When {@code Cert PEM}.
-   *   <li>Then throw {@link SymphonyInputException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#createCSR(String, String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.createCSR(String, String)"})
-  public void testCreateCSR_whenCertPem_thenThrowSymphonyInputException()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.createCSR("Cert PEM", null);
-  }
 
   /**
    * Test {@link Cert#createCSR(String, String)}.
@@ -53,7 +33,28 @@ public class CertDiffblueTest {
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createCSR(null, "Signing RSAKey Pair PEM");
+    Cert.createCSR(ValidateFactory.createNonNullString(), null);
+  }
+
+  /**
+   * Test {@link Cert#createCSR(String, String)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   *   <li>Then throw {@link SymphonyInputException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#createCSR(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.createCSR(String, String)"})
+  public void testCreateCSR_whenNull_thenThrowSymphonyInputException2()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.createCSR(null, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -73,9 +74,22 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Coutrny Code", "Org", "", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        ValidateFactory.createNonNullString(),
+        "",
+        "",
+        1,
+        1);
   }
 
   /**
@@ -95,9 +109,22 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Coutrny Code", "Org", "", null, 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        ValidateFactory.createNonNullString(),
+        "",
+        null,
+        1,
+        1);
   }
 
   /**
@@ -117,9 +144,22 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays3()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Coutrny Code", "Org", null, "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        ValidateFactory.createNonNullString(),
+        null,
+        "",
+        1,
+        1);
   }
 
   /**
@@ -139,9 +179,21 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays4()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Coutrny Code", null, "", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        ValidateFactory.createNonNullString(),
+        null,
+        "",
+        "",
+        1,
+        1);
   }
 
   /**
@@ -161,9 +213,21 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays5()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), null, "Org", "", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        null,
+        ValidateFactory.createNonNullString(),
+        "",
+        "",
+        1,
+        1);
   }
 
   /**
@@ -183,9 +247,23 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays6()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+    String Org = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, BigInteger.valueOf(1L), "Coutrny Code", "Org", "", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        Org,
+        ValidateFactory.createNonNullString(),
+        "",
+        1,
+        1);
   }
 
   /**
@@ -205,10 +283,23 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays7()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+    String Org = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.createSelfSigned(
-        "secret", BigInteger.valueOf(1L), "Coutrny Code", "Org", "Common Name", "", 1, 0);
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        Org,
+        ValidateFactory.createNonNullString(),
+        "",
+        1,
+        -1);
   }
 
   /**
@@ -228,10 +319,23 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameUidValidStartingInXDaysValidForXDays8()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+    String Org = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.createSelfSigned(
-        "secret", BigInteger.valueOf(1L), "Coutrny Code", "Org", "", "1234", 1, 0);
+        PEMEncodedRSAKeyPair,
+        SerialNumber,
+        CoutrnyCode,
+        Org,
+        "",
+        ValidateFactory.createNonNullString(),
+        1,
+        1);
   }
 
   /**
@@ -249,9 +353,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", 10, "Coutrny Code", "Org", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 10, CoutrnyCode, ValidateFactory.createNonNullString(), "", 1, 1);
   }
 
   /**
@@ -269,9 +378,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", 10, "Coutrny Code", "Org", null, 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 10, CoutrnyCode, ValidateFactory.createNonNullString(), null, 1, 1);
   }
 
   /**
@@ -289,9 +403,13 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays3()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", 10, "Coutrny Code", null, "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 10, ValidateFactory.createNonNullString(), null, "", 1, 1);
   }
 
   /**
@@ -309,9 +427,13 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays4()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", 10, null, "Org", "", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 10, null, ValidateFactory.createNonNullString(), "", 1, 1);
   }
 
   /**
@@ -329,9 +451,12 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays5()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, 10, "Coutrny Code", "Org", "", 1, 1);
+    Cert.createSelfSigned(null, 10, CoutrnyCode, ValidateFactory.createNonNullString(), "", 1, 1);
   }
 
   /**
@@ -349,9 +474,41 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays6()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+    String Org = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", 10, "Coutrny Code", "Org", "Common Name", 1, 0);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 0, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#createSelfSigned(String, int, String, String, String, int, int)} with {@code
+   * PEMEncodedRSAKeyPair}, {@code SerialNumber}, {@code CoutrnyCode}, {@code Org}, {@code
+   * CommonName}, {@code ValidStartingInXDays}, {@code ValidForXDays}.
+   *
+   * <p>Method under test: {@link Cert#createSelfSigned(String, int, String, String, String, int,
+   * int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.createSelfSigned(String, int, String, String, String, int, int)"})
+  public void
+      testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberCoutrnyCodeOrgCommonNameValidStartingInXDaysValidForXDays7()
+          throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+              UnsupportedEncodingException {
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String CoutrnyCode = ValidateFactory.createNonNullString();
+    String Org = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, 0, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, -1);
   }
 
   /**
@@ -372,11 +529,13 @@ public class CertDiffblueTest {
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
     // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
     BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", SerialNumber, "Name", new Extensions(), 1, 0);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, SerialNumber, name, new Extensions(), 1, 0);
   }
 
   /**
@@ -396,9 +555,13 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameExtValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String name = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", null, "Name", new Extensions(), 1, 1);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, null, name, new Extensions(), 1, 1);
   }
 
   /**
@@ -420,10 +583,11 @@ public class CertDiffblueTest {
               UnsupportedEncodingException {
     // Arrange
     BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, SerialNumber, "Name", new Extensions(), 1, 1);
+    Cert.createSelfSigned(null, SerialNumber, name, new Extensions(), 1, 1);
   }
 
   /**
@@ -444,11 +608,13 @@ public class CertDiffblueTest {
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
     // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
     BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String name = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", SerialNumber, "Name", new Extensions(), 1, 1);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, SerialNumber, name, new Extensions(), 1, 1);
   }
 
   /**
@@ -469,11 +635,14 @@ public class CertDiffblueTest {
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
     // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
     BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
+    String sigalg = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", SerialNumber, "Name", "Sigalg", new Extensions(), 1, 0);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, SerialNumber, name, sigalg, new Extensions(), 1, 0);
   }
 
   /**
@@ -493,9 +662,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgExtValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String name = ValidateFactory.createNonNullString();
+    String sigalg = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", null, "Name", "Sigalg", new Extensions(), 1, 1);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, null, name, sigalg, new Extensions(), 1, 1);
   }
 
   /**
@@ -517,10 +691,40 @@ public class CertDiffblueTest {
               UnsupportedEncodingException {
     // Arrange
     BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
+    String sigalg = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, SerialNumber, "Name", "Sigalg", new Extensions(), 1, 1);
+    Cert.createSelfSigned(null, SerialNumber, name, sigalg, new Extensions(), 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#createSelfSigned(String, BigInteger, String, String, Extensions, int, int)}
+   * with {@code PEMEncodedRSAKeyPair}, {@code SerialNumber}, {@code name}, {@code sigalg}, {@code
+   * ext}, {@code ValidStartingInXDays}, {@code ValidForXDays}.
+   *
+   * <p>Method under test: {@link Cert#createSelfSigned(String, BigInteger, String, String,
+   * Extensions, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "String Cert.createSelfSigned(String, BigInteger, String, String, Extensions, int, int)"
+  })
+  public void
+      testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgExtValidStartingInXDaysValidForXDays4()
+          throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+              UnsupportedEncodingException {
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String name = ValidateFactory.createNonNullString();
+    String sigalg = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, SerialNumber, name, sigalg, new Extensions(), 1, 1);
   }
 
   /**
@@ -538,9 +742,15 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgValidStartingInXDaysValidForXDays()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Name", "Sigalg", 1, 0);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, SerialNumber, name, ValidateFactory.createNonNullString(), 1, 0);
   }
 
   /**
@@ -558,9 +768,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    String name = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", null, "Name", "Sigalg", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, null, name, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -578,9 +793,13 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgValidStartingInXDaysValidForXDays3()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+    String name = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, BigInteger.valueOf(1L), "Name", "Sigalg", 1, 1);
+    Cert.createSelfSigned(null, SerialNumber, name, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -598,9 +817,15 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameSigalgValidStartingInXDaysValidForXDays4()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+    String name = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(0L), "Name", "Sigalg", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, SerialNumber, name, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -617,9 +842,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameValidStartingInXDaysValidForXDays()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(1L), "Name", 1, 0);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, SerialNumber, ValidateFactory.createNonNullString(), 1, 0);
   }
 
   /**
@@ -636,9 +866,12 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameValidStartingInXDaysValidForXDays2()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", null, "Name", 1, 1);
+    Cert.createSelfSigned(PEMEncodedRSAKeyPair, null, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -655,9 +888,12 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameValidStartingInXDaysValidForXDays3()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    BigInteger SerialNumber = BigInteger.valueOf(1L);
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned(null, BigInteger.valueOf(1L), "Name", 1, 1);
+    Cert.createSelfSigned(null, SerialNumber, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -674,9 +910,14 @@ public class CertDiffblueTest {
       testCreateSelfSignedWithPEMEncodedRSAKeyPairSerialNumberNameValidStartingInXDaysValidForXDays4()
           throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
               UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String PEMEncodedRSAKeyPair = ValidateFactory.createNonNullString();
+    BigInteger SerialNumber = BigInteger.valueOf(0L);
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.createSelfSigned("secret", BigInteger.valueOf(0L), "Name", 1, 1);
+    Cert.createSelfSigned(
+        PEMEncodedRSAKeyPair, SerialNumber, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**
@@ -691,9 +932,12 @@ public class CertDiffblueTest {
   public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEM()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String subjectName = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR("Hello from the Dreaming Spires", "Signing RSAKey Pair PEM");
+    Cert.generateCSR(subjectName, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -709,25 +953,8 @@ public class CertDiffblueTest {
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
     // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR("Hello from the Dreaming Spires", null);
-  }
-
-  /**
-   * Test {@link Cert#generateCSR(String, String)} with {@code subjectName}, {@code
-   * SigningRSAKeyPairPEM}.
-   *
-   * <p>Method under test: {@link Cert#generateCSR(String, String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.generateCSR(String, String)"})
-  public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEM3()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
     thrown.expect(SymphonyPEMFormatException.class);
-    Cert.generateCSR("", "Signing RSAKey Pair PEM");
+    Cert.generateCSR("", ValidateFactory.createNonNullString());
   }
 
   /**
@@ -742,10 +969,13 @@ public class CertDiffblueTest {
   public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEMSignatureAlgorithm()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String subjectName = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR(
-        "Hello from the Dreaming Spires", "Signing RSAKey Pair PEM", "Signature Algorithm");
+    Cert.generateCSR(subjectName, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -760,26 +990,12 @@ public class CertDiffblueTest {
   public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEMSignatureAlgorithm2()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR("Hello from the Dreaming Spires", null, "Signature Algorithm");
-  }
+    // Arrange
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
 
-  /**
-   * Test {@link Cert#generateCSR(String, String, String)} with {@code subjectName}, {@code
-   * SigningRSAKeyPairPEM}, {@code signatureAlgorithm}.
-   *
-   * <p>Method under test: {@link Cert#generateCSR(String, String, String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.generateCSR(String, String, String)"})
-  public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEMSignatureAlgorithm3()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Act and Assert
     thrown.expect(SymphonyPEMFormatException.class);
-    Cert.generateCSR("", "Signing RSAKey Pair PEM", "Signature Algorithm");
+    Cert.generateCSR("", SigningRSAKeyPairPEM, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -798,9 +1014,36 @@ public class CertDiffblueTest {
   public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEMSignatureAlgorithm_whenNull()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String subjectName = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR(null, "Signing RSAKey Pair PEM", "Signature Algorithm");
+    Cert.generateCSR(subjectName, null, ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link Cert#generateCSR(String, String, String)} with {@code subjectName}, {@code
+   * SigningRSAKeyPairPEM}, {@code signatureAlgorithm}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#generateCSR(String, String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.generateCSR(String, String, String)"})
+  public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEMSignatureAlgorithm_whenNull2()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.generateCSR(null, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -821,7 +1064,28 @@ public class CertDiffblueTest {
           UnsupportedEncodingException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.generateCSR(null, "Signing RSAKey Pair PEM");
+    Cert.generateCSR(ValidateFactory.createNonNullString(), null);
+  }
+
+  /**
+   * Test {@link Cert#generateCSR(String, String)} with {@code subjectName}, {@code
+   * SigningRSAKeyPairPEM}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#generateCSR(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.generateCSR(String, String)"})
+  public void testGenerateCSRWithSubjectNameSigningRSAKeyPairPEM_whenNull2()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.generateCSR(null, ValidateFactory.createNonNullString());
   }
 
   /**
@@ -861,7 +1125,7 @@ public class CertDiffblueTest {
    * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
    *
    * <ul>
-   *   <li>When {@code CSRPEM}.
+   *   <li>When {@code null}.
    * </ul>
    *
    * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
@@ -869,54 +1133,16 @@ public class CertDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
-  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenCsrpem()
+  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenNull()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", "Signing RSAKey Pair PEM", "Signing Cert PEM", null, 1, 1);
-  }
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
 
-  /**
-   * Test {@link Cert#signCSR(String, String, String, BigInteger, int, int)} with {@code String},
-   * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
-  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenCsrpem2()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", "Signing RSAKey Pair PEM", null, BigInteger.valueOf(1L), 1, 1);
-  }
-
-  /**
-   * Test {@link Cert#signCSR(String, String, String, BigInteger, int, int)} with {@code String},
-   * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
-  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenCsrpem3()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", null, "Signing Cert PEM", BigInteger.valueOf(1L), 1, 1);
+    Cert.signCSR(CSRPEM, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString(), null, 1, 1);
   }
 
   /**
@@ -932,12 +1158,100 @@ public class CertDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
-  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenNull()
+  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenNull2()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.signCSR(null, "Signing RSAKey Pair PEM", "Signing Cert PEM", BigInteger.valueOf(1L), 1, 1);
+    Cert.signCSR(CSRPEM, ValidateFactory.createNonNullString(), null, BigInteger.valueOf(1L), 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, BigInteger, int, int)} with {@code String},
+   * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
+  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenNull3()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(CSRPEM, null, ValidateFactory.createNonNullString(), BigInteger.valueOf(1L), 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, BigInteger, int, int)} with {@code String},
+   * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
+  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenNull4()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(
+        null,
+        SigningRSAKeyPairPEM,
+        ValidateFactory.createNonNullString(),
+        BigInteger.valueOf(1L),
+        1,
+        1);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, BigInteger, int, int)} with {@code String},
+   * {@code String}, {@code String}, {@code BigInteger}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When valueOf zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, BigInteger, int, int)"})
+  public void testSignCSRWithStringStringStringBigIntegerIntInt_whenValueOfZero()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(
+        CSRPEM,
+        SigningRSAKeyPairPEM,
+        ValidateFactory.createNonNullString(),
+        BigInteger.valueOf(0L),
+        1,
+        1);
   }
 
   /**
@@ -956,44 +1270,17 @@ public class CertDiffblueTest {
   public void testSignCSRWithStringStringStringBigIntegerIntInt_whenZero()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR(
-        "CSRPEM", "Signing RSAKey Pair PEM", "Signing Cert PEM", BigInteger.valueOf(1L), 1, 0);
-  }
-
-  /**
-   * Test {@link Cert#signCSR(String, String, String, BigInteger, String, Extensions, int, int)}
-   * with {@code String}, {@code String}, {@code String}, {@code BigInteger}, {@code String}, {@code
-   * Extensions}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, String,
-   * Extensions, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "String Cert.signCSR(String, String, String, BigInteger, String, Extensions, int, int)"
-  })
-  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt_whenCsrpem()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
     // Arrange
-    BigInteger SerialNum = BigInteger.valueOf(1L);
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.signCSR(
-        "CSRPEM",
-        "Signing RSAKey Pair PEM",
-        "Signing Cert PEM",
-        SerialNum,
-        "Sig Alg",
-        new Extensions(),
+        CSRPEM,
+        SigningRSAKeyPairPEM,
+        ValidateFactory.createNonNullString(),
+        BigInteger.valueOf(1L),
         1,
         0);
   }
@@ -1003,10 +1290,6 @@ public class CertDiffblueTest {
    * with {@code String}, {@code String}, {@code String}, {@code BigInteger}, {@code String}, {@code
    * Extensions}, {@code int}, {@code int}.
    *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
    * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, String,
    * Extensions, int, int)}
    */
@@ -1015,15 +1298,20 @@ public class CertDiffblueTest {
   @MethodsUnderTest({
     "String Cert.signCSR(String, String, String, BigInteger, String, Extensions, int, int)"
   })
-  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt_whenCsrpem2()
+  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
     // Arrange
-    BigInteger SerialNum = BigInteger.valueOf(1L);
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+    String SigningCertPEM = ValidateFactory.createNonNullString();
+    BigInteger SerialNum = BigInteger.valueOf(0L);
+    String sigAlg = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", null, "Signing Cert PEM", SerialNum, "Sig Alg", new Extensions(), 1, 0);
+    Cert.signCSR(
+        CSRPEM, SigningRSAKeyPairPEM, SigningCertPEM, SerialNum, sigAlg, new Extensions(), 1, 1);
   }
 
   /**
@@ -1032,7 +1320,7 @@ public class CertDiffblueTest {
    * Extensions}, {@code int}, {@code int}.
    *
    * <ul>
-   *   <li>When {@code CSRPEM}.
+   *   <li>When valueOf one.
    * </ul>
    *
    * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, String,
@@ -1043,94 +1331,20 @@ public class CertDiffblueTest {
   @MethodsUnderTest({
     "String Cert.signCSR(String, String, String, BigInteger, String, Extensions, int, int)"
   })
-  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt_whenCsrpem3()
+  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt_whenValueOfOne()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
     // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+    String SigningCertPEM = ValidateFactory.createNonNullString();
     BigInteger SerialNum = BigInteger.valueOf(1L);
+    String sigAlg = ValidateFactory.createNonNullString();
 
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.signCSR(
-        "CSRPEM", "Signing RSAKey Pair PEM", null, SerialNum, "Sig Alg", new Extensions(), 1, 0);
-  }
-
-  /**
-   * Test {@link Cert#signCSR(String, String, String, BigInteger, String, Extensions, int, int)}
-   * with {@code String}, {@code String}, {@code String}, {@code BigInteger}, {@code String}, {@code
-   * Extensions}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, BigInteger, String,
-   * Extensions, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "String Cert.signCSR(String, String, String, BigInteger, String, Extensions, int, int)"
-  })
-  public void testSignCSRWithStringStringStringBigIntegerStringExtensionsIntInt_whenNull()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange
-    BigInteger SerialNum = BigInteger.valueOf(1L);
-
-    // Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR(
-        null,
-        "Signing RSAKey Pair PEM",
-        "Signing Cert PEM",
-        SerialNum,
-        "Sig Alg",
-        new Extensions(),
-        1,
-        0);
-  }
-
-  /**
-   * Test {@link Cert#signCSR(String, String, String, int, int, int)} with {@code String}, {@code
-   * String}, {@code String}, {@code int}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, int, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.signCSR(String, String, String, int, int, int)"})
-  public void testSignCSRWithStringStringStringIntIntInt_whenCsrpem()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", "Signing RSAKey Pair PEM", null, 10, 1, 1);
-  }
-
-  /**
-   * Test {@link Cert#signCSR(String, String, String, int, int, int)} with {@code String}, {@code
-   * String}, {@code String}, {@code int}, {@code int}, {@code int}.
-   *
-   * <ul>
-   *   <li>When {@code CSRPEM}.
-   * </ul>
-   *
-   * <p>Method under test: {@link Cert#signCSR(String, String, String, int, int, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String Cert.signCSR(String, String, String, int, int, int)"})
-  public void testSignCSRWithStringStringStringIntIntInt_whenCsrpem2()
-      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", null, "Signing Cert PEM", 10, 1, 1);
+        CSRPEM, SigningRSAKeyPairPEM, SigningCertPEM, SerialNum, sigAlg, new Extensions(), 1, 0);
   }
 
   /**
@@ -1149,9 +1363,60 @@ public class CertDiffblueTest {
   public void testSignCSRWithStringStringStringIntIntInt_whenNull()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.signCSR(null, "Signing RSAKey Pair PEM", "Signing Cert PEM", 10, 1, 1);
+    Cert.signCSR(CSRPEM, ValidateFactory.createNonNullString(), null, 10, 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, int, int, int)} with {@code String}, {@code
+   * String}, {@code String}, {@code int}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, int, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, int, int, int)"})
+  public void testSignCSRWithStringStringStringIntIntInt_whenNull2()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(CSRPEM, null, ValidateFactory.createNonNullString(), 10, 1, 1);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, int, int, int)} with {@code String}, {@code
+   * String}, {@code String}, {@code int}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, int, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, int, int, int)"})
+  public void testSignCSRWithStringStringStringIntIntInt_whenNull3()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(null, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString(), 10, 1, 1);
   }
 
   /**
@@ -1170,8 +1435,37 @@ public class CertDiffblueTest {
   public void testSignCSRWithStringStringStringIntIntInt_whenZero()
       throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
           UnsupportedEncodingException {
-    // Arrange, Act and Assert
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
     thrown.expect(SymphonyInputException.class);
-    Cert.signCSR("CSRPEM", "Signing RSAKey Pair PEM", "Signing Cert PEM", 10, 1, 0);
+    Cert.signCSR(CSRPEM, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString(), 10, 1, 0);
+  }
+
+  /**
+   * Test {@link Cert#signCSR(String, String, String, int, int, int)} with {@code String}, {@code
+   * String}, {@code String}, {@code int}, {@code int}, {@code int}.
+   *
+   * <ul>
+   *   <li>When zero.
+   * </ul>
+   *
+   * <p>Method under test: {@link Cert#signCSR(String, String, String, int, int, int)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String Cert.signCSR(String, String, String, int, int, int)"})
+  public void testSignCSRWithStringStringStringIntIntInt_whenZero2()
+      throws SymphonyInputException, SymphonyPEMFormatException, SymphonySignatureException,
+          UnsupportedEncodingException {
+    // Arrange
+    String CSRPEM = ValidateFactory.createNonNullString();
+    String SigningRSAKeyPairPEM = ValidateFactory.createNonNullString();
+
+    // Act and Assert
+    thrown.expect(SymphonyInputException.class);
+    Cert.signCSR(CSRPEM, SigningRSAKeyPairPEM, ValidateFactory.createNonNullString(), 0, 1, 1);
   }
 }

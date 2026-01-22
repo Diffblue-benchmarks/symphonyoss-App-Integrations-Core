@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class SymphonyRevokedCertExceptionDiffblueTest {
@@ -18,10 +19,10 @@ public class SymphonyRevokedCertExceptionDiffblueTest {
   public void testNewSymphonyRevokedCertException() {
     // Arrange and Act
     SymphonyRevokedCertException actualSymphonyRevokedCertException =
-        new SymphonyRevokedCertException("An error occurred");
+        new SymphonyRevokedCertException(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("An error occurred", actualSymphonyRevokedCertException.getMessage());
+    assertEquals("validString", actualSymphonyRevokedCertException.getMessage());
     assertNull(actualSymphonyRevokedCertException.getCause());
     assertEquals(0, actualSymphonyRevokedCertException.getSuppressed().length);
   }

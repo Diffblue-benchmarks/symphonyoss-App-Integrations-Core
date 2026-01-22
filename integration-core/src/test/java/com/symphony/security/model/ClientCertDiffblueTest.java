@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.ClientCertException;
+import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -119,16 +120,15 @@ public class ClientCertDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void ClientCert.setClientCertPEM(String)"})
-  public void testSetClientCertPEM() throws ClientCertException, UnsupportedEncodingException {
+  public void testSetClientCertPEM() throws UnsupportedEncodingException {
     // Arrange
-    ClientCert clientCert =
-        new ClientCert(1L, 1L, 1, "AXAXAXAX".getBytes("UTF-8"), "AXAXAXAX".getBytes("UTF-8"));
+    ClientCert createClientCertResult = ClientCertFactory.createClientCert();
 
     // Act
-    clientCert.setClientCertPEM("Client Cert PEM");
+    createClientCertResult.setClientCertPEM(ValidateFactory.createNonNullString());
 
     // Assert
-    assertEquals("Client Cert PEM", clientCert.getClientCertPEM());
-    assertArrayEquals("Client Cert PEM".getBytes("UTF-8"), clientCert.getClientCert());
+    assertEquals("validString", createClientCertResult.getClientCertPEM());
+    assertArrayEquals("validString".getBytes("UTF-8"), createClientCertResult.getClientCert());
   }
 }

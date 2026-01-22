@@ -3,6 +3,7 @@ package com.symphony.security.model;
 import static org.junit.Assert.assertEquals;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 
 public class ThreadRotationIdInfoDiffblueTest {
@@ -30,13 +31,14 @@ public class ThreadRotationIdInfoDiffblueTest {
   })
   public void testGettersAndSetters() {
     // Arrange and Act
-    ThreadRotationIdInfo actualThreadRotationIdInfo = new ThreadRotationIdInfo("42", 1, 1, 1);
+    ThreadRotationIdInfo actualThreadRotationIdInfo =
+        new ThreadRotationIdInfo(ValidateFactory.createNonNullString(), 1, 1, 1);
     int actualAcceptedRotationId = actualThreadRotationIdInfo.getAcceptedRotationId();
     int actualAcceptedRotationRange = actualThreadRotationIdInfo.getAcceptedRotationRange();
     int actualRetiredRotationId = actualThreadRotationIdInfo.getRetiredRotationId();
 
     // Assert
-    assertEquals("42", actualThreadRotationIdInfo.getStreamId());
+    assertEquals("validString", actualThreadRotationIdInfo.getStreamId());
     assertEquals(1, actualAcceptedRotationId);
     assertEquals(1, actualAcceptedRotationRange);
     assertEquals(1, actualRetiredRotationId);
