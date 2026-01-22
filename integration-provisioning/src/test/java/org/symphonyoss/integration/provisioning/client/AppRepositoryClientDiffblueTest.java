@@ -1,5 +1,7 @@
 package org.symphonyoss.integration.provisioning.client;
 
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
@@ -27,6 +29,46 @@ public class AppRepositoryClientDiffblueTest {
   @MockBean private AuthenticationProxy authenticationProxy;
 
   @MockBean private SymphonyHttpApiClient symphonyHttpApiClient;
+
+  /**
+   * Test {@link AppRepositoryClient#getAppsAvailable(String)}.
+   *
+   * <ul>
+   *   <li>Given createAppRepositoryClient.
+   *   <li>Then return Empty.
+   * </ul>
+   *
+   * <p>Method under test: {@link AppRepositoryClient#getAppsAvailable(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.util.List AppRepositoryClient.getAppsAvailable(String)"})
+  public void testGetAppsAvailable_givenCreateAppRepositoryClient_thenReturnEmpty()
+      throws AppRepositoryClientException {
+    // Arrange, Act and Assert
+    assertTrue(
+        AppRepositoryClientFactory.createAppRepositoryClient().getAppsAvailable("42").isEmpty());
+  }
+
+  /**
+   * Test {@link AppRepositoryClient#getAppByAppGroupId(String, String)}.
+   *
+   * <ul>
+   *   <li>Given createAppRepositoryClient.
+   *   <li>Then return {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AppRepositoryClient#getAppByAppGroupId(String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.util.Map AppRepositoryClient.getAppByAppGroupId(String, String)"})
+  public void testGetAppByAppGroupId_givenCreateAppRepositoryClient_thenReturnNull()
+      throws AppRepositoryClientException {
+    // Arrange, Act and Assert
+    assertNull(
+        AppRepositoryClientFactory.createAppRepositoryClient().getAppByAppGroupId("42", "42"));
+  }
 
   /**
    * Test {@link AppRepositoryClient#createNewApp(AppStoreWrapper, String)}.

@@ -1,0 +1,160 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  ===============================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.provisioning
+INFO  - org.symphonyoss.integration.provisioning.client
+INFO  - org.symphonyoss.integration.provisioning.client.model
+INFO  - org.symphonyoss.integration.provisioning.exception
+INFO  - org.symphonyoss.integration.provisioning.properties
+INFO  - org.symphonyoss.integration.provisioning.service
+INFO  Gathering methods to test...
+WARN  E199: Libraries with limited support found
+      Libraries are on the classpath that have only limited support by
+      Diffblue Cover:
+      - PowerMock 1.6.1
+      For code that uses these libraries fewer or lower quality tests may be written.
+INFO  Found 102 callable methods in 30 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/30] org.symphonyoss.integration.provisioning.IntegrationProvisioningApp
+INFO   [1/30]   Tests created: 5
+INFO   [2/30] org.symphonyoss.integration.provisioning.IntegrationProvisioningService
+INFO   [2/30]   Tests created: 1
+INFO   [3/30] org.symphonyoss.integration.provisioning.client.AppRepositoryClient
+INFO   [3/30]   Tests created: 5
+INFO   [4/30] org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper
+INFO   [4/30]   Tests created: 1
+INFO   [5/30] org.symphonyoss.integration.provisioning.client.model.AppStoreBuilder
+INFO   [5/30]   Tests created: 1
+INFO   [6/30] org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper
+INFO   [6/30]   Tests created: 1
+INFO   [7/30] org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper
+INFO   [7/30]   Tests created: 1
+INFO   [8/30] org.symphonyoss.integration.provisioning.exception.AppRepositoryClientException
+INFO   [8/30]   Tests created: 1
+INFO   [9/30] org.symphonyoss.integration.provisioning.exception.ApplicationProvisioningException
+INFO   [9/30]   Tests created: 6
+INFO  [10/30] org.symphonyoss.integration.provisioning.exception.CompanyCertificateException
+INFO  [10/30]   Tests created: 6
+INFO  [11/30] org.symphonyoss.integration.provisioning.exception.ConfigurationProvisioningException
+INFO  [11/30]   Tests created: 4
+INFO  [12/30] org.symphonyoss.integration.provisioning.exception.IntegrationProvisioningAuthException
+INFO  [12/30]   Tests created: 4
+INFO  [13/30] org.symphonyoss.integration.provisioning.exception.KeyPairException
+INFO  [13/30]   Tests created: 6
+INFO  [14/30] org.symphonyoss.integration.provisioning.exception.UpdateUserException
+INFO  [14/30]   Tests created: 4
+INFO  [15/30] org.symphonyoss.integration.provisioning.exception.UserSearchException
+INFO  [15/30]   Tests created: 6
+INFO  [16/30] org.symphonyoss.integration.provisioning.exception.UsernameMismatchException
+INFO  [16/30]   Tests created: 3
+INFO  [17/30] org.symphonyoss.integration.provisioning.properties.ApplicationProperties
+INFO  [17/30]   Tests created: 0
+INFO  [18/30] org.symphonyoss.integration.provisioning.properties.CompanyCertificateProperties
+INFO  [18/30]   Tests created: 0
+INFO  [19/30] org.symphonyoss.integration.provisioning.properties.ConfigurationProvisioningProperties
+INFO  [19/30]   Tests created: 0
+INFO  [20/30] org.symphonyoss.integration.provisioning.properties.IntegrationProvisioningProperties
+INFO  [20/30]   Tests created: 0
+INFO  [21/30] org.symphonyoss.integration.provisioning.properties.KeyPairProperties
+INFO  [21/30]   Tests created: 0
+INFO  [22/30] org.symphonyoss.integration.provisioning.properties.UserProperties
+INFO  [22/30]   Tests created: 0
+INFO  [23/30] org.symphonyoss.integration.provisioning.service.AppKeyPairService
+INFO  [23/30]   Tests created: 1
+INFO  [24/30] org.symphonyoss.integration.provisioning.service.ApplicationService
+INFO  [24/30]   Tests created: 5
+INFO  [25/30] org.symphonyoss.integration.provisioning.service.AuthenticationService
+INFO  [25/30]   Tests created: 4
+INFO  [26/30] org.symphonyoss.integration.provisioning.service.CompanyCertificateService
+INFO  [26/30]   Tests created: 29
+INFO  [27/30] org.symphonyoss.integration.provisioning.service.ConfigurationProvisioningService
+INFO  [27/30]   Tests created: 9
+INFO  [28/30] org.symphonyoss.integration.provisioning.service.KeyPairService
+INFO  [28/30]   Tests created: 5
+INFO  [29/30] org.symphonyoss.integration.provisioning.service.UserKeyPairService
+INFO  [29/30]   Tests created: 1
+INFO  [30/30] org.symphonyoss.integration.provisioning.service.UserService
+INFO  [30/30]   Tests created: 12
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  ------------------------------------------------------------------------------------------------
+INFO  Total:                                             102 methods
+INFO  121 tests created for:                              80 methods
+INFO  
+INFO  Tested indirectly via other methods:                16 methods
+INFO     16 T005: Trivial constructor
+INFO  Not unit-testable:                                   1 method
+INFO      1 T006: Main method
+INFO  No tests created for:                                5 methods
+INFO      2 R011: Sandboxing policy violation
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO    
+INFO  All 121 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 619 of 822 lines to cover (75.3%)
+INFO  Diffblue tests cover 153 of 822 lines to cover (18.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/report.json
+INFO  
+WARN  One or more warnings were logged, please review them in the log file
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T141215.log
+INFO  Finished in 6m 16s
