@@ -1,0 +1,79 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  ==================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.auth.api.client
+INFO  - org.symphonyoss.integration.auth.api.exception
+INFO  - org.symphonyoss.integration.auth.api.model
+INFO  - org.symphonyoss.integration.auth.api.properties
+INFO  Gathering methods to test...
+INFO  Found 27 callable methods in 10 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/10] org.symphonyoss.integration.auth.api.client.AuthenticationApiClient
+INFO   [1/10]   Tests created: 2
+INFO   [2/10] org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient
+INFO   [2/10]   Tests created: 9
+INFO   [3/10] org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient
+INFO   [3/10]   Tests created: 0
+INFO   [4/10] org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient
+INFO   [4/10]   Tests created: 1
+INFO   [5/10] org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient
+INFO   [5/10]   Tests created: 0
+INFO   [6/10] org.symphonyoss.integration.auth.api.exception.InvalidAppTokenException
+INFO   [6/10]   Tests created: 1
+INFO   [7/10] org.symphonyoss.integration.auth.api.exception.UnauthorizedAppException
+INFO   [7/10]   Tests created: 1
+INFO   [8/10] org.symphonyoss.integration.auth.api.exception.UnexpectedAppAuthenticationException
+INFO   [8/10]   Tests created: 1
+INFO   [9/10] org.symphonyoss.integration.auth.api.model.Token
+INFO   [9/10]   Tests created: 1
+INFO  [10/10] org.symphonyoss.integration.auth.api.properties.AuthApiClientProperties
+INFO  [10/10]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  ---------------------------------------------------------------------------------------------------
+INFO  Total:                                              27 methods
+INFO  16 tests created for:                               17 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                6 methods
+INFO      6 R026: Failed to create Spring context
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  All 16 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 91 of 98 lines to cover (92.9%)
+INFO  Diffblue tests cover 73 of 98 lines to cover (74.5%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260121T165049.log
+INFO  Finished in 1m 21s
