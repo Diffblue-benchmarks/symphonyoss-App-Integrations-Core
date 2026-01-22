@@ -1,0 +1,95 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-config
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-config
+INFO  =========================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.config
+INFO  - org.symphonyoss.integration.config.exception
+INFO  - org.symphonyoss.integration.config.model
+INFO  - org.symphonyoss.integration.config.properties
+INFO  Gathering methods to test...
+INFO  Found 33 callable methods in 12 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/12] org.symphonyoss.integration.config.LocalIntegrationService
+INFO   [1/12]   Tests created: 16
+INFO   [2/12] org.symphonyoss.integration.config.RemoteIntegrationService
+INFO   [2/12]   Tests created: 12
+INFO   [3/12] org.symphonyoss.integration.config.exception.ConfigurationNotFoundException
+INFO   [3/12]   Tests created: 1
+INFO   [4/12] org.symphonyoss.integration.config.exception.InitializationConfigException
+INFO   [4/12]   Tests created: 1
+INFO   [5/12] org.symphonyoss.integration.config.exception.InstanceNotFoundException
+INFO   [5/12]   Tests created: 1
+INFO   [6/12] org.symphonyoss.integration.config.exception.InvalidConfigurationIdException
+INFO   [6/12]   Tests created: 1
+INFO   [7/12] org.symphonyoss.integration.config.exception.InvalidInstanceIdException
+INFO   [7/12]   Tests created: 1
+INFO   [8/12] org.symphonyoss.integration.config.exception.SaveConfigurationException
+INFO   [8/12]   Tests created: 1
+INFO   [9/12] org.symphonyoss.integration.config.exception.SaveInstanceException
+INFO   [9/12]   Tests created: 1
+INFO  [10/12] org.symphonyoss.integration.config.model.IntegrationRepository
+INFO  [10/12]   Tests created: 12
+INFO  [11/12] org.symphonyoss.integration.config.properties.LocalIntegrationServiceProperties
+INFO  [11/12]   Tests created: 0
+INFO  [12/12] org.symphonyoss.integration.config.properties.RemoteIntegrationServiceProperties
+INFO  [12/12]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-config
+INFO  ------------------------------------------------------------------------------------------
+INFO  Total:                                              33 methods
+INFO  47 tests created for:                               28 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                1 method
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO    
+INFO  All 47 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 215 of 231 lines to cover (93.1%)
+INFO  Diffblue tests cover 14 of 231 lines to cover (6.1%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T101750.log
+INFO  Finished in 6m 6s
