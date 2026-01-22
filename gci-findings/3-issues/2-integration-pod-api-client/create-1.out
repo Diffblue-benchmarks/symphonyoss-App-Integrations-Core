@@ -1,0 +1,176 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  =================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.pod.api.client
+INFO  - org.symphonyoss.integration.pod.api.model
+INFO  - org.symphonyoss.integration.pod.api.properties
+INFO  Gathering methods to test...
+INFO  Found 252 callable methods in 45 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/45] org.symphonyoss.integration.pod.api.client.AppEntitlementApiClient
+INFO   [1/45]   Tests created: 4
+INFO   [2/45] org.symphonyoss.integration.pod.api.client.BaseIntegrationInstanceApiClient
+INFO   [2/45]   Tests created: 25
+INFO   [3/45] org.symphonyoss.integration.pod.api.client.BasePodApiClient
+INFO   [3/45]   Tests created: 3
+INFO   [4/45] org.symphonyoss.integration.pod.api.client.IntegrationApiClient
+INFO   [4/45]   Tests created: 27
+INFO   [5/45] org.symphonyoss.integration.pod.api.client.IntegrationAuthApiClient
+INFO   [5/45]   Tests created: 25
+INFO   [6/45] org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient
+INFO   [6/45]   Tests created: 0
+INFO   [7/45] org.symphonyoss.integration.pod.api.client.IntegrationInstanceAdminApiClient
+INFO   [7/45]   Tests created: 1
+INFO   [8/45] org.symphonyoss.integration.pod.api.client.IntegrationInstanceApiClient
+INFO   [8/45]   Tests created: 7
+INFO   [9/45] org.symphonyoss.integration.pod.api.client.PodHttpApiClient
+INFO   [9/45]   Tests created: 0
+INFO  [10/45] org.symphonyoss.integration.pod.api.client.PodInfoClient
+INFO  [10/45]   Tests created: 3
+INFO  [11/45] org.symphonyoss.integration.pod.api.client.RelayApiClient
+INFO  [11/45]   Tests created: 8
+INFO  [12/45] org.symphonyoss.integration.pod.api.client.SecurityApiClient
+INFO  [12/45]   Tests created: 5
+INFO  [13/45] org.symphonyoss.integration.pod.api.client.StreamApiClient
+INFO  [13/45]   Tests created: 7
+INFO  [14/45] org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient
+INFO  [14/45]   Tests created: 0
+INFO  [15/45] org.symphonyoss.integration.pod.api.client.UserApiClient
+INFO  [15/45]   Tests created: 26
+INFO  [16/45] org.symphonyoss.integration.pod.api.model.AppEntitlement
+INFO  [16/45]   Tests created: 1
+INFO  [17/45] org.symphonyoss.integration.pod.api.model.AppEntitlementList
+INFO  [17/45]   Tests created: 1
+INFO  [18/45] org.symphonyoss.integration.pod.api.model.Avatar
+INFO  [18/45]   Tests created: 1
+INFO  [19/45] org.symphonyoss.integration.pod.api.model.AvatarUpdate
+INFO  [19/45]   Tests created: 1
+INFO  [20/45] org.symphonyoss.integration.pod.api.model.CompanyCert
+INFO  [20/45]   Tests created: 1
+INFO  [21/45] org.symphonyoss.integration.pod.api.model.CompanyCertAttributes
+INFO  [21/45]   Tests created: 1
+INFO  [22/45] org.symphonyoss.integration.pod.api.model.CompanyCertDetail
+INFO  [22/45]   Tests created: 1
+INFO  [23/45] org.symphonyoss.integration.pod.api.model.CompanyCertInfo
+INFO  [23/45]   Tests created: 1
+INFO  [24/45] org.symphonyoss.integration.pod.api.model.CompanyCertStatus
+INFO  [24/45]   Tests created: 1
+INFO  [25/45] org.symphonyoss.integration.pod.api.model.CompanyCertStatus$TypeEnum
+INFO  [25/45]   Tests created: 0
+INFO  [26/45] org.symphonyoss.integration.pod.api.model.CompanyCertType
+INFO  [26/45]   Tests created: 1
+INFO  [27/45] org.symphonyoss.integration.pod.api.model.CompanyCertType$TypeEnum
+INFO  [27/45]   Tests created: 0
+INFO  [28/45] org.symphonyoss.integration.pod.api.model.Envelope
+INFO  [28/45]   Tests created: 2
+INFO  [29/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceList
+INFO  [29/45]   Tests created: 1
+INFO  [30/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceSubmissionCreate
+INFO  [30/45]   Tests created: 1
+INFO  [31/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceSubmissionUpdate
+INFO  [31/45]   Tests created: 1
+INFO  [32/45] org.symphonyoss.integration.pod.api.model.IntegrationSettingsList
+INFO  [32/45]   Tests created: 1
+INFO  [33/45] org.symphonyoss.integration.pod.api.model.IntegrationSubmissionCreate
+INFO  [33/45]   Tests created: 1
+INFO  [34/45] org.symphonyoss.integration.pod.api.model.PodInfo
+INFO  [34/45]   Tests created: 5
+INFO  [35/45] org.symphonyoss.integration.pod.api.model.UserAttributes
+INFO  [35/45]   Tests created: 1
+INFO  [36/45] org.symphonyoss.integration.pod.api.model.UserAttributes$AccountTypeEnum
+INFO  [36/45]   Tests created: 0
+INFO  [37/45] org.symphonyoss.integration.pod.api.model.UserAuthorizationDataList
+INFO  [37/45]   Tests created: 1
+INFO  [38/45] org.symphonyoss.integration.pod.api.model.UserCreate
+INFO  [38/45]   Tests created: 1
+INFO  [39/45] org.symphonyoss.integration.pod.api.model.UserDetail
+INFO  [39/45]   Tests created: 1
+INFO  [40/45] org.symphonyoss.integration.pod.api.model.UserPassword
+INFO  [40/45]   Tests created: 3
+INFO  [41/45] org.symphonyoss.integration.pod.api.model.UserSystemInfo
+INFO  [41/45]   Tests created: 1
+INFO  [42/45] org.symphonyoss.integration.pod.api.model.UserSystemInfo$StatusEnum
+INFO  [42/45]   Tests created: 0
+INFO  [43/45] org.symphonyoss.integration.pod.api.properties.AppEntitlementApiClientProperties
+INFO  [43/45]   Tests created: 0
+INFO  [44/45] org.symphonyoss.integration.pod.api.properties.BaseIntegrationInstanceApiClientProperties
+INFO  [44/45]   Tests created: 0
+INFO  [45/45] org.symphonyoss.integration.pod.api.properties.BasePodApiClientProperties
+INFO  [45/45]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  --------------------------------------------------------------------------------------------------
+INFO  Total:                                             252 methods
+INFO  171 tests created for:                             232 methods
+INFO  
+INFO  Tested indirectly via other methods:                 6 methods
+INFO      6 T005: Trivial constructor
+INFO  No tests created for:                                6 methods
+INFO      6 R026: Failed to create Spring context
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO    
+INFO  All 171 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 691 of 779 lines to cover (88.7%)
+INFO  Diffblue tests cover 419 of 779 lines to cover (53.8%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T090314.log
+INFO  Finished in 3m 20s

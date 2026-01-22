@@ -1,0 +1,701 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: issues
+INFO  Output a prioritized list of issues.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  
+INFO  
+INFO  [1/1] Diagnosing issues for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  ====================================================================================================
+INFO  
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Reading report file '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report.json'
+INFO  Copied report file to '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report-20260122T090315.json'
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.getBasePath:()Ljava/lang/String;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: integrationHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'integrationHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.getBasePath(IntegrationHttpApiClient.java:48)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass6038 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient integrationHttpApiClient;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for sun.reflect.NativeMethodAccessorImpl.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: integrationHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'integrationHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.getBasePath(IntegrationHttpApiClient.java:48)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass6061 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient integrationHttpApiClient;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.PodHttpApiClient.getBasePath:()Ljava/lang/String;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: podHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'podHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.PodHttpApiClient.getBasePath(PodHttpApiClient.java:51)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.PodHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass6375 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.PodHttpApiClient podHttpApiClient;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.PodHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: podHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'podHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.PodHttpApiClient.getBasePath(PodHttpApiClient.java:51)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.PodHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass6398 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.PodHttpApiClient podHttpApiClient;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.getBasePath:()Ljava/lang/String;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: symphonyHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symphonyHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.getBasePath(SymphonyHttpApiClient.java:48)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass7319 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient symphonyHttpApiClient;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  R026: Failed to create Spring context
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      Fix the following issue preventing test creation for the following affected methods:
+      org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.getProxy:()Lorg/symphonyoss/integration/model/yaml/ProxyConnectionInfo;
+      
+      Attempt to initialize test context failed with
+      com.diffblue.fuzztest.shared.proxy.BeanInstantiationException: Could not instantiate bean: symphonyHttpApiClient defined in null
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      java.lang.IllegalStateException: Failed to load ApplicationContext
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symphonyHttpApiClient': Invocation of init method failed; nested exception is org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      org.symphonyoss.integration.exception.MissingConfigurationException: 
+      Component: POD
+      Message: Verify the YAML configuration file. No configuration found to the key pod.host
+      Solutions: 
+      No solution has been cataloged for troubleshooting this problem.
+          at org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.getBasePath(SymphonyHttpApiClient.java:48)
+          at org.symphonyoss.integration.api.client.SymphonyApiClient.init(SymphonyApiClient.java:49)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+          at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+          at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+          at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+          at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+          at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+          at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+          at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+          at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+          at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+          at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+          at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+          at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+          at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+          at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384)
+          at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+          at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+          at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+          at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+          at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
+      when running class:
+      package org.symphonyoss.integration.pod.api.client;
+      @org.springframework.test.context.ContextConfiguration(classes = {org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient.class,org.symphonyoss.integration.model.yaml.IntegrationProperties.class})
+      @org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4
+      @org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5
+      public class DiffblueFakeClass7342 {
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.api.client.metrics.ApiMetricsController apiMetricsController;
+        @org.springframework.boot.test.mock.mockito.MockBean org.symphonyoss.integration.authentication.AuthenticationProxy authenticationProxy;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.model.yaml.IntegrationProperties integrationProperties;
+        @org.springframework.beans.factory.annotation.Autowired org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient symphonyHttpApiClient;
+        @org.junit.Test // if JUnit 4
+        @org.junit.jupiter.api.Test // if JUnit 5
+        public void testSpringContextLoads() {}
+      }
+      To avoid this error, consider adding a custom base class to setup static
+      mocking for org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.
+      For details on how to set up a custom base class, please follow this link:
+      https://docs.diffblue.com/features/cover-cli/writing-tests/custom-test-setup
+      See https://diff.blue/R026 to resolve this issue.
+      
+INFO  
+INFO  6 issues were found and displayed
+INFO  Rerun without --prompts to summarise all the issues
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T090736.log
+INFO  Finished in 3s

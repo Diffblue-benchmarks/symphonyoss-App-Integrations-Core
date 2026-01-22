@@ -1,0 +1,27 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: issues
+INFO  Output a prioritized list of issues.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  
+INFO  
+INFO  [1/1] Diagnosing issues for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  ====================================================================================================
+INFO  
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Reading report file '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report.json'
+INFO  Copied report file to '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report-20260122T090315.json'
+INFO  
+INFO  R026: Failed to create Spring context
+INFO  Issues: 6
+INFO  Affected methods: 6
+INFO  
+INFO  6 issues were found, rerun with --prompts to list with actionable advice
+INFO  Rerun with --prompts --limit 10 --skip 10 to restrict which issues are displayed
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T090732.log
+INFO  Finished in 3s
