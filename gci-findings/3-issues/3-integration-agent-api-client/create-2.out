@@ -1,0 +1,71 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  ===================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.agent.api.client
+INFO  - org.symphonyoss.integration.agent.api.client.properties
+INFO  Gathering methods to test...
+INFO  Found 11 callable methods in 7 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO  [1/7] org.symphonyoss.integration.agent.api.client.AgentApiClient
+INFO  [1/7]   Tests created: 0
+INFO  [2/7] org.symphonyoss.integration.agent.api.client.BaseMessageApiClient
+INFO  [2/7]   Tests created: 4
+INFO  [3/7] org.symphonyoss.integration.agent.api.client.V2MessageApiClient
+INFO  [3/7]   Tests created: 1
+INFO  [4/7] org.symphonyoss.integration.agent.api.client.V4MessageApiClient
+INFO  [4/7]   Tests created: 3
+INFO  [5/7] org.symphonyoss.integration.agent.api.client.properties.AgentApiClientProperties
+INFO  [5/7]   Tests created: 0
+INFO  [6/7] org.symphonyoss.integration.agent.api.client.properties.BaseMessageApiClientProperties
+INFO  [6/7]   Tests created: 0
+INFO  [7/7] org.symphonyoss.integration.agent.api.client.properties.V4MessageApiClientProperties
+INFO  [7/7]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  ----------------------------------------------------------------------------------------------------
+INFO  Total:                                              11 methods
+INFO  8 tests created for:                                 3 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                4 methods
+INFO      2 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  All 8 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 60 of 64 lines to cover (93.8%)
+INFO  Diffblue tests cover 42 of 64 lines to cover (65.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T092344.log
+INFO  Finished in 1m 12s
