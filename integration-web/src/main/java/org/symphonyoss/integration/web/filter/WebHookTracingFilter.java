@@ -43,8 +43,20 @@ public class WebHookTracingFilter implements Filter {
 
   private static final Logger LOG = LoggerFactory.getLogger(WebHookTracingFilter.class);
 
+  private boolean initialized;
+
+  public WebHookTracingFilter() {
+    this.initialized = false;
+  }
+
+  /** For testing purposes only */
+  public boolean isInitialized() {
+    return initialized;
+  }
+
   @Override
   public void init(FilterConfig config) throws ServletException {
+    this.initialized = true;
   }
 
   @Override

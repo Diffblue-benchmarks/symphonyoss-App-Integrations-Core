@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.Set;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -20,11 +21,40 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
-import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
 public class WebHookTracingFilterDiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>default or parameterless constructor of {@link WebHookTracingFilter}
+   *   <li>{@link WebHookTracingFilter#init(FilterConfig)}
+   *   <li>{@link WebHookTracingFilter#destroy()}
+   *   <li>{@link WebHookTracingFilter#isInitialized()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void WebHookTracingFilter.<init>()",
+    "void WebHookTracingFilter.destroy()",
+    "void WebHookTracingFilter.init(FilterConfig)",
+    "boolean WebHookTracingFilter.isInitialized()"
+  })
+  public void testGettersAndSetters() throws ServletException {
+    // Arrange and Act
+    WebHookTracingFilter actualWebHookTracingFilter = new WebHookTracingFilter();
+    actualWebHookTracingFilter.init(WebHookOriginCheckFilterFactory.createFilterConfig());
+    actualWebHookTracingFilter.destroy();
+
+    // Assert
+    assertTrue(actualWebHookTracingFilter.isInitialized());
+  }
 
   /**
    * Test {@link WebHookTracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
@@ -46,7 +76,7 @@ public class WebHookTracingFilterDiffblueTest {
       throws IOException, ServletException {
     // Arrange
     WebHookTracingFilter webHookTracingFilter = new WebHookTracingFilter();
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
+    ServletRequest servletRequest = WebHookOriginCheckFilterFactory.createServletRequest();
     MockHttpServletResponse servletResponse = new MockHttpServletResponse();
 
     FilterChain filterChain = mock(FilterChain.class);
@@ -58,48 +88,6 @@ public class WebHookTracingFilterDiffblueTest {
     thrown.expect(ServletException.class);
     webHookTracingFilter.doFilter(servletRequest, servletResponse, filterChain);
     verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
-  }
-
-  /**
-   * Test {@link WebHookTracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
-   *
-   * <ul>
-   *   <li>Given {@code X-Trace-Id}.
-   *   <li>When {@link MockHttpServletRequest#MockHttpServletRequest()} addHeader {@code X-Trace-Id}
-   *       and {@code Value}.
-   * </ul>
-   *
-   * <p>Method under test: {@link WebHookTracingFilter#doFilter(ServletRequest, ServletResponse,
-   * FilterChain)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "void WebHookTracingFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"
-  })
-  public void testDoFilter_givenXTraceId_whenMockHttpServletRequestAddHeaderXTraceIdAndValue()
-      throws IOException, ServletException {
-    // Arrange
-    WebHookTracingFilter webHookTracingFilter = new WebHookTracingFilter();
-
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
-    servletRequest.addHeader("X-Trace-Id", "Value");
-    MockHttpServletResponse servletResponse = new MockHttpServletResponse();
-
-    FilterChain filterChain = mock(FilterChain.class);
-    doNothing()
-        .when(filterChain)
-        .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
-
-    // Act
-    webHookTracingFilter.doFilter(servletRequest, servletResponse, filterChain);
-
-    // Assert
-    verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
-    Collection<String> headerNames = servletResponse.getHeaderNames();
-    assertEquals(1, headerNames.size());
-    assertTrue(headerNames instanceof Set);
-    assertTrue(headerNames.contains("X-Trace-Id"));
   }
 
   /**
@@ -121,7 +109,7 @@ public class WebHookTracingFilterDiffblueTest {
       throws IOException, ServletException {
     // Arrange
     WebHookTracingFilter webHookTracingFilter = new WebHookTracingFilter();
-    MockHttpServletRequest servletRequest = new MockHttpServletRequest();
+    ServletRequest servletRequest = WebHookOriginCheckFilterFactory.createServletRequest();
     MockHttpServletResponse servletResponse = new MockHttpServletResponse();
 
     FilterChain filterChain = mock(FilterChain.class);

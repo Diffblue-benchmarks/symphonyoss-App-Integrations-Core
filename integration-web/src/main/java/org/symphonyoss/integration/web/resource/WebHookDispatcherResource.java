@@ -237,4 +237,9 @@ public class WebHookDispatcherResource extends WebHookResource {
     return ResponseEntity.status(e.getCode()).body(e.getMessage());
   }
 
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
+
 }

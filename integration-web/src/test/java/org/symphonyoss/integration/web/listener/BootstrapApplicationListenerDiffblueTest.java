@@ -1,5 +1,6 @@
 package org.symphonyoss.integration.web.listener;
 
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.atLeast;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -13,6 +14,27 @@ import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEven
 import org.springframework.core.env.StandardEnvironment;
 
 public class BootstrapApplicationListenerDiffblueTest {
+  /**
+   * Test getters and setters.
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>default or parameterless constructor of {@link BootstrapApplicationListener}
+   *   <li>{@link BootstrapApplicationListener#isInitialized()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "void BootstrapApplicationListener.<init>()",
+    "boolean BootstrapApplicationListener.isInitialized()"
+  })
+  public void testGettersAndSetters() {
+    // Arrange, Act and Assert
+    assertTrue(new BootstrapApplicationListener().isInitialized());
+  }
+
   /**
    * Test {@link
    * BootstrapApplicationListener#onApplicationEvent(ApplicationEnvironmentPreparedEvent)} with

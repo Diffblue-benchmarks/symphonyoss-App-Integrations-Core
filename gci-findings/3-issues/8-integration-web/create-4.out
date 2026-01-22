@@ -1,0 +1,284 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-web
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-web
+INFO  ======================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.web
+INFO  - org.symphonyoss.integration.web.exception
+INFO  - org.symphonyoss.integration.web.filter
+INFO  - org.symphonyoss.integration.web.listener
+INFO  - org.symphonyoss.integration.web.metrics
+INFO  - org.symphonyoss.integration.web.properties
+INFO  - org.symphonyoss.integration.web.register
+INFO  - org.symphonyoss.integration.web.resource
+INFO  Gathering methods to test...
+WARN  E199: Libraries with limited support found
+      Libraries are on the classpath that have only limited support by
+      Diffblue Cover:
+      - PowerMock 1.6.1
+      For code that uses these libraries fewer or lower quality tests may be written.
+INFO  Found 94 callable methods in 21 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/21] org.symphonyoss.integration.web.IntegrationBridgeApplication
+INFO   [1/21]   Tests created: 0
+INFO   [2/21] org.symphonyoss.integration.web.exception.IntegrationBridgeUnavailableException
+INFO   [2/21]   Tests created: 5
+INFO   [3/21] org.symphonyoss.integration.web.filter.IntegrationMetricsFilter
+INFO   [3/21]   Tests created: 6
+INFO   [4/21] org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter
+INFO   [4/21]   Tests created: 1
+INFO   [5/21] org.symphonyoss.integration.web.filter.WebHookTracingFilter
+INFO   [5/21]   Tests created: 3
+INFO   [6/21] org.symphonyoss.integration.web.listener.ApplicationReadyListener
+INFO   [6/21]   Tests created: 1
+INFO   [7/21] org.symphonyoss.integration.web.listener.BootstrapApplicationListener
+INFO   [7/21]   Tests created: 3
+INFO   [8/21] org.symphonyoss.integration.web.listener.IntegrationListener
+INFO   [8/21]   Tests created: 2
+INFO   [9/21] org.symphonyoss.integration.web.metrics.RequestMetricsController
+INFO   [9/21]   Tests created: 2
+INFO  [10/21] org.symphonyoss.integration.web.properties.AuthErrorMessageKeys
+INFO  [10/21]   Tests created: 0
+INFO  [11/21] org.symphonyoss.integration.web.properties.WebHookDispatcherResourceProperties
+INFO  [11/21]   Tests created: 0
+INFO  [12/21] org.symphonyoss.integration.web.properties.WebHookOriginCheckFilterProperties
+INFO  [12/21]   Tests created: 0
+INFO  [13/21] org.symphonyoss.integration.web.properties.WebHookResourceProperties
+INFO  [13/21]   Tests created: 0
+INFO  [14/21] org.symphonyoss.integration.web.properties.WebProperties
+INFO  [14/21]   Tests created: 0
+INFO  [15/21] org.symphonyoss.integration.web.register.WebResourcesRegistration
+INFO  [15/21]   Tests created: 4
+INFO  [16/21] org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource
+INFO  [16/21]   Tests created: 0
+INFO  [17/21] org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource
+INFO  [17/21]   Tests created: 0
+2026-01-22T13:55:24,698 ERROR [pool-8-thread-29] WebHookDispatcherResource   - 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+org.symphonyoss.integration.exception.RemoteApiException: 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+	at org.symphonyoss.integration.web.resource.WebHookDispatcherResourceDiffblueTest5423356055031179630.testHandleRemoteApiException_thenReturnBodyIsAString(WebHookDispatcherResourceDiffblueTest5423356055031179630.java:48) ~[test-classes6911324066010604759/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [18/21] org.symphonyoss.integration.web.resource.WebHookDispatcherResource
+INFO  [18/21]   Tests created: 2
+2026-01-22T13:55:40,791 ERROR [pool-8-thread-38]      WebHookResource   - null
+java.lang.Exception
+	at org.symphonyoss.integration.web.resource.WebHookResourceDiffblueTest1945899031618455698.testHandleBadRequest_whenException_thenReturnBodyIsNull(WebHookResourceDiffblueTest1945899031618455698.java:48) ~[test-classes6911324066010604759/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T13:56:03,862 ERROR [pool-8-thread-42]      WebHookResource   - null
+java.lang.Exception
+	at org.symphonyoss.integration.web.resource.WebHookResourceDiffblueTest8514933180716811262.testHandleUnexpectedException_whenException_thenReturnBodyIsUnexpectedException(WebHookResourceDiffblueTest8514933180716811262.java:46) ~[test-classes6911324066010604759/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [19/21] org.symphonyoss.integration.web.resource.WebHookResource
+INFO  [19/21]   Tests created: 18
+INFO  [20/21] org.symphonyoss.integration.web.resource.WebHookWelcomeResource
+INFO  [20/21]   Tests created: 0
+2026-01-22T13:56:30,101 ERROR [pool-8-thread-50] WebResourceExceptionHandler   - 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+org.symphonyoss.integration.exception.RemoteApiException: 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+	at org.symphonyoss.integration.web.resource.WebResourceExceptionHandlerDiffblueTest615200399348152327.testHandleRemoteAPIException_thenReturnBodyMessageIsAString(WebResourceExceptionHandlerDiffblueTest615200399348152327.java:39) ~[test-classes6911324066010604759/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [21/21] org.symphonyoss.integration.web.resource.WebResourceExceptionHandler
+INFO  [21/21]   Tests created: 5
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-web
+INFO  ---------------------------------------------------------------------------------------
+INFO  Total:                                              94 methods
+INFO  52 tests created for:                               52 methods
+INFO  
+INFO  Tested indirectly via other methods:                14 methods
+INFO     14 T005: Trivial constructor
+INFO  Not unit-testable:                                   1 method
+INFO      1 T006: Main method
+INFO  No tests created for:                               27 methods
+INFO      3 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO    
+INFO  All 52 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 470 of 535 lines to cover (87.9%)
+INFO  Diffblue tests cover 191 of 535 lines to cover (35.7%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/report.json
+INFO  
+WARN  One or more warnings were logged, please review them in the log file
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T135313.log
+INFO  Finished in 3m 48s
+2026-01-22T13:57:04,673 INFO  [Thread-16] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@fb1b624: startup date [Thu Jan 22 13:55:24 GMT 2026]; root of context hierarchy
+2026-01-22T13:57:04,673 INFO  [Thread-14] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@4d1a8197: startup date [Thu Jan 22 13:54:52 GMT 2026]; root of context hierarchy
+2026-01-22T13:57:04,673 INFO  [Thread-17] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@520ad378: startup date [Thu Jan 22 13:56:20 GMT 2026]; root of context hierarchy
+2026-01-22T13:57:04,673 INFO  [Thread-15] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@16673ac2: startup date [Thu Jan 22 13:54:59 GMT 2026]; root of context hierarchy

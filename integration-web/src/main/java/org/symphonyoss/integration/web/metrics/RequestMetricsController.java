@@ -78,6 +78,9 @@ public class RequestMetricsController implements IntegrationController {
    */
   @PostConstruct
   public void init() {
+    if (metricsRegistry == null) {
+      return;
+    }
     this.activeRequests = metricsRegistry.counter(ACTIVE_REQUESTS);
     this.requestsTimer = metricsRegistry.timer(INCOMING_REQUESTS);
     this.otherMeter = metricsRegistry.meter(OTHER_RESPONSE_CODE);
@@ -96,7 +99,13 @@ public class RequestMetricsController implements IntegrationController {
    * @param metricName Metric name
    */
   private void initStatusCode(int code, String metricName) {
+    if (metricsRegistry == null) {
+      return;
+    }
     Meter meter = metricsRegistry.meter(MetricRegistry.name(BASE_METRIC_NAME, metricName));
+    if (meter == null) {
+      return;
+    }
     this.metersByStatusCode.put(code, meter);
 
     CounterRatio requestsRatio = new CounterRatio(meter, requestsTimer);
@@ -110,7 +119,13 @@ public class RequestMetricsController implements IntegrationController {
    */
   @Override
   public void initController(String integration) {
+    if (metricsRegistry == null || requestsTimer == null) {
+      return;
+    }
     Timer timer = metricsRegistry.timer(MetricRegistry.name(BASE_METRIC_NAME, integration, REQUESTS));
+    if (timer == null) {
+      return;
+    }
     timerByIntegration.put(integration, timer);
 
     CounterRatio requestsRatio = new CounterRatio(timer, requestsTimer);

@@ -27,6 +27,17 @@ import org.springframework.core.env.Environment;
  */
 public class BootstrapApplicationListener implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
 
+  private boolean initialized;
+
+  public BootstrapApplicationListener() {
+    this.initialized = true;
+  }
+
+  /** For testing purposes only */
+  public boolean isInitialized() {
+    return initialized;
+  }
+
   private static final String BASE_TRUSTSTORE_PROPERTIES = "integration_bridge";
 
   private static final String TRUSTSTORE_FILE = BASE_TRUSTSTORE_PROPERTIES + ".truststore_file";

@@ -5,31 +5,25 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Matchers.isA;
-import static org.mockito.Mockito.anyLong;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import java.util.Map;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.MediaType;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.annotation.DirtiesContext.ClassMode;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.symphonyoss.integration.exception.IntegrationUnavailableException;
 import org.symphonyoss.integration.exception.authentication.ConnectivityException;
 import org.symphonyoss.integration.logging.LogMessageSource;
@@ -39,26 +33,47 @@ import org.symphonyoss.integration.service.IntegrationService;
 import org.symphonyoss.integration.webhook.WebHookPayload;
 import org.symphonyoss.integration.webhook.exception.WebHookUnprocessableEntityException;
 
-@DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
-@RunWith(MockitoJUnitRunner.class)
+@ContextConfiguration(classes = {WebHookDispatcherResource.class})
+@RunWith(SpringJUnit4ClassRunner.class)
 public class WebHookResourceDiffblueTest {
-  @Mock private IntegrationBridge integrationBridge;
+  @MockBean private IntegrationBridge integrationBridge;
 
-  @Mock private IntegrationService integrationService;
+  @MockBean(name = "remoteIntegrationService")
+  private IntegrationService integrationService;
 
-  @Mock private LogMessageSource logMessageSource;
-
-  @Mock private ScheduledExecutorService scheduledExecutorService;
+  @MockBean private LogMessageSource logMessageSource;
 
   @Rule public ExpectedException thrown = ExpectedException.none();
 
-  @InjectMocks private WebHookDispatcherResource webHookDispatcherResource;
+  @Autowired private WebHookResource webHookResource;
+
+  /**
+   * Test {@link WebHookResource#getWebHookIntegration(String)}.
+   *
+   * <p>Method under test: {@link WebHookResource#getWebHookIntegration(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "org.symphonyoss.integration.webhook.WebHookIntegration WebHookResource.getWebHookIntegration(String)"
+  })
+  public void testGetWebHookIntegration() {
+    // Arrange
+    when(integrationBridge.getIntegrationById(Mockito.<String>any()))
+        .thenThrow(new IntegrationUnavailableException("Webhook Dispatcher"));
+
+    // Act and Assert
+    thrown.expect(IntegrationUnavailableException.class);
+    webHookResource.getWebHookIntegration("42");
+    verify(integrationBridge).getIntegrationById(Mockito.<String>any());
+  }
 
   /**
    * Test {@link WebHookResource#getWebHookIntegration(String)}.
    *
    * <ul>
-   *   <li>Then throw {@link IntegrationUnavailableException}.
+   *   <li>Given {@link IntegrationBridge} {@link IntegrationBridge#getIntegrationById(String)}
+   *       return {@code null}.
    * </ul>
    *
    * <p>Method under test: {@link WebHookResource#getWebHookIntegration(String)}
@@ -68,22 +83,18 @@ public class WebHookResourceDiffblueTest {
   @MethodsUnderTest({
     "org.symphonyoss.integration.webhook.WebHookIntegration WebHookResource.getWebHookIntegration(String)"
   })
-  public void testGetWebHookIntegration_thenThrowIntegrationUnavailableException() {
+  public void testGetWebHookIntegration_givenIntegrationBridgeGetIntegrationByIdReturnNull() {
     // Arrange
     when(integrationBridge.getIntegrationById(Mockito.<String>any())).thenReturn(null);
 
     // Act and Assert
     thrown.expect(IntegrationUnavailableException.class);
-    webHookDispatcherResource.getWebHookIntegration("42");
+    webHookResource.getWebHookIntegration("42");
     verify(integrationBridge).getIntegrationById(Mockito.<String>any());
   }
 
   /**
    * Test {@link WebHookResource#checkIntegrationAvailability(String)}.
-   *
-   * <ul>
-   *   <li>Then throw {@link IntegrationUnavailableException}.
-   * </ul>
    *
    * <p>Method under test: {@link WebHookResource#checkIntegrationAvailability(String)}
    */
@@ -92,13 +103,34 @@ public class WebHookResourceDiffblueTest {
   @MethodsUnderTest({
     "org.symphonyoss.integration.webhook.WebHookIntegration WebHookResource.checkIntegrationAvailability(String)"
   })
-  public void testCheckIntegrationAvailability_thenThrowIntegrationUnavailableException() {
+  public void testCheckIntegrationAvailability() {
+    // Arrange
+    when(integrationBridge.getIntegrationById(Mockito.<String>any()))
+        .thenThrow(new IntegrationUnavailableException("Webhook Dispatcher"));
+
+    // Act and Assert
+    thrown.expect(IntegrationUnavailableException.class);
+    webHookResource.checkIntegrationAvailability("42");
+    verify(integrationBridge).getIntegrationById(Mockito.<String>any());
+  }
+
+  /**
+   * Test {@link WebHookResource#checkIntegrationAvailability(String)}.
+   *
+   * <p>Method under test: {@link WebHookResource#checkIntegrationAvailability(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "org.symphonyoss.integration.webhook.WebHookIntegration WebHookResource.checkIntegrationAvailability(String)"
+  })
+  public void testCheckIntegrationAvailability2() {
     // Arrange
     when(integrationBridge.getIntegrationById(Mockito.<String>any())).thenReturn(null);
 
     // Act and Assert
     thrown.expect(IntegrationUnavailableException.class);
-    webHookDispatcherResource.checkIntegrationAvailability("42");
+    webHookResource.checkIntegrationAvailability("42");
     verify(integrationBridge).getIntegrationById(Mockito.<String>any());
   }
 
@@ -134,12 +166,78 @@ public class WebHookResourceDiffblueTest {
 
     // Act
     IntegrationInstance actualConfigurationInstance =
-        webHookDispatcherResource.getConfigurationInstance("42", "42", "Configuration Type");
+        webHookResource.getConfigurationInstance("42", "42", "Configuration Type");
 
     // Assert
     verify(integrationService)
         .getInstanceById(Mockito.<String>any(), Mockito.<String>any(), Mockito.<String>any());
     assertSame(integrationInstance, actualConfigurationInstance);
+  }
+
+  /**
+   * Test {@link WebHookResource#getConfigurationInstance(String, String, String)}.
+   *
+   * <ul>
+   *   <li>Then throw {@link IntegrationUnavailableException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link WebHookResource#getConfigurationInstance(String, String, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "IntegrationInstance WebHookResource.getConfigurationInstance(String, String, String)"
+  })
+  public void testGetConfigurationInstance_thenThrowIntegrationUnavailableException() {
+    // Arrange
+    when(integrationService.getInstanceById(
+            Mockito.<String>any(), Mockito.<String>any(), Mockito.<String>any()))
+        .thenThrow(new IntegrationUnavailableException("Configuration Type"));
+
+    // Act and Assert
+    thrown.expect(IntegrationUnavailableException.class);
+    webHookResource.getConfigurationInstance("42", "42", "Configuration Type");
+    verify(integrationService)
+        .getInstanceById(Mockito.<String>any(), Mockito.<String>any(), Mockito.<String>any());
+  }
+
+  /**
+   * Test {@link WebHookResource#getIntegrationBridge()}.
+   *
+   * <p>Method under test: {@link WebHookResource#getIntegrationBridge()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"IntegrationBridge WebHookResource.getIntegrationBridge()"})
+  public void testGetIntegrationBridge() {
+    // Arrange, Act and Assert
+    assertNull(new WebHookDispatcherResource().getIntegrationBridge());
+  }
+
+  /**
+   * Test {@link WebHookResource#getIntegrationService()}.
+   *
+   * <p>Method under test: {@link WebHookResource#getIntegrationService()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"IntegrationService WebHookResource.getIntegrationService()"})
+  public void testGetIntegrationService() {
+    // Arrange, Act and Assert
+    assertNull(new WebHookDispatcherResource().getIntegrationService());
+  }
+
+  /**
+   * Test {@link WebHookResource#isCircuitClosed()}.
+   *
+   * <p>Method under test: {@link WebHookResource#isCircuitClosed()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean WebHookResource.isCircuitClosed()"})
+  public void testIsCircuitClosed() {
+    // Arrange, Act and Assert
+    assertTrue(webHookResource.isCircuitClosed());
   }
 
   /**
@@ -160,14 +258,12 @@ public class WebHookResourceDiffblueTest {
   })
   public void testRetrieveWebHookPayload_givenName_thenReturnContentTypeSubtypeIsAsterisk() {
     // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
     MockHttpServletRequest request = new MockHttpServletRequest();
     request.addParameter("Name", "42");
 
     // Act
     WebHookPayload actualRetrieveWebHookPayloadResult =
-        webHookDispatcherResource.retrieveWebHookPayload(request, "Not all who wander are lost");
+        webHookResource.retrieveWebHookPayload(request, "Not all who wander are lost");
 
     // Assert
     MediaType contentType = actualRetrieveWebHookPayloadResult.getContentType();
@@ -201,15 +297,13 @@ public class WebHookResourceDiffblueTest {
   })
   public void testRetrieveWebHookPayload_givenValue_thenReturnHeadersSizeIsOne() {
     // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
     MockHttpServletRequest request = new MockHttpServletRequest();
     request.addHeader("42", "Value");
     request.addParameter("Name", "42");
 
     // Act
     WebHookPayload actualRetrieveWebHookPayloadResult =
-        webHookDispatcherResource.retrieveWebHookPayload(request, "Not all who wander are lost");
+        webHookResource.retrieveWebHookPayload(request, "Not all who wander are lost");
 
     // Assert
     Map<String, String> parameters = actualRetrieveWebHookPayloadResult.getParameters();
@@ -237,12 +331,9 @@ public class WebHookResourceDiffblueTest {
     "WebHookPayload WebHookResource.retrieveWebHookPayload(HttpServletRequest, String)"
   })
   public void testRetrieveWebHookPayload_whenMockHttpServletRequest_thenReturnParametersEmpty() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     WebHookPayload actualRetrieveWebHookPayloadResult =
-        webHookDispatcherResource.retrieveWebHookPayload(
+        webHookResource.retrieveWebHookPayload(
             new MockHttpServletRequest(), "Not all who wander are lost");
 
     // Assert
@@ -271,12 +362,9 @@ public class WebHookResourceDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"ResponseEntity WebHookResource.handleBadRequest(Exception)"})
   public void testHandleBadRequest_whenException_thenReturnBodyIsNull() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     ResponseEntity<String> actualHandleBadRequestResult =
-        webHookDispatcherResource.handleBadRequest(new Exception());
+        webHookResource.handleBadRequest(new Exception());
 
     // Assert
     assertNull(actualHandleBadRequestResult.getBody());
@@ -300,12 +388,9 @@ public class WebHookResourceDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"ResponseEntity WebHookResource.handleNotFound(Exception)"})
   public void testHandleNotFound_whenException_thenReturnBodyIsNull() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     ResponseEntity<String> actualHandleNotFoundResult =
-        webHookDispatcherResource.handleNotFound(new Exception());
+        webHookResource.handleNotFound(new Exception());
 
     // Assert
     assertNull(actualHandleNotFoundResult.getBody());
@@ -350,38 +435,9 @@ public class WebHookResourceDiffblueTest {
     assertEquals(503, actualHandleConnectivityExceptionResult.getStatusCodeValue());
     assertEquals(
         HttpStatus.SERVICE_UNAVAILABLE, actualHandleConnectivityExceptionResult.getStatusCode());
+    assertFalse(webHookDispatcherResource.isCircuitClosed());
     assertTrue(actualHandleConnectivityExceptionResult.hasBody());
     assertTrue(actualHandleConnectivityExceptionResult.getHeaders().isEmpty());
-  }
-
-  /**
-   * Test {@link WebHookResource#handleConnectivityException(ConnectivityException)}.
-   *
-   * <ul>
-   *   <li>Then throw {@link IntegrationUnavailableException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link
-   * WebHookResource#handleConnectivityException(ConnectivityException)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "ResponseEntity WebHookResource.handleConnectivityException(ConnectivityException)"
-  })
-  public void testHandleConnectivityException_thenThrowIntegrationUnavailableException() {
-    // Arrange
-    Mockito.<ScheduledFuture<?>>when(
-            scheduledExecutorService.schedule(
-                Mockito.<Runnable>any(), anyLong(), Mockito.<TimeUnit>any()))
-        .thenThrow(new IntegrationUnavailableException("Configuration Type"));
-
-    // Act and Assert
-    thrown.expect(IntegrationUnavailableException.class);
-    webHookDispatcherResource.handleConnectivityException(
-        new ConnectivityException("Component", "Service Name"));
-    verify(scheduledExecutorService)
-        .schedule(isA(Runnable.class), anyLong(), Mockito.<TimeUnit>any());
   }
 
   /**
@@ -398,12 +454,9 @@ public class WebHookResourceDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"ResponseEntity WebHookResource.handleServiceUnavailableException(Exception)"})
   public void testHandleServiceUnavailableException_whenException_thenReturnBodyIsNull() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     ResponseEntity<String> actualHandleServiceUnavailableExceptionResult =
-        webHookDispatcherResource.handleServiceUnavailableException(new Exception());
+        webHookResource.handleServiceUnavailableException(new Exception());
 
     // Assert
     assertNull(actualHandleServiceUnavailableExceptionResult.getBody());
@@ -428,12 +481,9 @@ public class WebHookResourceDiffblueTest {
     "ResponseEntity WebHookResource.handleWebHookUnprocessableEntityException(WebHookUnprocessableEntityException)"
   })
   public void testHandleWebHookUnprocessableEntityException() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     ResponseEntity<String> actualHandleWebHookUnprocessableEntityExceptionResult =
-        webHookDispatcherResource.handleWebHookUnprocessableEntityException(
+        webHookResource.handleWebHookUnprocessableEntityException(
             new WebHookUnprocessableEntityException("An error occurred", "Solutions"));
 
     // Assert
@@ -462,12 +512,9 @@ public class WebHookResourceDiffblueTest {
   @ManagedByDiffblue
   @MethodsUnderTest({"ResponseEntity WebHookResource.handleUnexpectedException(Exception)"})
   public void testHandleUnexpectedException_whenException_thenReturnBodyIsUnexpectedException() {
-    // Arrange
-    WebHookDispatcherResource webHookDispatcherResource = new WebHookDispatcherResource();
-
-    // Act
+    // Arrange and Act
     ResponseEntity<String> actualHandleUnexpectedExceptionResult =
-        webHookDispatcherResource.handleUnexpectedException(new Exception());
+        webHookResource.handleUnexpectedException(new Exception());
 
     // Assert
     assertEquals("Unexpected exception", actualHandleUnexpectedExceptionResult.getBody());

@@ -1,6 +1,7 @@
 package org.symphonyoss.integration.web.resource;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
@@ -60,5 +61,18 @@ public class WebHookDispatcherResourceDiffblueTest {
     assertEquals(1, actualHandleRemoteApiExceptionResult.getStatusCodeValue());
     assertTrue(actualHandleRemoteApiExceptionResult.hasBody());
     assertTrue(actualHandleRemoteApiExceptionResult.getHeaders().isEmpty());
+  }
+
+  /**
+   * Test {@link WebHookDispatcherResource#getLogMessage()}.
+   *
+   * <p>Method under test: {@link WebHookDispatcherResource#getLogMessage()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"LogMessageSource WebHookDispatcherResource.getLogMessage()"})
+  public void testGetLogMessage() {
+    // Arrange, Act and Assert
+    assertNull(new WebHookDispatcherResource().getLogMessage());
   }
 }

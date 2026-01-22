@@ -4,56 +4,30 @@ import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import com.codahale.metrics.Counter;
-import com.codahale.metrics.Meter;
+import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
 import com.codahale.metrics.Timer.Context;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(MockitoJUnitRunner.class)
+@ContextConfiguration(classes = {RequestMetricsController.class})
+@RunWith(SpringJUnit4ClassRunner.class)
 public class RequestMetricsControllerDiffblueTest {
-  @Mock private Counter counter;
+  @MockBean private MetricRegistry metricRegistry;
 
-  @Mock private Meter meter;
-
-  @InjectMocks private RequestMetricsController requestMetricsController;
-
-  @Mock private Timer timer;
-
-  /**
-   * Test {@link RequestMetricsController#startRequest()}.
-   *
-   * <p>Method under test: {@link RequestMetricsController#startRequest()}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"Context RequestMetricsController.startRequest()"})
-  public void testStartRequest() {
-    // Arrange
-    doNothing().when(counter).inc();
-    when(timer.time()).thenReturn(null);
-
-    // Act
-    Context actualStartRequestResult = requestMetricsController.startRequest();
-
-    // Assert
-    verify(counter).inc();
-    verify(timer).time();
-    assertNull(actualStartRequestResult);
-  }
+  @Autowired private RequestMetricsController requestMetricsController;
 
   /**
    * Test {@link RequestMetricsController#startIntegrationExecution(String)}.
    *
    * <ul>
-   *   <li>Given {@link RequestMetricsController} (default constructor).
+   *   <li>When {@code Integration}.
    *   <li>Then return {@code null}.
    * </ul>
    *
@@ -62,69 +36,16 @@ public class RequestMetricsControllerDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"Context RequestMetricsController.startIntegrationExecution(String)"})
-  public void testStartIntegrationExecution_givenRequestMetricsController_thenReturnNull() {
+  public void testStartIntegrationExecution_whenIntegration_thenReturnNull() {
     // Arrange, Act and Assert
-    assertNull(new RequestMetricsController().startIntegrationExecution("Integration"));
-  }
-
-  /**
-   * Test {@link RequestMetricsController#finishRequest(Context, int)}.
-   *
-   * <ul>
-   *   <li>Given {@link Meter} {@link Meter#mark()} does nothing.
-   *   <li>Then calls {@link Meter#mark()}.
-   * </ul>
-   *
-   * <p>Method under test: {@link RequestMetricsController#finishRequest(Context, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void RequestMetricsController.finishRequest(Context, int)"})
-  public void testFinishRequest_givenMeterMarkDoesNothing_thenCallsMark() {
-    // Arrange
-    doNothing().when(counter).dec();
-    doNothing().when(meter).mark();
-
-    Context context = mock(Context.class);
-    doNothing().when(context).close();
-
-    // Act
-    requestMetricsController.finishRequest(context, 1);
-
-    // Assert
-    verify(counter).dec();
-    verify(meter).mark();
-    verify(context).close();
-  }
-
-  /**
-   * Test {@link RequestMetricsController#finishRequest(Context, int)}.
-   *
-   * <ul>
-   *   <li>When {@code null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link RequestMetricsController#finishRequest(Context, int)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void RequestMetricsController.finishRequest(Context, int)"})
-  public void testFinishRequest_whenNull() {
-    // Arrange
-    doNothing().when(counter).dec();
-
-    // Act
-    requestMetricsController.finishRequest(null, 1);
-
-    // Assert
-    verify(counter).dec();
+    assertNull(requestMetricsController.startIntegrationExecution("Integration"));
   }
 
   /**
    * Test {@link RequestMetricsController#finishIntegrationExecution(Context)}.
    *
    * <ul>
-   *   <li>Given {@link RequestMetricsController} (default constructor).
+   *   <li>When {@link Context} {@link Context#close()} does nothing.
    *   <li>Then calls {@link Context#close()}.
    * </ul>
    *
@@ -133,10 +54,8 @@ public class RequestMetricsControllerDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void RequestMetricsController.finishIntegrationExecution(Context)"})
-  public void testFinishIntegrationExecution_givenRequestMetricsController_thenCallsClose() {
+  public void testFinishIntegrationExecution_whenContextCloseDoesNothing_thenCallsClose() {
     // Arrange
-    RequestMetricsController requestMetricsController = new RequestMetricsController();
-
     Context context = mock(Context.class);
     doNothing().when(context).close();
 

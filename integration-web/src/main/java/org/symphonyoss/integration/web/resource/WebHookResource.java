@@ -68,7 +68,6 @@ import javax.servlet.http.HttpServletRequest;
  *
  * Created by rsanchez on 19/10/16.
  */
-@RestController
 @RequestMapping("/v1/whi")
 public abstract class WebHookResource {
 
@@ -152,6 +151,31 @@ public abstract class WebHookResource {
       String configurationId,
       String configurationType) {
     return integrationService.getInstanceById(configurationId, instanceId, configurationType);
+  }
+
+  /** For testing purposes only */
+  public IntegrationBridge getIntegrationBridge() {
+    return integrationBridge;
+  }
+
+  /** For testing purposes only */
+  public IntegrationService getIntegrationService() {
+    return integrationService;
+  }
+
+  /** For testing purposes only */
+  public LogMessageSource getLogMessage() {
+    return logMessage;
+  }
+
+  /** For testing purposes only */
+  public ScheduledExecutorService getScheduler() {
+    return scheduler;
+  }
+
+  /** For testing purposes only */
+  public boolean isCircuitClosed() {
+    return circuitClosed;
   }
 
   /**

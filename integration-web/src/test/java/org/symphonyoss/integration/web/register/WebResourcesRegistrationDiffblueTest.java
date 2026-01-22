@@ -88,9 +88,10 @@ public class WebResourcesRegistrationDiffblueTest {
     Collection urlPatterns = actualWebhookTracingFilterRegistrationResult.getUrlPatterns();
     assertEquals(1, urlPatterns.size());
     assertTrue(urlPatterns instanceof Set);
-    assertTrue(
-        actualWebhookTracingFilterRegistrationResult.getFilter() instanceof WebHookTracingFilter);
+    Filter filter = actualWebhookTracingFilterRegistrationResult.getFilter();
+    assertTrue(filter instanceof WebHookTracingFilter);
     assertFalse(actualWebhookTracingFilterRegistrationResult.isMatchAfter());
+    assertFalse(((WebHookTracingFilter) filter).isInitialized());
     assertTrue(servletNames.isEmpty());
     assertTrue(actualWebhookTracingFilterRegistrationResult.getInitParameters().isEmpty());
     assertTrue(actualWebhookTracingFilterRegistrationResult.isAsyncSupported());

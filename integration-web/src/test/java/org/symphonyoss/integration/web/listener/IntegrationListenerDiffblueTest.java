@@ -9,7 +9,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.symphonyoss.integration.core.bootstrap.IntegrationBootstrapContext;
@@ -20,6 +19,30 @@ public class IntegrationListenerDiffblueTest {
   @MockBean private IntegrationBootstrapContext integrationBootstrapContext;
 
   @Autowired private IntegrationListener integrationListener;
+
+  /**
+   * Test {@link IntegrationListener#contextInitialized(ServletContextEvent)}.
+   *
+   * <ul>
+   *   <li>When createServletContextEvent.
+   *   <li>Then calls {@link IntegrationBootstrapContext#startup()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link IntegrationListener#contextInitialized(ServletContextEvent)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void IntegrationListener.contextInitialized(ServletContextEvent)"})
+  public void testContextInitialized_whenCreateServletContextEvent_thenCallsStartup() {
+    // Arrange
+    doNothing().when(integrationBootstrapContext).startup();
+
+    // Act
+    integrationListener.contextInitialized(IntegrationListenerFactory.createServletContextEvent());
+
+    // Assert
+    verify(integrationBootstrapContext).startup();
+  }
 
   /**
    * Test {@link IntegrationListener#contextDestroyed(ServletContextEvent)}.
@@ -34,7 +57,7 @@ public class IntegrationListenerDiffblueTest {
     doNothing().when(integrationBootstrapContext).shutdown();
 
     // Act
-    integrationListener.contextDestroyed(new ServletContextEvent(new MockServletContext()));
+    integrationListener.contextDestroyed(IntegrationListenerFactory.createServletContextEvent());
 
     // Assert
     verify(integrationBootstrapContext).shutdown();

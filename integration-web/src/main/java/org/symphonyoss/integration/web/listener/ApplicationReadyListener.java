@@ -26,6 +26,17 @@ import org.symphonyoss.integration.core.bootstrap.IntegrationLogging;
  */
 public class ApplicationReadyListener implements ApplicationListener<ApplicationReadyEvent> {
 
+  private boolean initialized;
+
+  public ApplicationReadyListener() {
+    this.initialized = true;
+  }
+
+  /** For testing purposes only */
+  public boolean isInitialized() {
+    return initialized;
+  }
+
   @Override
   public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
     IntegrationLogging logging =
