@@ -482,7 +482,7 @@ public class CertDiffblueTest {
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.createSelfSigned(
-        PEMEncodedRSAKeyPair, 0, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, 1);
+        PEMEncodedRSAKeyPair, 10, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, 0);
   }
 
   /**
@@ -508,7 +508,7 @@ public class CertDiffblueTest {
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
     Cert.createSelfSigned(
-        PEMEncodedRSAKeyPair, 0, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, -1);
+        PEMEncodedRSAKeyPair, 0, CoutrnyCode, Org, ValidateFactory.createNonNullString(), 1, 1);
   }
 
   /**

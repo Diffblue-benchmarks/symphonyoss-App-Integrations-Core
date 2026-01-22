@@ -5,6 +5,7 @@ import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.security.exceptions.InvalidDataException;
 import com.symphony.security.exceptions.SymphonyEncryptionException;
 import com.symphony.security.exceptions.SymphonyInputException;
+import com.symphony.security.helper.CDecryptionHelperFactory;
 import com.symphony.security.utils.ValidateFactory;
 import java.io.UnsupportedEncodingException;
 import org.apache.commons.codec.DecoderException;
@@ -14,6 +15,27 @@ import org.junit.rules.ExpectedException;
 
 public class EntityCryptoHandlerV2DiffblueTest {
   @Rule public ExpectedException thrown = ExpectedException.none();
+
+  /**
+   * Test {@link EntityCryptoHandlerV2#decrypt(String, byte[])}.
+   *
+   * <ul>
+   *   <li>When createEntityStringV1.
+   *   <li>Then throw {@link SymphonyEncryptionException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link EntityCryptoHandlerV2#decrypt(String, byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String EntityCryptoHandlerV2.decrypt(String, byte[])"})
+  public void testDecrypt_whenCreateEntityStringV1_thenThrowSymphonyEncryptionException()
+      throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    EntityCryptoHandlerV2.decrypt(
+        EntityCryptoHandlerFactory.createEntityStringV1(), "AXAXAXAX".getBytes("UTF-8"));
+  }
 
   /**
    * Test {@link EntityCryptoHandlerV2#decrypt(String, byte[])}.
@@ -100,6 +122,28 @@ public class EntityCryptoHandlerV2DiffblueTest {
    * Test {@link EntityCryptoHandlerV2#encrypt(String, byte[])}.
    *
    * <ul>
+   *   <li>When createEntityStringV1.
+   *   <li>Then throw {@link SymphonyEncryptionException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link EntityCryptoHandlerV2#encrypt(String, byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String EntityCryptoHandlerV2.encrypt(String, byte[])"})
+  public void testEncrypt_whenCreateEntityStringV1_thenThrowSymphonyEncryptionException()
+      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
+          UnsupportedEncodingException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    EntityCryptoHandlerV2.encrypt(
+        EntityCryptoHandlerFactory.createEntityStringV1(), "AXAXAXAX".getBytes("UTF-8"));
+  }
+
+  /**
+   * Test {@link EntityCryptoHandlerV2#encrypt(String, byte[])}.
+   *
+   * <ul>
    *   <li>When createNonNullString.
    *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
@@ -162,28 +206,6 @@ public class EntityCryptoHandlerV2DiffblueTest {
    * Test {@link EntityCryptoHandlerV2#encrypt(String, byte[])}.
    *
    * <ul>
-   *   <li>When {@link EntityCiphertextTransportV2#ENTITY_PREFIX}.
-   *   <li>Then throw {@link SymphonyEncryptionException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link EntityCryptoHandlerV2#encrypt(String, byte[])}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String EntityCryptoHandlerV2.encrypt(String, byte[])"})
-  public void testEncrypt_whenEntity_prefix_thenThrowSymphonyEncryptionException()
-      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
-          UnsupportedEncodingException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyEncryptionException.class);
-    EntityCryptoHandlerV2.encrypt(
-        EntityCiphertextTransportV2.ENTITY_PREFIX, "AXAXAXAX".getBytes("UTF-8"));
-  }
-
-  /**
-   * Test {@link EntityCryptoHandlerV2#encrypt(String, byte[])}.
-   *
-   * <ul>
    *   <li>When {@code null}.
    *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
@@ -225,6 +247,49 @@ public class EntityCryptoHandlerV2DiffblueTest {
    * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
    *
    * <ul>
+   *   <li>When createDecryptStringInput.
+   * </ul>
+   *
+   * <p>Method under test: {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String EntityCryptoHandlerV2.getTokenPrefix(String, byte[])"})
+  public void testGetTokenPrefix_whenCreateDecryptStringInput()
+      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
+          UnsupportedEncodingException, DecoderException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    EntityCryptoHandlerV2.getTokenPrefix(
+        CDecryptionHelperFactory.createDecryptStringInput(), "AXAXAXAX".getBytes("UTF-8"));
+  }
+
+  /**
+   * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
+   *
+   * <ul>
+   *   <li>When createEntityStringV1.
+   *   <li>Then throw {@link SymphonyEncryptionException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String EntityCryptoHandlerV2.getTokenPrefix(String, byte[])"})
+  public void testGetTokenPrefix_whenCreateEntityStringV1_thenThrowSymphonyEncryptionException()
+      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
+          UnsupportedEncodingException, DecoderException {
+    // Arrange, Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    EntityCryptoHandlerV2.getTokenPrefix(
+        EntityCryptoHandlerFactory.createEntityStringV1(), "AXAXAXAX".getBytes("UTF-8"));
+  }
+
+  /**
+   * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
+   *
+   * <ul>
    *   <li>When createNonNullString.
    *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
@@ -241,27 +306,6 @@ public class EntityCryptoHandlerV2DiffblueTest {
     thrown.expect(SymphonyEncryptionException.class);
     EntityCryptoHandlerV2.getTokenPrefix(
         ValidateFactory.createNonNullString(), "AXAXAXAX".getBytes("UTF-8"));
-  }
-
-  /**
-   * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
-   *
-   * <ul>
-   *   <li>When createNonNullString.
-   *   <li>Then throw {@link SymphonyEncryptionException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String EntityCryptoHandlerV2.getTokenPrefix(String, byte[])"})
-  public void testGetTokenPrefix_whenCreateNonNullString_thenThrowSymphonyEncryptionException2()
-      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
-          DecoderException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyEncryptionException.class);
-    EntityCryptoHandlerV2.getTokenPrefix(ValidateFactory.createNonNullString(), null);
   }
 
   /**
@@ -289,28 +333,6 @@ public class EntityCryptoHandlerV2DiffblueTest {
    * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
    *
    * <ul>
-   *   <li>When {@link EntityCiphertextTransportV2#ENTITY_PREFIX}.
-   *   <li>Then throw {@link SymphonyEncryptionException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String EntityCryptoHandlerV2.getTokenPrefix(String, byte[])"})
-  public void testGetTokenPrefix_whenEntity_prefix_thenThrowSymphonyEncryptionException()
-      throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
-          UnsupportedEncodingException, DecoderException {
-    // Arrange, Act and Assert
-    thrown.expect(SymphonyEncryptionException.class);
-    EntityCryptoHandlerV2.getTokenPrefix(
-        EntityCiphertextTransportV2.ENTITY_PREFIX, "AXAXAXAX".getBytes("UTF-8"));
-  }
-
-  /**
-   * Test {@link EntityCryptoHandlerV2#getTokenPrefix(String, byte[])}.
-   *
-   * <ul>
    *   <li>When {@code null}.
    *   <li>Then throw {@link SymphonyEncryptionException}.
    * </ul>
@@ -322,10 +344,10 @@ public class EntityCryptoHandlerV2DiffblueTest {
   @MethodsUnderTest({"String EntityCryptoHandlerV2.getTokenPrefix(String, byte[])"})
   public void testGetTokenPrefix_whenNull_thenThrowSymphonyEncryptionException()
       throws InvalidDataException, SymphonyEncryptionException, SymphonyInputException,
-          UnsupportedEncodingException, DecoderException {
+          DecoderException {
     // Arrange, Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
-    EntityCryptoHandlerV2.getTokenPrefix(null, "AXAXAXAX".getBytes("UTF-8"));
+    EntityCryptoHandlerV2.getTokenPrefix(ValidateFactory.createNonNullString(), null);
   }
 
   /**

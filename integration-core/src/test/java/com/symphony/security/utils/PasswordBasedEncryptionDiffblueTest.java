@@ -2,7 +2,9 @@ package com.symphony.security.utils;
 
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.clientsdk.entity.EntityCryptoHandlerFactory;
 import com.symphony.security.exceptions.SymphonyEncryptionException;
+import com.symphony.security.helper.ClientCryptoHandlerFactory;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -52,6 +54,29 @@ public class PasswordBasedEncryptionDiffblueTest {
     // Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
     PasswordBasedEncryption.decrypt(password, ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link PasswordBasedEncryption#decrypt(char[], String)}.
+   *
+   * <ul>
+   *   <li>When createValidEncryptedMessageString.
+   * </ul>
+   *
+   * <p>Method under test: {@link PasswordBasedEncryption#decrypt(char[], String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String PasswordBasedEncryption.decrypt(char[], String)"})
+  public void testDecrypt_whenCreateValidEncryptedMessageString()
+      throws SymphonyEncryptionException {
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act and Assert
+    thrown.expect(SymphonyEncryptionException.class);
+    PasswordBasedEncryption.decrypt(
+        password, ClientCryptoHandlerFactory.createValidEncryptedMessageString());
   }
 
   /**
@@ -115,6 +140,28 @@ public class PasswordBasedEncryptionDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(IllegalArgumentException.class);
     PasswordBasedEncryption.encrypt(new char[] {'A', 'Z', 'A', 'Z'}, null);
+  }
+
+  /**
+   * Test {@link PasswordBasedEncryption#encrypt(char[], String)}.
+   *
+   * <ul>
+   *   <li>When createEntityStringV1.
+   *   <li>Then does not throw.
+   * </ul>
+   *
+   * <p>Method under test: {@link PasswordBasedEncryption#encrypt(char[], String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"String PasswordBasedEncryption.encrypt(char[], String)"})
+  public void testEncrypt_whenCreateEntityStringV1_thenDoesNotThrow()
+      throws SymphonyEncryptionException {
+    // Arrange
+    char[] password = "AZAZ".toCharArray();
+
+    // Act
+    PasswordBasedEncryption.encrypt(password, EntityCryptoHandlerFactory.createEntityStringV1());
   }
 
   /**

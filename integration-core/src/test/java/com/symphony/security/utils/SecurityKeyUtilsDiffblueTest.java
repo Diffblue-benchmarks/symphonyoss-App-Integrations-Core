@@ -2,6 +2,7 @@ package com.symphony.security.utils;
 
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.helper.ClientCryptoHandlerFactory;
 import java.security.GeneralSecurityException;
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,6 +29,26 @@ public class SecurityKeyUtilsDiffblueTest {
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPrivateKey(
         "-----BEGIN PRIVATE KEY-----42-----BEGIN RSA PRIVATE KEY-----");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----42-----END RSA PRIVATE KEY-----}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKey42EndRsaPrivateKey()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY-----42-----END RSA PRIVATE KEY-----");
   }
 
   /**
@@ -496,46 +517,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
    *
    * <ul>
-   *   <li>When {@code -----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----UTF-8}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
-  public void testParseRSAPrivateKey_whenBeginPrivateKeyEndRsaPrivateKeyUtf8()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPrivateKey(
-        "-----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----UTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code -----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----X.509}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
-  public void testParseRSAPrivateKey_whenBeginPrivateKeyEndRsaPrivateKeyX509()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPrivateKey(
-        "-----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----X.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code -----BEGIN PRIVATE KEY-----\n-----BEGIN RSA PRIVATE KEY-----}.
    * </ul>
    *
@@ -921,6 +902,26 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
    *
    * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----Pem Private Key-----END RSA PRIVATE KEY-----}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyPemPrivateKeyEndRsaPrivateKey()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY-----Pem Private Key-----END RSA PRIVATE KEY-----");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
    *   <li>When {@code -----BEGIN PRIVATE KEY-----Pem Private Key\n}.
    * </ul>
    *
@@ -1051,6 +1052,26 @@ public class SecurityKeyUtilsDiffblueTest {
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPrivateKey(
         "-----BEGIN PRIVATE KEY-----\\s-----BEGIN RSA PRIVATE KEY-----");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----\s-----END RSA PRIVATE KEY-----}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeySEndRsaPrivateKey()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY-----\\s-----END RSA PRIVATE KEY-----");
   }
 
   /**
@@ -1191,6 +1212,26 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
    *
    * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----UTF-8}.
+   *   <li>Then throw {@link GeneralSecurityException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyUtf8_thenThrowGeneralSecurityException2()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey("-----BEGIN PRIVATE KEY-----UTF-8 ");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
    *   <li>When {@code -----BEGIN PRIVATE KEY-----X.509-----BEGIN RSA PRIVATE KEY-----}.
    * </ul>
    *
@@ -1261,26 +1302,6 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPrivateKey("-----BEGIN PRIVATE KEY-----X.509Pem Private Key");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code -----BEGIN PRIVATE KEY-----X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
-  public void testParseRSAPrivateKey_whenBeginPrivateKeyX509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPrivateKey(" -----BEGIN PRIVATE KEY-----X.509");
   }
 
   /**
@@ -1360,45 +1381,6 @@ public class SecurityKeyUtilsDiffblueTest {
   }
 
   /**
-   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code -----END PRIVATE KEY----------BEGIN RSA PRIVATE KEY-----}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
-  public void testParseRSAPrivateKey_whenEndPrivateKeyBeginRsaPrivateKey()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPrivateKey("-----END PRIVATE KEY----------BEGIN RSA PRIVATE KEY-----");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code -----END PRIVATE KEY----------BEGIN RSA PRIVATE KEY-----}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
-  public void testParseRSAPrivateKey_whenEndPrivateKeyBeginRsaPrivateKey2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPrivateKey(
-        " -----END PRIVATE KEY----------BEGIN RSA PRIVATE KEY-----");
-  }
-
-  /**
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
@@ -1462,26 +1444,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code 42RSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_when42rsa_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" 42RSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code 42UTF-8}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -1496,26 +1458,6 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(" 42UTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code 42X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_when42x509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" 42X.509");
   }
 
   /**
@@ -1556,6 +1498,26 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(ValidateFactory.createNonNullString());
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
+   *
+   * <ul>
+   *   <li>When createValidEncryptedMessageString.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
+  public void testParseRSAPublicKey_whenCreateValidEncryptedMessageString()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPublicKey(
+        ClientCryptoHandlerFactory.createValidEncryptedMessageString());
   }
 
   /**
@@ -1655,46 +1617,6 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(" \\nUTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code \nX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenNX509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("\\nX.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code \nX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenNX509_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" \\nX.509");
   }
 
   /**
@@ -1818,46 +1740,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code Pem Public KeyRSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenPemPublicKeyRSA_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("Pem Public KeyRSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code Pem Public KeyRSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenPemPublicKeyRSA_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" Pem Public KeyRSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code Pem Public Key\s}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -1932,46 +1814,6 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(" Pem Public KeyUTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code Pem Public KeyX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenPemPublicKeyX509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("Pem Public KeyX.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code Pem Public KeyX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenPemPublicKeyX509_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" Pem Public KeyX.509");
   }
 
   /**
@@ -2078,146 +1920,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code RSAPem Public Key}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRSAPemPublicKey_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("RSAPem Public Key");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSAPem Public Key}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRSAPemPublicKey_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSAPem Public Key");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSA42}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRsa42_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSA42");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSA\s}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRsaS_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSA\\s");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSARSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRsarsa_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSARSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSAUTF-8}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRsautf8_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSAUTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code RSAX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenRsax509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" RSAX.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code \s42}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -2278,26 +1980,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code \sRSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenSRSA_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" \\sRSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code \s\s}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -2332,26 +2014,6 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(" \\sUTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code \sX.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenSX509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" \\sX.509");
   }
 
   /**
@@ -2538,26 +2200,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code UTF-8RSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenUtf8rsa_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" UTF-8RSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code UTF-8UTF-8}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -2578,26 +2220,6 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
    *
    * <ul>
-   *   <li>When {@code UTF-8X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenUtf8x509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" UTF-8X.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
    *   <li>When {@code UTF-842}.
    *   <li>Then throw {@link GeneralSecurityException}.
    * </ul>
@@ -2612,265 +2234,5 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPublicKey(" UTF-842");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509\n}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509N_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("X.509\\n");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509\n}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509N_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509\\n");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509Pem Public Key}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509PemPublicKey_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("X.509Pem Public Key");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509Pem Public Key}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509PemPublicKey_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509Pem Public Key");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509\s}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509S_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509\\s");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509_thenThrowGeneralSecurityException2()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("X.509 ");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509_thenThrowGeneralSecurityException3()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey("  X.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509_thenThrowGeneralSecurityException4()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509 ");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509RSA}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509rsa_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509RSA");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509UTF-8}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509utf8_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509UTF-8");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.509X.509}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX509x509_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.509X.509");
-  }
-
-  /**
-   * Test {@link SecurityKeyUtils#parseRSAPublicKey(String)}.
-   *
-   * <ul>
-   *   <li>When {@code X.50942}.
-   *   <li>Then throw {@link GeneralSecurityException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPublicKey(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.security.PublicKey SecurityKeyUtils.parseRSAPublicKey(String)"})
-  public void testParseRSAPublicKey_whenX50942_thenThrowGeneralSecurityException()
-      throws GeneralSecurityException {
-    // Arrange, Act and Assert
-    thrown.expect(GeneralSecurityException.class);
-    SecurityKeyUtils.parseRSAPublicKey(" X.50942");
   }
 }

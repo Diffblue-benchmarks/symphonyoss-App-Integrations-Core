@@ -2,6 +2,7 @@ package com.symphony.security.helper;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -14,23 +15,139 @@ public class KeyIdentifierDiffblueTest {
   /**
    * Test {@link KeyIdentifier#buildBufId()}.
    *
-   * <ul>
-   *   <li>Given createKeyIdentifier.
-   *   <li>Then return array of {@code byte} with one and two.
-   * </ul>
-   *
    * <p>Method under test: {@link KeyIdentifier#buildBufId()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] KeyIdentifier.buildBufId()"})
-  public void testBuildBufId_givenCreateKeyIdentifier_thenReturnArrayOfByteWithOneAndTwo() {
+  public void testBuildBufId() {
     // Arrange, Act and Assert
     assertArrayEquals(
         new byte[] {
-          1, 2, 3, 4, 5, 6, 7, '\b', '\t', '\n', 11, '\f', '\r', 14, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0
+          1, 2, 3, 4, 5, 6, 7, '\b', '\t', '\n', 11, '\f', '\r', 14, 15, 16, 1, 0, 0, 0, 0, 0, 0, 0
         },
-        KeyIdentifierFactory.createKeyIdentifier().buildBufId());
+        KeyIdentifierFactory.createKeyIdentifierWithRotation().buildBufId());
+  }
+
+  /**
+   * Test {@link KeyIdentifier#equals(Object)}, and {@link KeyIdentifier#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is equal.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link KeyIdentifier#equals(Object)}
+   *   <li>{@link KeyIdentifier#hashCode()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean KeyIdentifier.equals(Object)", "int KeyIdentifier.hashCode()"})
+  public void testEqualsAndHashCode_whenOtherIsEqual_thenReturnEqual() {
+    // Arrange
+    KeyIdentifier createKeyIdentifierWithRotationResult =
+        KeyIdentifierFactory.createKeyIdentifierWithRotation();
+    KeyIdentifier createKeyIdentifierWithRotationResult2 =
+        KeyIdentifierFactory.createKeyIdentifierWithRotation();
+
+    // Act and Assert
+    assertEquals(createKeyIdentifierWithRotationResult, createKeyIdentifierWithRotationResult2);
+    assertEquals(
+        createKeyIdentifierWithRotationResult.hashCode(),
+        createKeyIdentifierWithRotationResult2.hashCode());
+  }
+
+  /**
+   * Test {@link KeyIdentifier#equals(Object)}, and {@link KeyIdentifier#hashCode()}.
+   *
+   * <ul>
+   *   <li>When other is same.
+   *   <li>Then return equal.
+   * </ul>
+   *
+   * <p>Methods under test:
+   *
+   * <ul>
+   *   <li>{@link KeyIdentifier#equals(Object)}
+   *   <li>{@link KeyIdentifier#hashCode()}
+   * </ul>
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean KeyIdentifier.equals(Object)", "int KeyIdentifier.hashCode()"})
+  public void testEqualsAndHashCode_whenOtherIsSame_thenReturnEqual() {
+    // Arrange
+    KeyIdentifier createKeyIdentifierWithRotationResult =
+        KeyIdentifierFactory.createKeyIdentifierWithRotation();
+
+    // Act and Assert
+    assertEquals(createKeyIdentifierWithRotationResult, createKeyIdentifierWithRotationResult);
+    int expectedHashCodeResult = createKeyIdentifierWithRotationResult.hashCode();
+    assertEquals(expectedHashCodeResult, createKeyIdentifierWithRotationResult.hashCode());
+  }
+
+  /**
+   * Test {@link KeyIdentifier#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is different.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link KeyIdentifier#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean KeyIdentifier.equals(Object)", "int KeyIdentifier.hashCode()"})
+  public void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
+    // Arrange
+    KeyIdentifier createKeyIdentifierAlternateResult =
+        KeyIdentifierFactory.createKeyIdentifierAlternate();
+
+    // Act and Assert
+    assertNotEquals(
+        createKeyIdentifierAlternateResult, KeyIdentifierFactory.createKeyIdentifierWithRotation());
+  }
+
+  /**
+   * Test {@link KeyIdentifier#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is {@code null}.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link KeyIdentifier#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean KeyIdentifier.equals(Object)", "int KeyIdentifier.hashCode()"})
+  public void testEquals_whenOtherIsNull_thenReturnNotEqual() {
+    // Arrange, Act and Assert
+    assertNotEquals(KeyIdentifierFactory.createKeyIdentifierWithRotation(), null);
+  }
+
+  /**
+   * Test {@link KeyIdentifier#equals(Object)}.
+   *
+   * <ul>
+   *   <li>When other is wrong type.
+   *   <li>Then return not equal.
+   * </ul>
+   *
+   * <p>Method under test: {@link KeyIdentifier#equals(Object)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean KeyIdentifier.equals(Object)", "int KeyIdentifier.hashCode()"})
+  public void testEquals_whenOtherIsWrongType_thenReturnNotEqual() {
+    // Arrange, Act and Assert
+    assertNotEquals(
+        KeyIdentifierFactory.createKeyIdentifierWithRotation(), "Different type to KeyIdentifier");
   }
 
   /**
@@ -132,19 +249,15 @@ public class KeyIdentifierDiffblueTest {
   /**
    * Test {@link KeyIdentifier#toString()}.
    *
-   * <ul>
-   *   <li>Then return {@code AQIDBAUGBwgJCgsMDQ4PEA== (isPublic=null) FOR userId=1 @ rotationId=0}.
-   * </ul>
-   *
    * <p>Method under test: {@link KeyIdentifier#toString()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"java.lang.String KeyIdentifier.toString()"})
-  public void testToString_thenReturnAQIDBAUGBwgJCgsMDQ4PEAIsPublicNullForUserId1RotationId0() {
+  public void testToString() {
     // Arrange, Act and Assert
     assertEquals(
-        "AQIDBAUGBwgJCgsMDQ4PEA==\r\n (isPublic=null) FOR userId=1 @ rotationId=0",
-        KeyIdentifierFactory.createKeyIdentifier().toString());
+        "AQIDBAUGBwgJCgsMDQ4PEA==\r\n (isPublic=null) FOR userId=2 @ rotationId=1",
+        KeyIdentifierFactory.createKeyIdentifierWithRotation().toString());
   }
 }

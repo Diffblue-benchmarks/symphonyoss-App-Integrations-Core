@@ -39,12 +39,18 @@ public class UtilsDiffblueTest {
   /**
    * Test {@link Utils#validateCString(String)}.
    *
+   * <ul>
+   *   <li>When createNonNullString.
+   *   <li>Then does not throw.
+   * </ul>
+   *
    * <p>Method under test: {@link Utils#validateCString(String)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void Utils.validateCString(String)"})
-  public void testValidateCString() throws UnsupportedEncodingException {
+  public void testValidateCString_whenCreateNonNullString_thenDoesNotThrow()
+      throws UnsupportedEncodingException {
     // Arrange, Act and Assert
     Utils.validateCString(ValidateFactory.createNonNullString());
   }

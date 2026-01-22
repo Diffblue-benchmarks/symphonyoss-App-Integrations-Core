@@ -186,12 +186,17 @@ public class KmAuthHealthInvokerDiffblueTest {
   /**
    * Test {@link KmAuthHealthInvoker#getMinVersion()}.
    *
+   * <ul>
+   *   <li>Given {@link KmAuthHealthInvoker}.
+   *   <li>Then return {@code null}.
+   * </ul>
+   *
    * <p>Method under test: {@link KmAuthHealthInvoker#getMinVersion()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String KmAuthHealthInvoker.getMinVersion()"})
-  public void testGetMinVersion() {
+  public void testGetMinVersion_givenKmAuthHealthInvoker_thenReturnNull() {
     // Arrange, Act and Assert
     assertNull(kmAuthHealthInvoker.getMinVersion());
   }

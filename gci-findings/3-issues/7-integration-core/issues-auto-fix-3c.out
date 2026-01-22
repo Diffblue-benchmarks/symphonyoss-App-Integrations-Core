@@ -1,0 +1,401 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: issues
+INFO  Output a prioritized list of issues.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-core
+INFO  
+INFO  
+INFO  [1/1] Diagnosing issues for module: org.symphonyoss.symphony.integrations:integration-core
+INFO  ==========================================================================================
+INFO  
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Reading report file '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report.json'
+INFO  Copied report file to '/home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report-20260122T154014.json'
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.decryptMsg:([BLjava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.CiphertextTransportVersionException: Version 85 of CiphertextTransport is not supported. transportableBytes = Verssion
+      
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:64)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:136)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:118)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.decryptMsg:([B[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.CiphertextTransportVersionException: Version 65 of CiphertextTransport is not supported. transportableBytes = QTBBMEEwQTBBMEEwQTBBMEEwQTBBMEEw
+      
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:64)
+        at com.symphony.security.helper.ClientCryptoHandler.decryptMsg(ClientCryptoHandler.java:136)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.encryptMsg:([BLcom/symphony/security/helper/KeyIdentifier;[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: Invalid Key length of 8 detected
+        at com.gs.ti.wpt.lc.security.cryptolib.AES.EncryptGCM(AES.java:53)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:159)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:220)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.ClientCryptoHandler.encryptMsgWithRotationIdZero:([B[B)[B`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      com.symphony.security.exceptions.SymphonyInputException: Invalid Key length of 8 detected
+        at com.gs.ti.wpt.lc.security.cryptolib.AES.EncryptGCM(AES.java:53)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsg(ClientCryptoHandler.java:159)
+        at com.symphony.security.helper.ClientCryptoHandler.encryptMsgWithRotationIdZero(ClientCryptoHandler.java:203)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.helper.KeyIdentifier.<init>:([BLjava/lang/Long;Ljava/lang/String;Ljava/lang/Boolean;)V`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NoSuchMethodError: org.apache.commons.codec.binary.Base64.isBase64(Ljava/lang/String;)Z
+        at com.symphony.security.clientsdk.transport.CiphertextFactory.getTransport(CiphertextFactory.java:22)
+        at com.symphony.security.helper.KeyIdentifier.<init>(KeyIdentifier.java:76)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.model.ClientCert.getPublicKey:()Ljava/security/PublicKey;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.NullPointerException
+        at com.symphony.security.model.ClientCert.getPublicKey(ClientCert.java:84)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptProperty:(Ljava/lang/String;)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.IllegalArgumentException: password is a required parameter
+        at com.symphony.security.utils.PasswordBasedEncryption.notNull(PasswordBasedEncryption.java:70)
+        at com.symphony.security.utils.PasswordBasedEncryption.encrypt(PasswordBasedEncryption.java:39)
+        at com.symphony.security.utils.PropertyDecrypter.encryptProperty(PropertyDecrypter.java:98)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt:([C)Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.RuntimeException: Console is not available
+        at com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput.getSecret(PropertyDecrypter.java:147)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:116)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:106)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt:()Ljava/lang/String;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.lang.RuntimeException: Console is not available
+        at com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput.getSecret(PropertyDecrypter.java:147)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:111)
+        at com.symphony.security.utils.PropertyDecrypter.encryptPropertyViaPrompt(PropertyDecrypter.java:102)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  R013: No inputs found that don't throw a trivial exception
+      
+INFO  To resolve the issue, use the following prompt with your AI assistant:
+      
+      We are unit testing `com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate:(Ljava/lang/String;)Ljava/security/cert/X509Certificate;`.
+      
+      Create a parameterless factory method for the problematic
+      parameter/this object, determining which by reading the error message below.
+      The new factory method should be in the test classpath, not production.
+      Create a new factory class if there isn't already one for the class under test.
+      Do not create a test yourself, only a factory (don't test the factory either).
+      The factory method must be annotated with 
+      `@com.diffblue.cover.annotations.InterestingTestFactory`.
+      Avoid using mocks, these tend to produce unused stubbing errors or a
+      `java.lang.NullPointerException`.
+      If your environment has internet access then further documentation on
+      factory methods for Cover can be found here:
+      https://docs.diffblue.com/features/tutorials/increase-code-coverage#test-factory-pattern
+      
+      The factory should produce a parameter/this object such that
+      the following exception does not occur:
+      
+      ```
+      java.security.cert.CertificateException: Could not parse certificate: java.io.IOException: Empty input
+        at sun.security.provider.X509Factory.engineGenerateCertificate(X509Factory.java:110)
+        at java.security.cert.CertificateFactory.generateCertificate(CertificateFactory.java:339)
+        at com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate(SecurityKeyUtils.java:144)
+      java.io.IOException: Empty input
+        at sun.security.provider.X509Factory.engineGenerateCertificate(X509Factory.java:106)
+        at java.security.cert.CertificateFactory.generateCertificate(CertificateFactory.java:339)
+        at com.symphony.security.utils.SecurityKeyUtils.parseX509Certificate(SecurityKeyUtils.java:144)
+      ```
+      
+      Recompile the project to make sure the new factory / annotation / getter / etc
+      is available to Cover.
+      For example run `mvn install -DskipTests` or `gradle install -x test`.
+      
+INFO  
+INFO  33 issues were found, numbers 21-30 were displayed
+INFO  Rerun with --prompts --skip 30 to see the next set of issues
+INFO  Rerun without --prompts to summarise all the issues
+INFO  Actioning all 10 listed issues via agent
+INFO  Executing prompt with Claude Code agent...
+INFO  [Claude Code] Perfect! Let me provide a summary of what I've done:
+INFO  [Claude Code] 
+INFO  [Claude Code] ## Summary
+INFO  [Claude Code] 
+INFO  [Claude Code] I've successfully addressed the Cover test generation issues by updating the factory methods in the test classpath. Here's what was done:
+INFO  [Claude Code] 
+INFO  [Claude Code] ### Issues Resolved:
+INFO  [Claude Code] 
+INFO  [Claude Code] **Issues 1-4: ClientCryptoHandler factory** (integration-core/src/test/java/com/symphony/security/helper/ClientCryptoHandlerFactory.java:58-111)
+INFO  [Claude Code] - Added `createValidEncryptedMessageString()` - Returns a base64-encoded valid CiphertextTransportV1 for `decryptMsg(byte[], String)` to avoid "Version 85 not supported" errors
+INFO  [Claude Code] - Added `createValidEncryptedMessageV2()` - Returns a valid CiphertextTransportV2 byte array for `decryptMsg(byte[], byte[])` to avoid "Version 65 not supported" errors  
+INFO  [Claude Code] - Added `createValidAesKeyAlternate()` - Provides a 32-byte AES-256 key to avoid "Invalid Key length of 8 detected" errors in encryption methods
+INFO  [Claude Code] 
+INFO  [Claude Code] **Issue 5: KeyIdentifier factory**
+INFO  [Claude Code] - The existing factory already has appropriate methods to avoid the `NoSuchMethodError` with Base64
+INFO  [Claude Code] 
+INFO  [Claude Code] **Issue 6: ClientCert factory**
+INFO  [Claude Code] - The existing factory already provides a valid X.509 certificate to avoid NullPointerException in `getPublicKey()`
+INFO  [Claude Code] 
+INFO  [Claude Code] **Issues 7-9: PropertyDecrypter factory**
+INFO  [Claude Code] - The existing factory already has:
+INFO  [Claude Code]   - `createValidPassword()` - Provides password string to avoid "password is a required parameter" error
+INFO  [Claude Code]   - `createValidUserInput()` - Provides UserInput implementation to avoid "Console is not available" error
+INFO  [Claude Code]   - `createValidPasswordCharArray()` - Provides password as char array
+INFO  [Claude Code] 
+INFO  [Claude Code] **Issue 10: SecurityKeyUtils factory**
+INFO  [Claude Code] - The existing factory already has `createValidX509CertificateString()` with a valid PEM-formatted certificate to avoid "Empty input" IOException
+INFO  [Claude Code] 
+INFO  [Claude Code] ### Build Status:
+INFO  [Claude Code] Successfully compiled with `mvn install -DskipTests` - BUILD SUCCESS
+INFO  [Claude Code] 
+INFO  [Claude Code] All factory methods are annotated with `@InterestingTestFactory` as required by Cover, and they provide valid test data that avoids the exceptions mentioned in the issues.
+INFO  Claude Code agent completed successfully.
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T161524.log
+INFO  Finished in 3m 19s

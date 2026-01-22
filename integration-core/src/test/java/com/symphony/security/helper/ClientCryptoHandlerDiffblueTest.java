@@ -34,7 +34,10 @@ public class ClientCryptoHandlerDiffblueTest {
     // Act and Assert
     thrown.expect(SymphonyEncryptionException.class);
     createClientCryptoHandlerResult.encryptMsg(
-        key, KeyIdentifierFactory.createKeyIdentifier(), "AXAXAXAX".getBytes("UTF-8"), (byte) 'A');
+        key,
+        KeyIdentifierFactory.createKeyIdentifierWithRotation(),
+        "AXAXAXAX".getBytes("UTF-8"),
+        (byte) 'A');
   }
 
   /**
@@ -58,6 +61,9 @@ public class ClientCryptoHandlerDiffblueTest {
     // Act and Assert
     thrown.expect(SymphonyInputException.class);
     createClientCryptoHandlerResult.encryptMsg(
-        key, KeyIdentifierFactory.createKeyIdentifier(), "AXAXAXAX".getBytes("UTF-8"), (byte) 1);
+        key,
+        KeyIdentifierFactory.createKeyIdentifierWithRotation(),
+        "AXAXAXAX".getBytes("UTF-8"),
+        (byte) 1);
   }
 }

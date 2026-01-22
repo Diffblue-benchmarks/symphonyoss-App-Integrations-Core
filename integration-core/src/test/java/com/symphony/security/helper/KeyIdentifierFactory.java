@@ -39,4 +39,33 @@ public class KeyIdentifierFactory {
       throw new RuntimeException("Failed to create KeyIdentifier", e);
     }
   }
+
+  /**
+   * Creates a valid KeyIdentifier instance with rotation ID.
+   * This factory method uses the 3-parameter constructor to completely avoid
+   * the CiphertextFactory.getTransport path that causes NoSuchMethodError.
+   *
+   * @return a valid KeyIdentifier instance
+   */
+  @InterestingTestFactory
+  public static KeyIdentifier createKeyIdentifierWithRotation() {
+    byte[] keyId = new byte[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+    Long podId = 2L;
+    Long rotationId = 1L;
+    return new KeyIdentifier(keyId, podId, rotationId);
+  }
+
+  /**
+   * Creates another valid KeyIdentifier instance with different values.
+   * This provides variety for equals() testing while avoiding the problematic constructor.
+   *
+   * @return a valid KeyIdentifier instance
+   */
+  @InterestingTestFactory
+  public static KeyIdentifier createKeyIdentifierAlternate() {
+    byte[] keyId = new byte[] {16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    Long podId = 3L;
+    Long rotationId = 2L;
+    return new KeyIdentifier(keyId, podId, rotationId);
+  }
 }

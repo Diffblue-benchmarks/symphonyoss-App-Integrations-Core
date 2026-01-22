@@ -9,6 +9,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.security.utils.ValidateFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -50,7 +51,7 @@ public class StreamServiceImplDiffblueTest {
    * Test {@link StreamServiceImpl#getStreams(IntegrationInstance)} with {@code instance}.
    *
    * <ul>
-   *   <li>Given empty string.
+   *   <li>Given {@link AgentApiClient}.
    * </ul>
    *
    * <p>Method under test: {@link StreamServiceImpl#getStreams(IntegrationInstance)}
@@ -58,46 +59,17 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(IntegrationInstance)"})
-  public void testGetStreamsWithInstance_givenEmptyString() {
+  public void testGetStreamsWithInstance_givenAgentApiClient() {
     // Arrange
     IntegrationInstance instance = new IntegrationInstance();
     instance.setActive(true);
-    instance.setConfigurationId("42");
+    instance.setConfigurationId(ValidateFactory.createNonNullString());
     instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
+    instance.setCreatorId(ValidateFactory.createNonNullString());
+    instance.setCreatorName(ValidateFactory.createNonNullString());
+    instance.setInstanceId(ValidateFactory.createNonNullString());
     instance.setLastModifiedDate(1L);
-    instance.setName("Name");
-    instance.setOptionalProperties("");
-
-    // Act and Assert
-    assertTrue(streamServiceImpl.getStreams(instance).isEmpty());
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreams(IntegrationInstance)} with {@code instance}.
-   *
-   * <ul>
-   *   <li>Given {@code null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreams(IntegrationInstance)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(IntegrationInstance)"})
-  public void testGetStreamsWithInstance_givenNull() {
-    // Arrange
-    IntegrationInstance instance = new IntegrationInstance();
-    instance.setActive(true);
-    instance.setConfigurationId("42");
-    instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
-    instance.setLastModifiedDate(1L);
-    instance.setName("Name");
+    instance.setName(ValidateFactory.createNonNullString());
     instance.setOptionalProperties(null);
 
     // Act and Assert
@@ -108,7 +80,7 @@ public class StreamServiceImplDiffblueTest {
    * Test {@link StreamServiceImpl#getStreams(IntegrationInstance)} with {@code instance}.
    *
    * <ul>
-   *   <li>Given {@code Optional Properties}.
+   *   <li>Given {@link StreamServiceImpl} (default constructor).
    * </ul>
    *
    * <p>Method under test: {@link StreamServiceImpl#getStreams(IntegrationInstance)}
@@ -116,46 +88,19 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(IntegrationInstance)"})
-  public void testGetStreamsWithInstance_givenOptionalProperties() {
+  public void testGetStreamsWithInstance_givenStreamServiceImpl() {
     // Arrange
+    StreamServiceImpl streamServiceImpl = new StreamServiceImpl();
+
     IntegrationInstance instance = new IntegrationInstance();
     instance.setActive(true);
-    instance.setConfigurationId("42");
+    instance.setConfigurationId(ValidateFactory.createNonNullString());
     instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
+    instance.setCreatorId(ValidateFactory.createNonNullString());
+    instance.setCreatorName(ValidateFactory.createNonNullString());
+    instance.setInstanceId(ValidateFactory.createNonNullString());
     instance.setLastModifiedDate(1L);
-    instance.setName("Name");
-    instance.setOptionalProperties("Optional Properties");
-
-    // Act and Assert
-    assertTrue(streamServiceImpl.getStreams(instance).isEmpty());
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreams(IntegrationInstance)} with {@code instance}.
-   *
-   * <ul>
-   *   <li>When {@link IntegrationInstance} (default constructor) OptionalProperties is {@code 42}.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreams(IntegrationInstance)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(IntegrationInstance)"})
-  public void testGetStreamsWithInstance_whenIntegrationInstanceOptionalPropertiesIs42() {
-    // Arrange
-    IntegrationInstance instance = new IntegrationInstance();
-    instance.setActive(true);
-    instance.setConfigurationId("42");
-    instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
-    instance.setLastModifiedDate(1L);
-    instance.setName("Name");
+    instance.setName(ValidateFactory.createNonNullString());
     instance.setOptionalProperties("42");
 
     // Act and Assert
@@ -166,40 +111,7 @@ public class StreamServiceImplDiffblueTest {
    * Test {@link StreamServiceImpl#getStreams(String)} with {@code optionalProperties}.
    *
    * <ul>
-   *   <li>When {@code 42}.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreams(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(String)"})
-  public void testGetStreamsWithOptionalProperties_when42() {
-    // Arrange, Act and Assert
-    assertTrue(streamServiceImpl.getStreams("42").isEmpty());
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreams(String)} with {@code optionalProperties}.
-   *
-   * <ul>
-   *   <li>When empty string.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreams(String)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(String)"})
-  public void testGetStreamsWithOptionalProperties_whenEmptyString() {
-    // Arrange, Act and Assert
-    assertTrue(streamServiceImpl.getStreams("").isEmpty());
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreams(String)} with {@code optionalProperties}.
-   *
-   * <ul>
+   *   <li>Given {@link AgentApiClient}.
    *   <li>When {@code null}.
    * </ul>
    *
@@ -208,7 +120,7 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(String)"})
-  public void testGetStreamsWithOptionalProperties_whenNull() {
+  public void testGetStreamsWithOptionalProperties_givenAgentApiClient_whenNull() {
     // Arrange, Act and Assert
     assertTrue(streamServiceImpl.getStreams((String) null).isEmpty());
   }
@@ -217,7 +129,8 @@ public class StreamServiceImplDiffblueTest {
    * Test {@link StreamServiceImpl#getStreams(String)} with {@code optionalProperties}.
    *
    * <ul>
-   *   <li>When {@code Optional Properties}.
+   *   <li>Given {@link StreamServiceImpl} (default constructor).
+   *   <li>When {@code 42}.
    * </ul>
    *
    * <p>Method under test: {@link StreamServiceImpl#getStreams(String)}
@@ -225,16 +138,16 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"java.util.List StreamServiceImpl.getStreams(String)"})
-  public void testGetStreamsWithOptionalProperties_whenOptionalProperties() {
+  public void testGetStreamsWithOptionalProperties_givenStreamServiceImpl_when42() {
     // Arrange, Act and Assert
-    assertTrue(streamServiceImpl.getStreams("Optional Properties").isEmpty());
+    assertTrue(new StreamServiceImpl().getStreams("42").isEmpty());
   }
 
   /**
    * Test {@link StreamServiceImpl#getStreamType(IntegrationInstance)}.
    *
    * <ul>
-   *   <li>Given empty string.
+   *   <li>Given {@link AgentApiClient}.
    * </ul>
    *
    * <p>Method under test: {@link StreamServiceImpl#getStreamType(IntegrationInstance)}
@@ -242,48 +155,17 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"StreamType StreamServiceImpl.getStreamType(IntegrationInstance)"})
-  public void testGetStreamType_givenEmptyString() {
+  public void testGetStreamType_givenAgentApiClient() {
     // Arrange
     IntegrationInstance instance = new IntegrationInstance();
     instance.setActive(true);
-    instance.setConfigurationId("42");
+    instance.setConfigurationId(ValidateFactory.createNonNullString());
     instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
+    instance.setCreatorId(ValidateFactory.createNonNullString());
+    instance.setCreatorName(ValidateFactory.createNonNullString());
+    instance.setInstanceId(ValidateFactory.createNonNullString());
     instance.setLastModifiedDate(1L);
-    instance.setName("Name");
-    instance.setOptionalProperties("");
-
-    // Act and Assert
-    assertEquals(StreamType.NONE, streamServiceImpl.getStreamType(instance));
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreamType(IntegrationInstance)}.
-   *
-   * <ul>
-   *   <li>Given {@code null}.
-   *   <li>When {@link IntegrationInstance} (default constructor) OptionalProperties is {@code
-   *       null}.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreamType(IntegrationInstance)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"StreamType StreamServiceImpl.getStreamType(IntegrationInstance)"})
-  public void testGetStreamType_givenNull_whenIntegrationInstanceOptionalPropertiesIsNull() {
-    // Arrange
-    IntegrationInstance instance = new IntegrationInstance();
-    instance.setActive(true);
-    instance.setConfigurationId("42");
-    instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
-    instance.setLastModifiedDate(1L);
-    instance.setName("Name");
+    instance.setName(ValidateFactory.createNonNullString());
     instance.setOptionalProperties(null);
 
     // Act and Assert
@@ -294,7 +176,7 @@ public class StreamServiceImplDiffblueTest {
    * Test {@link StreamServiceImpl#getStreamType(IntegrationInstance)}.
    *
    * <ul>
-   *   <li>Given {@code Optional Properties}.
+   *   <li>Given {@link StreamServiceImpl} (default constructor).
    * </ul>
    *
    * <p>Method under test: {@link StreamServiceImpl#getStreamType(IntegrationInstance)}
@@ -302,46 +184,19 @@ public class StreamServiceImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"StreamType StreamServiceImpl.getStreamType(IntegrationInstance)"})
-  public void testGetStreamType_givenOptionalProperties() {
+  public void testGetStreamType_givenStreamServiceImpl() {
     // Arrange
+    StreamServiceImpl streamServiceImpl = new StreamServiceImpl();
+
     IntegrationInstance instance = new IntegrationInstance();
     instance.setActive(true);
-    instance.setConfigurationId("42");
+    instance.setConfigurationId(ValidateFactory.createNonNullString());
     instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
+    instance.setCreatorId(ValidateFactory.createNonNullString());
+    instance.setCreatorName(ValidateFactory.createNonNullString());
+    instance.setInstanceId(ValidateFactory.createNonNullString());
     instance.setLastModifiedDate(1L);
-    instance.setName("Name");
-    instance.setOptionalProperties("Optional Properties");
-
-    // Act and Assert
-    assertEquals(StreamType.NONE, streamServiceImpl.getStreamType(instance));
-  }
-
-  /**
-   * Test {@link StreamServiceImpl#getStreamType(IntegrationInstance)}.
-   *
-   * <ul>
-   *   <li>When {@link IntegrationInstance} (default constructor) OptionalProperties is {@code 42}.
-   * </ul>
-   *
-   * <p>Method under test: {@link StreamServiceImpl#getStreamType(IntegrationInstance)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"StreamType StreamServiceImpl.getStreamType(IntegrationInstance)"})
-  public void testGetStreamType_whenIntegrationInstanceOptionalPropertiesIs42() {
-    // Arrange
-    IntegrationInstance instance = new IntegrationInstance();
-    instance.setActive(true);
-    instance.setConfigurationId("42");
-    instance.setCreatedDate(1L);
-    instance.setCreatorId("42");
-    instance.setCreatorName("Creator Name");
-    instance.setInstanceId("42");
-    instance.setLastModifiedDate(1L);
-    instance.setName("Name");
+    instance.setName(ValidateFactory.createNonNullString());
     instance.setOptionalProperties("42");
 
     // Act and Assert
@@ -362,20 +217,24 @@ public class StreamServiceImplDiffblueTest {
   @MethodsUnderTest({"Message StreamServiceImpl.postMessage(String, String, Message)"})
   public void testPostMessage_thenReturnNull() throws RemoteApiException {
     // Arrange
-    when(agentApiClient.escapeString(Mockito.<String>any())).thenReturn("Escape String");
+    when(agentApiClient.escapeString(Mockito.<String>any()))
+        .thenReturn(ValidateFactory.createNonNullString());
+    String sessionToken = ValidateFactory.createNonNullString();
     when(authenticationProxy.getToken(Mockito.<String>any()))
-        .thenReturn(new AuthenticationToken("ABC123", "ABC123"));
+        .thenReturn(new AuthenticationToken(sessionToken, ValidateFactory.createNonNullString()));
+    String integrationUser = ValidateFactory.createNonNullString();
+    String stream = ValidateFactory.createNonNullString();
 
     Message messageSubmission = new Message();
-    messageSubmission.setData("Data");
+    messageSubmission.setData(ValidateFactory.createNonNullString());
     messageSubmission.setFormat(FormatEnum.TEXT);
-    messageSubmission.setMessage("Not all who wander are lost");
+    messageSubmission.setMessage(ValidateFactory.createNonNullString());
     messageSubmission.setTimestamp(10L);
     messageSubmission.setVersion(MessageMLVersion.V1);
 
     // Act
     Message actualPostMessageResult =
-        streamServiceImpl.postMessage("Integration User", "Stream", messageSubmission);
+        streamServiceImpl.postMessage(integrationUser, stream, messageSubmission);
 
     // Assert
     verify(agentApiClient).escapeString(Mockito.<String>any());
@@ -386,17 +245,23 @@ public class StreamServiceImplDiffblueTest {
   /**
    * Test {@link StreamServiceImpl#createIM(String, Long)}.
    *
+   * <ul>
+   *   <li>Then return {@code null}.
+   * </ul>
+   *
    * <p>Method under test: {@link StreamServiceImpl#createIM(String, Long)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"Stream StreamServiceImpl.createIM(String, Long)"})
-  public void testCreateIM() throws RemoteApiException {
+  public void testCreateIM_thenReturnNull() throws RemoteApiException {
     // Arrange
-    when(authenticationProxy.getSessionToken(Mockito.<String>any())).thenReturn("ABC123");
+    when(authenticationProxy.getSessionToken(Mockito.<String>any()))
+        .thenReturn(ValidateFactory.createNonNullString());
 
     // Act
-    Stream actualCreateIMResult = streamServiceImpl.createIM("Integration User", 1L);
+    Stream actualCreateIMResult =
+        streamServiceImpl.createIM(ValidateFactory.createNonNullString(), 1L);
 
     // Assert
     verify(authenticationProxy).getSessionToken(Mockito.<String>any());

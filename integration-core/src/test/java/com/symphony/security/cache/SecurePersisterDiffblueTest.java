@@ -26,32 +26,67 @@ public class SecurePersisterDiffblueTest {
     // Arrange, Act and Assert
     assertEquals(
         "SecurePersister(InMemoryPersister(of size 0))",
-        new SecurePersister(new InMemoryPersister(), 1L).getType());
+        SecurePersisterFactory.createSecurePersister().getType());
+  }
+
+  /**
+   * Test {@link SecurePersister#getType()}.
+   *
+   * <ul>
+   *   <li>Then return {@code SecurePersister(SecurePersister(InMemoryPersister(of size 0)))}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurePersister#getType()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.lang.String SecurePersister.getType()"})
+  public void testGetType_thenReturnSecurePersisterSecurePersisterInMemoryPersisterOfSize0() {
+    // Arrange, Act and Assert
+    assertEquals(
+        "SecurePersister(SecurePersister(InMemoryPersister(of size 0)))",
+        new SecurePersister(SecurePersisterFactory.createSecurePersister(), 1L).getType());
   }
 
   /**
    * Test {@link SecurePersister#SecurePersister(IPersister, long)}.
-   *
-   * <ul>
-   *   <li>Then return Type is {@code SecurePersister(InMemoryPersister(of size 0))}.
-   * </ul>
    *
    * <p>Method under test: {@link SecurePersister#SecurePersister(IPersister, long)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void SecurePersister.<init>(IPersister, long)"})
-  public void testNewSecurePersister_thenReturnTypeIsSecurePersisterInMemoryPersisterOfSize0() {
+  public void testNewSecurePersister() {
     // Arrange, Act and Assert
     assertEquals(
-        "SecurePersister(InMemoryPersister(of size 0))",
-        new SecurePersister(new InMemoryPersister(), 1L).getType());
+        "SecurePersister(SecurePersister(InMemoryPersister(of size 0)))",
+        new SecurePersister(SecurePersisterFactory.createSecurePersister(), 1L).getType());
+  }
+
+  /**
+   * Test {@link SecurePersister#retrieve(byte[])}.
+   *
+   * <p>Method under test: {@link SecurePersister#retrieve(byte[])}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"byte[] SecurePersister.retrieve(byte[])"})
+  public void testRetrieve()
+      throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
+    // Arrange and Act
+    byte[] actualRetrieveResult =
+        new SecurePersister(SecurePersisterFactory.createSecurePersister(), 1L)
+            .retrieve("AXAXAXAX".getBytes("UTF-8"));
+
+    // Assert
+    assertNull(actualRetrieveResult);
   }
 
   /**
    * Test {@link SecurePersister#retrieve(byte[])}.
    *
    * <ul>
+   *   <li>Given createSecurePersister.
    *   <li>Then return {@code null}.
    * </ul>
    *
@@ -60,11 +95,11 @@ public class SecurePersisterDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] SecurePersister.retrieve(byte[])"})
-  public void testRetrieve_thenReturnNull()
+  public void testRetrieve_givenCreateSecurePersister_thenReturnNull()
       throws SymphonyEncryptionException, SymphonyInputException, UnsupportedEncodingException {
     // Arrange and Act
     byte[] actualRetrieveResult =
-        new SecurePersister(new InMemoryPersister(), 1L).retrieve("AXAXAXAX".getBytes("UTF-8"));
+        SecurePersisterFactory.createSecurePersister().retrieve("AXAXAXAX".getBytes("UTF-8"));
 
     // Assert
     assertNull(actualRetrieveResult);

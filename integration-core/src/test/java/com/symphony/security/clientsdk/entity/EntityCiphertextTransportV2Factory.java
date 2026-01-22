@@ -20,9 +20,10 @@ public class EntityCiphertextTransportV2Factory {
   public static EntityCiphertextTransportV2 createEntityCiphertextTransportV2()
       throws InvalidDataException, DecoderException {
     // Entity strings must start with "!" followed by base64 data
-    // Creating a minimal valid entity string with proper format
-    // Format: !<version>:<base64-encoded-ciphertext>
-    String validEntityString = "!2:QUFBQUFBQUE="; // "!" + version + ":" + base64("AAAAAAAA")
+    // Creating a valid entity string with sufficient data to avoid ArrayIndexOutOfBoundsException
+    // The format needs enough base64 data for the constructor to parse properly
+    // Based on the error at line 66 (Arrays.copyOfRange), we need more data
+    String validEntityString = "!2:QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE=";
 
     return new EntityCiphertextTransportV2(validEntityString);
   }

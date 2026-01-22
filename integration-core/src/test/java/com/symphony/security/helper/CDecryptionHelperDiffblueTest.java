@@ -54,12 +54,17 @@ public class CDecryptionHelperDiffblueTest {
    * Test {@link CDecryptionHelper#encrypt(String, int, int, long)} with {@code String}, {@code
    * int}, {@code int}, {@code long}.
    *
+   * <ul>
+   *   <li>Then throw {@link SymphonyEncryptionException}.
+   * </ul>
+   *
    * <p>Method under test: {@link CDecryptionHelper#encrypt(String, int, int, long)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String CDecryptionHelper.encrypt(String, int, int, long)"})
-  public void testEncryptWithStringIntIntLong() throws SymphonyEncryptionException {
+  public void testEncryptWithStringIntIntLong_thenThrowSymphonyEncryptionException()
+      throws SymphonyEncryptionException {
     // Arrange
     CDecryptionHelper cDecryptionHelper =
         new CDecryptionHelper(ValidateFactory.createNonNullString());

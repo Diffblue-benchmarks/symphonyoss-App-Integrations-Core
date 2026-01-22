@@ -46,12 +46,17 @@ public class PodSessionManagerHealthInvokerDiffblueTest {
   /**
    * Test {@link PodSessionManagerHealthInvoker#getMinVersion()}.
    *
+   * <ul>
+   *   <li>Given {@link PodSessionManagerHealthInvoker}.
+   *   <li>Then return {@code null}.
+   * </ul>
+   *
    * <p>Method under test: {@link PodSessionManagerHealthInvoker#getMinVersion()}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"String PodSessionManagerHealthInvoker.getMinVersion()"})
-  public void testGetMinVersion() {
+  public void testGetMinVersion_givenPodSessionManagerHealthInvoker_thenReturnNull() {
     // Arrange, Act and Assert
     assertNull(podSessionManagerHealthInvoker.getMinVersion());
   }

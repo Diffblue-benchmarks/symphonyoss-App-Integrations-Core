@@ -61,12 +61,17 @@ public class EntityCryptoHandlerDiffblueTest {
   /**
    * Test {@link EntityCryptoHandler#getIv(String, byte[])}.
    *
+   * <ul>
+   *   <li>Then return array of {@code byte} with minus eighty-four and minus twenty-three.
+   * </ul>
+   *
    * <p>Method under test: {@link EntityCryptoHandler#getIv(String, byte[])}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"byte[] EntityCryptoHandler.getIv(String, byte[])"})
-  public void testGetIv() throws UnsupportedEncodingException, NoSuchAlgorithmException {
+  public void testGetIv_thenReturnArrayOfByteWithMinusEightyFourAndMinusTwentyThree()
+      throws UnsupportedEncodingException, NoSuchAlgorithmException {
     // Arrange and Act
     byte[] actualIv =
         EntityCryptoHandler.getIv(

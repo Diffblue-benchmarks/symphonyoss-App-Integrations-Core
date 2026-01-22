@@ -42,6 +42,11 @@ public class IntegrationBootstrapContextDiffblueTest {
   /**
    * Test {@link IntegrationBootstrapContext#getIntegrationById(String)}.
    *
+   * <ul>
+   *   <li>When createNonNullString.
+   *   <li>Then return {@code null}.
+   * </ul>
+   *
    * <p>Method under test: {@link IntegrationBootstrapContext#getIntegrationById(String)}
    */
   @Test
@@ -49,7 +54,8 @@ public class IntegrationBootstrapContextDiffblueTest {
   @MethodsUnderTest({
     "org.symphonyoss.integration.Integration IntegrationBootstrapContext.getIntegrationById(String)"
   })
-  public void testGetIntegrationById() throws IllegalStateException {
+  public void testGetIntegrationById_whenCreateNonNullString_thenReturnNull()
+      throws IllegalStateException {
     // Arrange, Act and Assert
     assertNull(
         integrationBootstrapContext.getIntegrationById(ValidateFactory.createNonNullString()));

@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2026.01.01-SNAPSHOT-f2f2d79-local",
-    "creationTimestamp" : "2026-01-22T13:53:13.697Z",
-    "command" : "dcover create -B --coverage-reports --include-modules org.symphonyoss.symphony.integrations:integration-web",
-    "totalTime" : 228.211,
-    "environmentDetectionTime" : 1.621,
-    "indexingTime" : 0.307,
-    "entryPointsTime" : 1.568,
-    "generationTime" : 191.791,
-    "timeToFirstTest" : 22.606,
-    "timeToLastTest" : 204.319,
-    "indexQueryTime" : 3.015,
-    "verificationTime" : 5.618,
-    "validationTime" : 11.615
+    "creationTimestamp" : "2026-01-22T16:58:13.784Z",
+    "command" : "dcover create -B --coverage-reports --upload http://localhost:8080 --project-name symphonyoss-App-Integrations-Core --name after-gci",
+    "totalTime" : 334.829,
+    "environmentDetectionTime" : 1.832,
+    "indexingTime" : 0.409,
+    "entryPointsTime" : 1.821,
+    "generationTime" : 3241.324,
+    "timeToFirstTest" : 3522.006,
+    "timeToLastTest" : 3348.584,
+    "indexQueryTime" : 3.146,
+    "verificationTime" : 61.829,
+    "validationTime" : 18.236
   },
   "codes" : {
     "F009" : "Internal error",
@@ -34,7 +34,8 @@
     "T010" : "Abstract or interface method",
     "T012" : "Synthetic method",
     "T021" : "Empty method body",
-    "V000" : "Validated successfully"
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
   },
   "summary" : {
     "classesCount" : 24,
@@ -76,7 +77,8 @@
       "R000" : 52
     },
     "perTestValidation" : {
-      "V000" : 52
+      "V000" : 52,
+      "V003" : 3
     }
   },
   "classes" : {

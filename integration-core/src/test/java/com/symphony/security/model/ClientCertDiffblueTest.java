@@ -115,12 +115,17 @@ public class ClientCertDiffblueTest {
   /**
    * Test {@link ClientCert#setClientCertPEM(String)}.
    *
+   * <ul>
+   *   <li>Then createClientCert ClientCertPEM is {@code validString}.
+   * </ul>
+   *
    * <p>Method under test: {@link ClientCert#setClientCertPEM(String)}
    */
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({"void ClientCert.setClientCertPEM(String)"})
-  public void testSetClientCertPEM() throws UnsupportedEncodingException {
+  public void testSetClientCertPEM_thenCreateClientCertClientCertPEMIsValidString()
+      throws UnsupportedEncodingException {
     // Arrange
     ClientCert createClientCertResult = ClientCertFactory.createClientCert();
 

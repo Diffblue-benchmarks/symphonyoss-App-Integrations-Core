@@ -1,0 +1,1628 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Discovered modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  - org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  - org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  - org.symphonyoss.symphony.integrations:integration-auth
+INFO  - org.symphonyoss.symphony.integrations:integration-config
+INFO  - org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  - org.symphonyoss.symphony.integrations:integration-core
+INFO  - org.symphonyoss.symphony.integrations:integration-web
+INFO  - org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  
+INFO  
+INFO  [1/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  ==================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.auth.api.client
+INFO  - org.symphonyoss.integration.auth.api.exception
+INFO  - org.symphonyoss.integration.auth.api.model
+INFO  - org.symphonyoss.integration.auth.api.properties
+INFO  Gathering methods to test...
+INFO  Found 27 callable methods in 10 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/10] org.symphonyoss.integration.auth.api.client.AuthenticationApiClient
+INFO   [1/10]   Tests created: 2
+INFO   [2/10] org.symphonyoss.integration.auth.api.client.AuthenticationAppApiClient
+INFO   [2/10]   Tests created: 9
+INFO   [3/10] org.symphonyoss.integration.auth.api.client.KmAuthHttpApiClient
+INFO   [3/10]   Tests created: 0
+INFO   [4/10] org.symphonyoss.integration.auth.api.client.PodAuthAppHttpApiClient
+INFO   [4/10]   Tests created: 1
+INFO   [5/10] org.symphonyoss.integration.auth.api.client.PodAuthHttpApiClient
+INFO   [5/10]   Tests created: 0
+INFO   [6/10] org.symphonyoss.integration.auth.api.exception.InvalidAppTokenException
+INFO   [6/10]   Tests created: 1
+INFO   [7/10] org.symphonyoss.integration.auth.api.exception.UnauthorizedAppException
+INFO   [7/10]   Tests created: 1
+INFO   [8/10] org.symphonyoss.integration.auth.api.exception.UnexpectedAppAuthenticationException
+INFO   [8/10]   Tests created: 1
+INFO   [9/10] org.symphonyoss.integration.auth.api.model.Token
+INFO   [9/10]   Tests created: 1
+INFO  [10/10] org.symphonyoss.integration.auth.api.properties.AuthApiClientProperties
+INFO  [10/10]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-auth-api-client
+INFO  ---------------------------------------------------------------------------------------------------
+INFO  Total:                                              27 methods
+INFO  16 tests created for:                               17 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                6 methods
+INFO      6 R026: Failed to create Spring context
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  All 16 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 91 of 98 lines to cover (92.9%)
+INFO  Diffblue tests cover 73 of 98 lines to cover (74.5%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth-api-client/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 16
+      Diffblue test coverage: 73 of 98 lines to cover
+      Manual test coverage: 91 of 98 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-auth-api-client?runId=1000100
+INFO  
+INFO  [2/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  =================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.pod.api.client
+INFO  - org.symphonyoss.integration.pod.api.model
+INFO  - org.symphonyoss.integration.pod.api.properties
+INFO  Gathering methods to test...
+INFO  Found 252 callable methods in 45 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/45] org.symphonyoss.integration.pod.api.client.AppEntitlementApiClient
+INFO   [1/45]   Tests created: 4
+INFO   [2/45] org.symphonyoss.integration.pod.api.client.BaseIntegrationInstanceApiClient
+INFO   [2/45]   Tests created: 25
+INFO   [3/45] org.symphonyoss.integration.pod.api.client.BasePodApiClient
+INFO   [3/45]   Tests created: 3
+INFO   [4/45] org.symphonyoss.integration.pod.api.client.IntegrationApiClient
+INFO   [4/45]   Tests created: 27
+INFO   [5/45] org.symphonyoss.integration.pod.api.client.IntegrationAuthApiClient
+INFO   [5/45]   Tests created: 25
+INFO   [6/45] org.symphonyoss.integration.pod.api.client.IntegrationHttpApiClient
+INFO   [6/45]   Tests created: 0
+INFO   [7/45] org.symphonyoss.integration.pod.api.client.IntegrationInstanceAdminApiClient
+INFO   [7/45]   Tests created: 1
+INFO   [8/45] org.symphonyoss.integration.pod.api.client.IntegrationInstanceApiClient
+INFO   [8/45]   Tests created: 7
+INFO   [9/45] org.symphonyoss.integration.pod.api.client.PodHttpApiClient
+INFO   [9/45]   Tests created: 0
+INFO  [10/45] org.symphonyoss.integration.pod.api.client.PodInfoClient
+INFO  [10/45]   Tests created: 3
+INFO  [11/45] org.symphonyoss.integration.pod.api.client.RelayApiClient
+INFO  [11/45]   Tests created: 8
+INFO  [12/45] org.symphonyoss.integration.pod.api.client.SecurityApiClient
+INFO  [12/45]   Tests created: 5
+INFO  [13/45] org.symphonyoss.integration.pod.api.client.StreamApiClient
+INFO  [13/45]   Tests created: 7
+INFO  [14/45] org.symphonyoss.integration.pod.api.client.SymphonyHttpApiClient
+INFO  [14/45]   Tests created: 0
+INFO  [15/45] org.symphonyoss.integration.pod.api.client.UserApiClient
+INFO  [15/45]   Tests created: 26
+INFO  [16/45] org.symphonyoss.integration.pod.api.model.AppEntitlement
+INFO  [16/45]   Tests created: 1
+INFO  [17/45] org.symphonyoss.integration.pod.api.model.AppEntitlementList
+INFO  [17/45]   Tests created: 1
+INFO  [18/45] org.symphonyoss.integration.pod.api.model.Avatar
+INFO  [18/45]   Tests created: 1
+INFO  [19/45] org.symphonyoss.integration.pod.api.model.AvatarUpdate
+INFO  [19/45]   Tests created: 1
+INFO  [20/45] org.symphonyoss.integration.pod.api.model.CompanyCert
+INFO  [20/45]   Tests created: 1
+INFO  [21/45] org.symphonyoss.integration.pod.api.model.CompanyCertAttributes
+INFO  [21/45]   Tests created: 1
+INFO  [22/45] org.symphonyoss.integration.pod.api.model.CompanyCertDetail
+INFO  [22/45]   Tests created: 1
+INFO  [23/45] org.symphonyoss.integration.pod.api.model.CompanyCertInfo
+INFO  [23/45]   Tests created: 1
+INFO  [24/45] org.symphonyoss.integration.pod.api.model.CompanyCertStatus
+INFO  [24/45]   Tests created: 1
+INFO  [25/45] org.symphonyoss.integration.pod.api.model.CompanyCertStatus$TypeEnum
+INFO  [25/45]   Tests created: 0
+INFO  [26/45] org.symphonyoss.integration.pod.api.model.CompanyCertType
+INFO  [26/45]   Tests created: 1
+INFO  [27/45] org.symphonyoss.integration.pod.api.model.CompanyCertType$TypeEnum
+INFO  [27/45]   Tests created: 0
+INFO  [28/45] org.symphonyoss.integration.pod.api.model.Envelope
+INFO  [28/45]   Tests created: 2
+INFO  [29/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceList
+INFO  [29/45]   Tests created: 1
+INFO  [30/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceSubmissionCreate
+INFO  [30/45]   Tests created: 1
+INFO  [31/45] org.symphonyoss.integration.pod.api.model.IntegrationInstanceSubmissionUpdate
+INFO  [31/45]   Tests created: 1
+INFO  [32/45] org.symphonyoss.integration.pod.api.model.IntegrationSettingsList
+INFO  [32/45]   Tests created: 1
+INFO  [33/45] org.symphonyoss.integration.pod.api.model.IntegrationSubmissionCreate
+INFO  [33/45]   Tests created: 1
+INFO  [34/45] org.symphonyoss.integration.pod.api.model.PodInfo
+INFO  [34/45]   Tests created: 5
+INFO  [35/45] org.symphonyoss.integration.pod.api.model.UserAttributes
+INFO  [35/45]   Tests created: 1
+INFO  [36/45] org.symphonyoss.integration.pod.api.model.UserAttributes$AccountTypeEnum
+INFO  [36/45]   Tests created: 0
+INFO  [37/45] org.symphonyoss.integration.pod.api.model.UserAuthorizationDataList
+INFO  [37/45]   Tests created: 1
+INFO  [38/45] org.symphonyoss.integration.pod.api.model.UserCreate
+INFO  [38/45]   Tests created: 1
+INFO  [39/45] org.symphonyoss.integration.pod.api.model.UserDetail
+INFO  [39/45]   Tests created: 1
+INFO  [40/45] org.symphonyoss.integration.pod.api.model.UserPassword
+INFO  [40/45]   Tests created: 3
+INFO  [41/45] org.symphonyoss.integration.pod.api.model.UserSystemInfo
+INFO  [41/45]   Tests created: 1
+INFO  [42/45] org.symphonyoss.integration.pod.api.model.UserSystemInfo$StatusEnum
+INFO  [42/45]   Tests created: 0
+INFO  [43/45] org.symphonyoss.integration.pod.api.properties.AppEntitlementApiClientProperties
+INFO  [43/45]   Tests created: 0
+INFO  [44/45] org.symphonyoss.integration.pod.api.properties.BaseIntegrationInstanceApiClientProperties
+INFO  [44/45]   Tests created: 0
+INFO  [45/45] org.symphonyoss.integration.pod.api.properties.BasePodApiClientProperties
+INFO  [45/45]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-pod-api-client
+INFO  --------------------------------------------------------------------------------------------------
+INFO  Total:                                             252 methods
+INFO  171 tests created for:                             232 methods
+INFO  
+INFO  Tested indirectly via other methods:                 6 methods
+INFO      6 T005: Trivial constructor
+INFO  No tests created for:                                6 methods
+INFO      6 R026: Failed to create Spring context
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/IntegrationAuthApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/StreamApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/client/UserApiClientDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/EnvelopeDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/PodInfoDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserCreateDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/src/test/java/org/symphonyoss/integration/pod/api/model/UserDetailDiffblueTest.java
+INFO    
+INFO  All 171 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 691 of 779 lines to cover (88.7%)
+INFO  Diffblue tests cover 419 of 779 lines to cover (53.8%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-pod-api-client/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 77
+      Diffblue test coverage: 419 of 779 lines to cover
+      Manual test coverage: 691 of 779 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-pod-api-client?runId=1000101
+INFO  
+INFO  [3/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  ===================================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.agent.api.client
+INFO  - org.symphonyoss.integration.agent.api.client.properties
+INFO  Gathering methods to test...
+INFO  Found 11 callable methods in 7 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO  [1/7] org.symphonyoss.integration.agent.api.client.AgentApiClient
+INFO  [1/7]   Tests created: 0
+INFO  [2/7] org.symphonyoss.integration.agent.api.client.BaseMessageApiClient
+INFO  [2/7]   Tests created: 4
+INFO  [3/7] org.symphonyoss.integration.agent.api.client.V2MessageApiClient
+INFO  [3/7]   Tests created: 1
+INFO  [4/7] org.symphonyoss.integration.agent.api.client.V4MessageApiClient
+INFO  [4/7]   Tests created: 3
+INFO  [5/7] org.symphonyoss.integration.agent.api.client.properties.AgentApiClientProperties
+INFO  [5/7]   Tests created: 0
+INFO  [6/7] org.symphonyoss.integration.agent.api.client.properties.BaseMessageApiClientProperties
+INFO  [6/7]   Tests created: 0
+INFO  [7/7] org.symphonyoss.integration.agent.api.client.properties.V4MessageApiClientProperties
+INFO  [7/7]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-agent-api-client
+INFO  ----------------------------------------------------------------------------------------------------
+INFO  Total:                                              11 methods
+INFO  8 tests created for:                                 3 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                4 methods
+INFO      2 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  All 8 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 60 of 64 lines to cover (93.8%)
+INFO  Diffblue tests cover 42 of 64 lines to cover (65.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-agent-api-client/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 8
+      Diffblue test coverage: 42 of 64 lines to cover
+      Manual test coverage: 60 of 64 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-agent-api-client?runId=1000102
+INFO  
+INFO  [4/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-auth
+INFO  =======================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.authentication
+INFO  - org.symphonyoss.integration.authentication.exception
+INFO  - org.symphonyoss.integration.authentication.jwt
+INFO  - org.symphonyoss.integration.authentication.properties
+INFO  Gathering methods to test...
+INFO  Found 47 callable methods in 14 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/14] org.symphonyoss.integration.authentication.AppAuthenticationContext
+INFO   [1/14]   Tests created: 7
+INFO   [2/14] org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl
+INFO   [2/14]   Tests created: 3
+INFO   [3/14] org.symphonyoss.integration.authentication.AuthenticationContext
+INFO   [3/14]   Tests created: 2
+INFO   [4/14] org.symphonyoss.integration.authentication.AuthenticationProxyImpl
+INFO   [4/14]   Tests created: 14
+INFO   [5/14] org.symphonyoss.integration.authentication.UserAuthenticationContext
+INFO   [5/14]   Tests created: 9
+INFO   [6/14] org.symphonyoss.integration.authentication.exception.MissingClientException
+INFO   [6/14]   Tests created: 2
+INFO   [7/14] org.symphonyoss.integration.authentication.exception.MissingServiceConfigurationException
+INFO   [7/14]   Tests created: 4
+INFO   [8/14] org.symphonyoss.integration.authentication.exception.UnregisteredAppAuthException
+INFO   [8/14]   Tests created: 1
+INFO   [9/14] org.symphonyoss.integration.authentication.exception.UnregisteredSessionTokenException
+INFO   [9/14]   Tests created: 1
+INFO  [10/14] org.symphonyoss.integration.authentication.exception.UnregisteredUserAuthException
+INFO  [10/14]   Tests created: 1
+INFO  [11/14] org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl
+INFO  [11/14]   Tests created: 42
+INFO  [12/14] org.symphonyoss.integration.authentication.properties.AppAuthenticationProxyProperties
+INFO  [12/14]   Tests created: 0
+INFO  [13/14] org.symphonyoss.integration.authentication.properties.AuthenticationContextProperties
+INFO  [13/14]   Tests created: 0
+INFO  [14/14] org.symphonyoss.integration.authentication.properties.AuthenticationProxyProperties
+INFO  [14/14]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-auth
+INFO  ----------------------------------------------------------------------------------------
+INFO  Total:                                              47 methods
+INFO  86 tests created for:                               38 methods
+INFO  
+INFO  Tested indirectly via other methods:                 6 methods
+INFO      6 T005: Trivial constructor
+INFO  No tests created for:                                3 methods
+INFO      1 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO    
+INFO  All 86 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 224 of 251 lines to cover (89.2%)
+INFO  Diffblue tests cover 122 of 251 lines to cover (48.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 44
+      Diffblue test coverage: 122 of 251 lines to cover
+      Manual test coverage: 224 of 251 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-auth?runId=1000103
+INFO  
+INFO  [5/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-config
+INFO  =========================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.config
+INFO  - org.symphonyoss.integration.config.exception
+INFO  - org.symphonyoss.integration.config.model
+INFO  - org.symphonyoss.integration.config.properties
+INFO  Gathering methods to test...
+INFO  Found 33 callable methods in 12 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/12] org.symphonyoss.integration.config.LocalIntegrationService
+INFO   [1/12]   Tests created: 16
+INFO   [2/12] org.symphonyoss.integration.config.RemoteIntegrationService
+INFO   [2/12]   Tests created: 12
+INFO   [3/12] org.symphonyoss.integration.config.exception.ConfigurationNotFoundException
+INFO   [3/12]   Tests created: 1
+INFO   [4/12] org.symphonyoss.integration.config.exception.InitializationConfigException
+INFO   [4/12]   Tests created: 1
+INFO   [5/12] org.symphonyoss.integration.config.exception.InstanceNotFoundException
+INFO   [5/12]   Tests created: 1
+INFO   [6/12] org.symphonyoss.integration.config.exception.InvalidConfigurationIdException
+INFO   [6/12]   Tests created: 1
+INFO   [7/12] org.symphonyoss.integration.config.exception.InvalidInstanceIdException
+INFO   [7/12]   Tests created: 1
+INFO   [8/12] org.symphonyoss.integration.config.exception.SaveConfigurationException
+INFO   [8/12]   Tests created: 1
+INFO   [9/12] org.symphonyoss.integration.config.exception.SaveInstanceException
+INFO   [9/12]   Tests created: 1
+INFO  [10/12] org.symphonyoss.integration.config.model.IntegrationRepository
+INFO  [10/12]   Tests created: 12
+INFO  [11/12] org.symphonyoss.integration.config.properties.LocalIntegrationServiceProperties
+INFO  [11/12]   Tests created: 0
+INFO  [12/12] org.symphonyoss.integration.config.properties.RemoteIntegrationServiceProperties
+INFO  [12/12]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-config
+INFO  ------------------------------------------------------------------------------------------
+INFO  Total:                                              33 methods
+INFO  47 tests created for:                               28 methods
+INFO  
+INFO  Tested indirectly via other methods:                 4 methods
+INFO      4 T005: Trivial constructor
+INFO  No tests created for:                                1 method
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/LocalIntegrationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/RemoteIntegrationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/src/test/java/org/symphonyoss/integration/config/model/IntegrationRepositoryDiffblueTest.java
+INFO    
+INFO  All 47 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 215 of 231 lines to cover (93.1%)
+INFO  Diffblue tests cover 14 of 231 lines to cover (6.1%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-config/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 7
+      Diffblue test coverage: 14 of 231 lines to cover
+      Manual test coverage: 215 of 231 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-config?runId=1000104
+INFO  
+INFO  [6/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  ==============================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.healthcheck
+INFO  - org.symphonyoss.integration.healthcheck.application
+INFO  - org.symphonyoss.integration.healthcheck.config
+INFO  - org.symphonyoss.integration.healthcheck.event
+INFO  - org.symphonyoss.integration.healthcheck.properties
+INFO  - org.symphonyoss.integration.healthcheck.services
+INFO  - org.symphonyoss.integration.healthcheck.services.indicators
+INFO  - org.symphonyoss.integration.healthcheck.services.invokers
+INFO  Gathering methods to test...
+INFO  Found 111 callable methods in 28 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/28] org.symphonyoss.integration.healthcheck.CompositeHealthEndpoint
+INFO   [1/28]   Tests created: 1
+INFO   [2/28] org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator
+INFO   [2/28]   Tests created: 1
+INFO   [3/28] org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter
+INFO   [3/28]   Tests created: 2
+INFO   [4/28] org.symphonyoss.integration.healthcheck.application.ApplicationsHealthAggregator
+INFO   [4/28]   Tests created: 1
+INFO   [5/28] org.symphonyoss.integration.healthcheck.application.ApplicationsHealthIndicator
+INFO   [5/28]   Tests created: 6
+INFO   [6/28] org.symphonyoss.integration.healthcheck.config.CachingConfiguration
+INFO   [6/28]   Tests created: 2
+INFO   [7/28] org.symphonyoss.integration.healthcheck.config.NamedThreadFactory
+INFO   [7/28]   Tests created: 1
+INFO   [8/28] org.symphonyoss.integration.healthcheck.config.RuntimeCacheResolver
+INFO   [8/28]   Tests created: 2
+INFO   [9/28] org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration
+INFO   [9/28]   Tests created: 2
+INFO  [10/28] org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData
+INFO  [10/28]   Tests created: 1
+INFO  [11/28] org.symphonyoss.integration.healthcheck.properties.HealthCheckProperties
+INFO  [11/28]   Tests created: 0
+INFO  [12/28] org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator
+INFO  [12/28]   Tests created: 2
+INFO  [13/28] org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthIndicator
+INFO  [13/28]   Tests created: 0
+INFO  [14/28] org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo
+INFO  [14/28]   Tests created: 30
+INFO  [15/28] org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability
+INFO  [15/28]   Tests created: 0
+INFO  [16/28] org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator
+INFO  [16/28]   Tests created: 1
+INFO  [17/28] org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator
+INFO  [17/28]   Tests created: 2
+INFO  [18/28] org.symphonyoss.integration.healthcheck.services.indicators.KmHealthIndicator
+INFO  [18/28]   Tests created: 1
+INFO  [19/28] org.symphonyoss.integration.healthcheck.services.indicators.PodHealthIndicator
+INFO  [19/28]   Tests created: 1
+INFO  [20/28] org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator
+INFO  [20/28]   Tests created: 2
+INFO  [21/28] org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator
+INFO  [21/28]   Tests created: 6
+INFO  [22/28] org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker
+INFO  [22/28]   Tests created: 3
+INFO  [23/28] org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker
+INFO  [23/28]   Tests created: 9
+INFO  [24/28] org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker
+INFO  [24/28]   Tests created: 8
+INFO  [25/28] org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker
+INFO  [25/28]   Tests created: 3
+INFO  [26/28] org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker
+INFO  [26/28]   Tests created: 4
+INFO  [27/28] org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker
+INFO  [27/28]   Tests created: 4
+INFO  [28/28] org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker
+INFO  [28/28]   Tests created: 16
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  -----------------------------------------------------------------------------------------------
+INFO  Total:                                             111 methods
+INFO  111 tests created for:                              83 methods
+INFO  
+INFO  Tested indirectly via other methods:                17 methods
+INFO     17 T005: Trivial constructor
+INFO  No tests created for:                                9 methods
+INFO      3 R013: No inputs found that don't throw a trivial exception
+INFO      2 R002: Missing observers
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO    
+INFO  Test execution failed, analyzing...
+INFO  9 individual tests did not pass and were removed.
+INFO    
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO    
+INFO  All 111 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 332 of 358 lines to cover (92.7%)
+INFO  Diffblue tests cover 231 of 358 lines to cover (64.5%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 93
+      Diffblue test coverage: 231 of 358 lines to cover
+      Manual test coverage: 332 of 358 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-healthcheck?runId=1000105
+INFO  
+INFO  [7/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-core
+INFO  =======================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - com.gs.ti.wpt.lc.security.cryptolib
+INFO  - com.symphony.security.cache
+INFO  - com.symphony.security.clientsdk.entity
+INFO  - com.symphony.security.clientsdk.search
+INFO  - com.symphony.security.clientsdk.transport
+INFO  - com.symphony.security.exceptions
+INFO  - com.symphony.security.helper
+INFO  - com.symphony.security.hsm
+INFO  - com.symphony.security.model
+INFO  - com.symphony.security.utils
+INFO  - org.symphonyoss.integration.core
+INFO  - org.symphonyoss.integration.core.authorization
+INFO  - org.symphonyoss.integration.core.bootstrap
+INFO  - org.symphonyoss.integration.core.bridge
+INFO  - org.symphonyoss.integration.core.properties
+INFO  - org.symphonyoss.integration.core.runnable
+INFO  - org.symphonyoss.integration.core.service
+INFO  Gathering methods to test...
+WARN  E199: Libraries with limited support found
+      Libraries are on the classpath that have only limited support by
+      Diffblue Cover:
+      - PowerMock 1.6.1
+      For code that uses these libraries fewer or lower quality tests may be written.
+INFO  Found 524 callable methods in 90 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/90] com.gs.ti.wpt.lc.security.cryptolib.AES
+INFO   [1/90]   Tests created: 22
+INFO   [2/90] com.gs.ti.wpt.lc.security.cryptolib.BCrypt
+INFO   [2/90]   Tests created: 4
+INFO   [3/90] com.gs.ti.wpt.lc.security.cryptolib.Cert
+INFO   [3/90]   Tests created: 56
+INFO   [4/90] com.gs.ti.wpt.lc.security.cryptolib.Crl
+INFO   [4/90]   Tests created: 16
+INFO   [5/90] com.gs.ti.wpt.lc.security.cryptolib.Extensions
+INFO   [5/90]   Tests created: 104
+INFO   [6/90] com.gs.ti.wpt.lc.security.cryptolib.PBKDF
+INFO   [6/90]   Tests created: 3
+INFO   [7/90] com.gs.ti.wpt.lc.security.cryptolib.PrettyPrint
+INFO   [7/90]   Tests created: 0
+INFO   [8/90] com.gs.ti.wpt.lc.security.cryptolib.RSA
+INFO   [8/90]   Tests created: 18
+INFO   [9/90] com.gs.ti.wpt.lc.security.cryptolib.RevokedCert
+INFO   [9/90]   Tests created: 8
+INFO  [10/90] com.gs.ti.wpt.lc.security.cryptolib.SHA
+INFO  [10/90]   Tests created: 1
+INFO  [11/90] com.gs.ti.wpt.lc.security.cryptolib.SecureLocalPersistence
+INFO  [11/90]   Tests created: 0
+2026-01-22T17:27:07,809 INFO  [pool-7-thread-683]                Utils   - Arch: linux/amd64
+INFO  [12/90] com.gs.ti.wpt.lc.security.cryptolib.Utils
+INFO  [12/90]   Tests created: 3
+INFO  [13/90] com.gs.ti.wpt.lc.security.cryptolib.Version
+INFO  [13/90]   Tests created: 0
+INFO  [14/90] com.symphony.security.cache.InMemoryPersister
+INFO  [14/90]   Tests created: 4
+INFO  [15/90] com.symphony.security.cache.SecurePersister
+INFO  [15/90]   Tests created: 5
+INFO  [16/90] com.symphony.security.clientsdk.entity.EntityCiphertextTransportV2
+INFO  [16/90]   Tests created: 14
+INFO  [17/90] com.symphony.security.clientsdk.entity.EntityCryptoHandler
+INFO  [17/90]   Tests created: 3
+INFO  [18/90] com.symphony.security.clientsdk.entity.EntityCryptoHandlerV2
+INFO  [18/90]   Tests created: 17
+2026-01-22T17:27:39,497 ERROR [pool-7-thread-734]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:27:39,532 ERROR [pool-7-thread-735]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.clientsdk.search.ClientTokenizer_v2.hashHMAC256B64(ClientTokenizer_v2.java:95) ~[classes/:?]
+	at com.symphony.security.clientsdk.search.ClientTokenizer_v2.getHashedTokens(ClientTokenizer_v2.java:77) ~[classes/:?]
+	at com.symphony.security.clientsdk.search.ClientTokenizer_v2DiffblueTest3562767046667505364.testGetHashedTokens_whenEmptyArrayOfByte_thenReturnContainsNull(ClientTokenizer_v2DiffblueTest3562767046667505364.java:40) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T17:27:41,575 ERROR [pool-7-thread-741]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:27:41,611 ERROR [pool-7-thread-742]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.clientsdk.search.ClientTokenizer_v2.hashHMAC256B64(ClientTokenizer_v2.java:95) ~[classes/:?]
+	at com.symphony.security.clientsdk.search.ClientTokenizer_v2DiffblueTest8978748410970543697.testHashHMAC256B64_whenEmptyArrayOfByte_thenReturnNull(ClientTokenizer_v2DiffblueTest8978748410970543697.java:30) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [19/90] com.symphony.security.clientsdk.search.ClientTokenizer_v2
+INFO  [19/90]   Tests created: 22
+2026-01-22T17:27:45,838 ERROR [pool-7-thread-750]    CiphertextFactory   - Version 65 of CiphertextTransport is not supported. transportableBytes = QVhBWEFYQVg=
+
+2026-01-22T17:27:45,907 ERROR [pool-7-thread-753]    CiphertextFactory   - Version 65 of CiphertextTransport is not supported. transportableBytes = QQhBCEEIQQhBCEEIQQhBCA==
+
+2026-01-22T17:27:45,930 ERROR [pool-7-thread-754]    CiphertextFactory   - Version 65 of CiphertextTransport is not supported. transportableBytes = QQhBCEEIQQhBCEEIQQhBCEEIQQhBCEEI
+
+2026-01-22T17:27:45,954 ERROR [pool-7-thread-755]    CiphertextFactory   - Version -1 of CiphertextTransport is not supported. transportableBytes = /1hBWEFYQVg=
+
+INFO  [20/90] com.symphony.security.clientsdk.transport.CiphertextFactory
+INFO  [20/90]   Tests created: 6
+INFO  [21/90] com.symphony.security.clientsdk.transport.CiphertextTransportEncryptionMode
+INFO  [21/90]   Tests created: 0
+INFO  [22/90] com.symphony.security.clientsdk.transport.CiphertextTransportV1
+INFO  [22/90]   Tests created: 15
+INFO  [23/90] com.symphony.security.clientsdk.transport.CiphertextTransportV2
+INFO  [23/90]   Tests created: 13
+INFO  [24/90] com.symphony.security.clientsdk.transport.CiphertextTransportV3
+INFO  [24/90]   Tests created: 9
+INFO  [25/90] com.symphony.security.clientsdk.transport.OnTheWireFormat
+INFO  [25/90]   Tests created: 11
+INFO  [26/90] com.symphony.security.exceptions.CertificateAuthorityException
+INFO  [26/90]   Tests created: 1
+INFO  [27/90] com.symphony.security.exceptions.CiphertextTransportIsEmptyException
+INFO  [27/90]   Tests created: 1
+INFO  [28/90] com.symphony.security.exceptions.CiphertextTransportVersionException
+INFO  [28/90]   Tests created: 1
+INFO  [29/90] com.symphony.security.exceptions.ClientCertException
+INFO  [29/90]   Tests created: 0
+INFO  [30/90] com.symphony.security.exceptions.InvalidDataException
+INFO  [30/90]   Tests created: 0
+INFO  [31/90] com.symphony.security.exceptions.KeyInfoNotFoundException
+INFO  [31/90]   Tests created: 1
+INFO  [32/90] com.symphony.security.exceptions.KeyManagerException
+INFO  [32/90]   Tests created: 1
+INFO  [33/90] com.symphony.security.exceptions.KeyNotFoundException
+INFO  [33/90]   Tests created: 1
+INFO  [34/90] com.symphony.security.exceptions.KeyRotationException
+INFO  [34/90]   Tests created: 1
+INFO  [35/90] com.symphony.security.exceptions.KeyStoreException
+INFO  [35/90]   Tests created: 0
+INFO  [36/90] com.symphony.security.exceptions.OnTheWireFormatException
+INFO  [36/90]   Tests created: 1
+INFO  [37/90] com.symphony.security.exceptions.SymphonyComputedKeyIdAndExpectedKeyIdMistmatchException
+INFO  [37/90]   Tests created: 6
+INFO  [38/90] com.symphony.security.exceptions.SymphonyEncryptionException
+INFO  [38/90]   Tests created: 0
+INFO  [39/90] com.symphony.security.exceptions.SymphonyExtensionException
+INFO  [39/90]   Tests created: 1
+INFO  [40/90] com.symphony.security.exceptions.SymphonyHSMException
+INFO  [40/90]   Tests created: 0
+INFO  [41/90] com.symphony.security.exceptions.SymphonyInputException
+INFO  [41/90]   Tests created: 0
+INFO  [42/90] com.symphony.security.exceptions.SymphonyNativeException
+INFO  [42/90]   Tests created: 0
+INFO  [43/90] com.symphony.security.exceptions.SymphonyPEMFormatException
+INFO  [43/90]   Tests created: 0
+INFO  [44/90] com.symphony.security.exceptions.SymphonyRevokedCertException
+INFO  [44/90]   Tests created: 1
+INFO  [45/90] com.symphony.security.exceptions.SymphonySignatureException
+INFO  [45/90]   Tests created: 0
+INFO  [46/90] com.symphony.security.exceptions.UnsupportedKeyDerivationAlgorithmException
+INFO  [46/90]   Tests created: 1
+INFO  [47/90] com.symphony.security.exceptions.UserSignatureException
+INFO  [47/90]   Tests created: 1
+2026-01-22T17:28:47,094 ERROR [pool-7-thread-824]  ClientCryptoHandler   - Invalid plaintext length of 8 in plaintext to encrypt CBC in unpadded format
+INFO  [48/90] com.symphony.security.helper.CDecryptionHelper
+INFO  [48/90]   Tests created: 3
+2026-01-22T17:29:00,403 ERROR [pool-7-thread-825]  ClientCryptoHandler   - unable to encrypt with unsupported encryption mode of 65
+2026-01-22T17:29:00,431 ERROR [pool-7-thread-826]  ClientCryptoHandler   - Invalid plaintext length of 8 in plaintext to encrypt CBC in unpadded format
+INFO  [49/90] com.symphony.security.helper.ClientCryptoHandler
+INFO  [49/90]   Tests created: 2
+INFO  [50/90] com.symphony.security.helper.KeyIdentifier
+INFO  [50/90]   Tests created: 9
+INFO  [51/90] com.symphony.security.hsm.TransportableWrappedKey
+INFO  [51/90]   Tests created: 7
+INFO  [52/90] com.symphony.security.model.CertStatus
+INFO  [52/90]   Tests created: 2
+INFO  [53/90] com.symphony.security.model.ClientCert
+INFO  [53/90]   Tests created: 4
+INFO  [54/90] com.symphony.security.model.ClientCertInfo
+INFO  [54/90]   Tests created: 2
+INFO  [55/90] com.symphony.security.model.RotationIdInfoList
+INFO  [55/90]   Tests created: 1
+INFO  [56/90] com.symphony.security.model.ThreadRotationIdInfo
+INFO  [56/90]   Tests created: 1
+INFO  [57/90] com.symphony.security.utils.Bytes
+INFO  [57/90]   Tests created: 217
+INFO  [58/90] com.symphony.security.utils.Bytes$LexicographicalComparerHolder
+INFO  [58/90]   Tests created: 0
+INFO  [59/90] com.symphony.security.utils.Bytes$LexicographicalComparerHolder$PureJavaComparer
+INFO  [59/90]   Tests created: 3
+INFO  [60/90] com.symphony.security.utils.Bytes$LexicographicalComparerHolder$UnsafeComparer
+INFO  [60/90]   Tests created: 0
+INFO  [61/90] com.symphony.security.utils.Converter
+INFO  [61/90]   Tests created: 24
+2026-01-22T17:32:26,102 ERROR [pool-7-thread-1099]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:32:26,124 ERROR [pool-7-thread-1100]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtilsDiffblueTest393814516470067530.testHMACxSHA256_whenEmptyArrayOfByte_thenReturnNull(CryptoHashUtilsDiffblueTest393814516470067530.java:27) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T17:32:31,224 ERROR [pool-7-thread-1106]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:32:31,248 ERROR [pool-7-thread-1107]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtils.hmacSha256digest(CryptoHashUtils.java:86) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtilsDiffblueTest3960971892642106658.testHmacSha256digest_whenEmptyArrayOfByte_thenReturnNull(CryptoHashUtilsDiffblueTest3960971892642106658.java:29) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T17:32:32,066 ERROR [pool-7-thread-1109]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:32:32,154 ERROR [pool-7-thread-1112]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtils.keyFingerprint(CryptoHashUtils.java:94) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtilsDiffblueTest7841063985380594970.testKeyFingerprintWithString_whenEmptyString_thenReturnFingerprintFailed(CryptoHashUtilsDiffblueTest7841063985380594970.java:24) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T17:32:33,339 ERROR [pool-7-thread-1116]      CryptoHashUtils   - No key, or invalid key length on HMACxSHA256 
+2026-01-22T17:32:33,367 ERROR [pool-7-thread-1117]      CryptoHashUtils   - Failed to get HMACxSHA256 : 
+java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:99) ~[?:1.8.0_472]
+	at com.symphony.security.utils.CryptoHashUtils.HMACxSHA256(CryptoHashUtils.java:115) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtils.keyFingerprint(CryptoHashUtils.java:94) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtils.keyFingerprint(CryptoHashUtils.java:90) ~[classes/:?]
+	at com.symphony.security.utils.CryptoHashUtilsDiffblueTest394974487746980768.testKeyFingerprintWithByte_whenEmptyArrayOfByte(CryptoHashUtilsDiffblueTest394974487746980768.java:25) ~[test-classes4587207435178483723/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [62/90] com.symphony.security.utils.CryptoHashUtils
+INFO  [62/90]   Tests created: 24
+INFO  [63/90] com.symphony.security.utils.DynamicLibraryLoader
+INFO  [63/90]   Tests created: 0
+INFO  [64/90] com.symphony.security.utils.PasswordBasedEncryption
+INFO  [64/90]   Tests created: 11
+INFO  [65/90] com.symphony.security.utils.PropertyDecrypter
+INFO  [65/90]   Tests created: 11
+INFO  [66/90] com.symphony.security.utils.PropertyDecrypter$ConsoleUserInput
+INFO  [66/90]   Tests created: 1
+INFO  [67/90] com.symphony.security.utils.SecurityKeyUtils
+INFO  [67/90]   Tests created: 113
+INFO  [68/90] com.symphony.security.utils.Validate
+INFO  [68/90]   Tests created: 4
+2026-01-22T17:34:45,549 ERROR [pool-7-thread-1273]      NullIntegration   - 
+Component: Integration Bootstrap
+Message: Certificate folder not found
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+2026-01-22T17:34:45,650 ERROR [pool-7-thread-1274]      NullIntegration   - 
+Component: Integration Bootstrap
+Message: Certificate folder not found
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+2026-01-22T17:34:45,749 ERROR [pool-7-thread-1275]      NullIntegration   - 
+Component: Integration Bootstrap
+Message: Certificate folder not found
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+2026-01-22T17:34:45,852 ERROR [pool-7-thread-1276]      NullIntegration   - 
+Component: Integration Bootstrap
+Message: Fail to retrieve the user keystore password. Application: validString
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+INFO  [69/90] org.symphonyoss.integration.core.NullIntegration
+INFO  [69/90]   Tests created: 21
+INFO  [70/90] org.symphonyoss.integration.core.authorization.AuthorizationRepositoryServiceImpl
+INFO  [70/90]   Tests created: 6
+INFO  [71/90] org.symphonyoss.integration.core.authorization.LocalAuthorizationRepoServiceCondition
+INFO  [71/90]   Tests created: 1
+INFO  [72/90] org.symphonyoss.integration.core.authorization.LocalAuthorizationRepositoryService
+INFO  [72/90]   Tests created: 2
+INFO  [73/90] org.symphonyoss.integration.core.authorization.RemoteAuthorizationRepoServiceCondition
+INFO  [73/90]   Tests created: 1
+INFO  [74/90] org.symphonyoss.integration.core.bootstrap.IntegrationBootstrapContext
+INFO  [74/90]   Tests created: 1
+INFO  [75/90] org.symphonyoss.integration.core.bootstrap.IntegrationBootstrapInfo
+INFO  [75/90]   Tests created: 2
+INFO  [76/90] org.symphonyoss.integration.core.bootstrap.IntegrationLogging
+INFO  [76/90]   Tests created: 2
+INFO  [77/90] org.symphonyoss.integration.core.bootstrap.NamedThreadFactory
+INFO  [77/90]   Tests created: 1
+INFO  [78/90] org.symphonyoss.integration.core.bridge.IntegrationBridgeExceptionHandler
+INFO  [78/90]   Tests created: 0
+INFO  [79/90] org.symphonyoss.integration.core.bridge.IntegrationBridgeImpl
+INFO  [79/90]   Tests created: 4
+INFO  [80/90] org.symphonyoss.integration.core.bridge.StreamServiceImpl
+INFO  [80/90]   Tests created: 9
+INFO  [81/90] org.symphonyoss.integration.core.properties.IntegrationBootstrapContextProperties
+INFO  [81/90]   Tests created: 0
+INFO  [82/90] org.symphonyoss.integration.core.properties.IntegrationBridgeExceptionHandlerProperties
+INFO  [82/90]   Tests created: 0
+INFO  [83/90] org.symphonyoss.integration.core.properties.IntegrationBridgeImplProperties
+INFO  [83/90]   Tests created: 0
+INFO  [84/90] org.symphonyoss.integration.core.properties.IntegrationLoggingProperties
+INFO  [84/90]   Tests created: 0
+INFO  [85/90] org.symphonyoss.integration.core.properties.NullIntegrationProperties
+INFO  [85/90]   Tests created: 0
+INFO  [86/90] org.symphonyoss.integration.core.properties.StreamServiceImplProperties
+INFO  [86/90]   Tests created: 0
+INFO  [87/90] org.symphonyoss.integration.core.properties.UserProperties
+INFO  [87/90]   Tests created: 0
+INFO  [88/90] org.symphonyoss.integration.core.runnable.IntegrationAbstractRunnable
+INFO  [88/90]   Tests created: 0
+INFO  [89/90] org.symphonyoss.integration.core.service.CryptoServiceImpl
+INFO  [89/90]   Tests created: 9
+INFO  [90/90] org.symphonyoss.integration.core.service.UserServiceImpl
+INFO  [90/90]   Tests created: 12
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-core
+INFO  ----------------------------------------------------------------------------------------
+INFO  Total:                                             524 methods
+INFO  882 tests created for:                             345 methods
+INFO  
+INFO  Tested indirectly via other methods:                28 methods
+INFO     28 T005: Trivial constructor
+INFO  Not unit-testable:                                   1 method
+INFO      1 T009: No implementation for abstract class
+INFO  No tests created for:                              146 methods
+INFO     66 R081: Exception in arrange section
+INFO     39 R013: No inputs found that don't throw a trivial exception
+INFO      8 R020: Temporary files were created but not deleted
+INFO      7 R002: Missing observers
+INFO      4 R011: Sandboxing policy violation
+INFO      2 R027: Missing beans when creating Spring context
+INFO      1 R031: Method may be time-sensitive
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/gs/ti/wpt/lc/security/cryptolib/ExtensionsDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/gs/ti/wpt/lc/security/cryptolib/ExtensionsDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/entity/EntityCiphertextTransportV2DiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/entity/EntityCiphertextTransportV2DiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/search/ClientTokenizer_v2DiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/search/ClientTokenizer_v2DiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/BytesDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/BytesDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/CryptoHashUtilsDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/CryptoHashUtilsDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/NullIntegrationDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/NullIntegrationDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/AuthorizationRepositoryServiceImplDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/AuthorizationRepositoryServiceImplDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/LocalAuthorizationRepositoryServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/LocalAuthorizationRepositoryServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationBootstrapInfoDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationBootstrapInfoDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationLoggingDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationLoggingDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bridge/IntegrationBridgeImplDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bridge/IntegrationBridgeImplDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/service/UserServiceImplDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/service/UserServiceImplDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/gs/ti/wpt/lc/security/cryptolib/ExtensionsDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/entity/EntityCiphertextTransportV2DiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/clientsdk/search/ClientTokenizer_v2DiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/BytesDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/com/symphony/security/utils/CryptoHashUtilsDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/NullIntegrationDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/AuthorizationRepositoryServiceImplDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/authorization/LocalAuthorizationRepositoryServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationBootstrapInfoDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bootstrap/IntegrationLoggingDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/bridge/IntegrationBridgeImplDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/src/test/java/org/symphonyoss/integration/core/service/UserServiceImplDiffblueTest.java
+INFO    
+INFO  Test execution failed, analyzing...
+INFO  3 individual tests did not pass and were removed.
+INFO    
+INFO  Number of tests discarded during validation since they didn't compile, run or pass
+INFO    1 for org.symphonyoss.integration.core.authorization.LocalAuthorizationRepoServiceCondition.matches
+INFO    1 for org.symphonyoss.integration.core.authorization.RemoteAuthorizationRepoServiceCondition.matches
+INFO    1 for org.symphonyoss.integration.core.bridge.StreamServiceImpl.init
+INFO  To skip discarding these tests please re-run DCover with --skip-test-validation
+INFO  Test validation was able to validate 879 out of 882 complete tests, the remainder were discarded.
+INFO  Refactorings have been generated - run `dcover refactor` to apply them
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 718 of 3208 lines to cover (22.4%)
+INFO  Diffblue tests cover 959 of 3208 lines to cover (29.9%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-core/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 446
+      Diffblue test coverage: 959 of 3208 lines to cover
+      Manual test coverage: 718 of 3208 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-core?runId=1000106
+INFO  
+INFO  [8/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-web
+INFO  ======================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.web
+INFO  - org.symphonyoss.integration.web.exception
+INFO  - org.symphonyoss.integration.web.filter
+INFO  - org.symphonyoss.integration.web.listener
+INFO  - org.symphonyoss.integration.web.metrics
+INFO  - org.symphonyoss.integration.web.properties
+INFO  - org.symphonyoss.integration.web.register
+INFO  - org.symphonyoss.integration.web.resource
+INFO  Gathering methods to test...
+WARN  E199: Libraries with limited support found
+      Libraries are on the classpath that have only limited support by
+      Diffblue Cover:
+      - PowerMock 1.6.1
+      For code that uses these libraries fewer or lower quality tests may be written.
+INFO  Found 94 callable methods in 21 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/21] org.symphonyoss.integration.web.IntegrationBridgeApplication
+INFO   [1/21]   Tests created: 0
+INFO   [2/21] org.symphonyoss.integration.web.exception.IntegrationBridgeUnavailableException
+INFO   [2/21]   Tests created: 5
+INFO   [3/21] org.symphonyoss.integration.web.filter.IntegrationMetricsFilter
+INFO   [3/21]   Tests created: 6
+INFO   [4/21] org.symphonyoss.integration.web.filter.WebHookOriginCheckFilter
+INFO   [4/21]   Tests created: 1
+INFO   [5/21] org.symphonyoss.integration.web.filter.WebHookTracingFilter
+INFO   [5/21]   Tests created: 3
+INFO   [6/21] org.symphonyoss.integration.web.listener.ApplicationReadyListener
+INFO   [6/21]   Tests created: 1
+INFO   [7/21] org.symphonyoss.integration.web.listener.BootstrapApplicationListener
+INFO   [7/21]   Tests created: 3
+INFO   [8/21] org.symphonyoss.integration.web.listener.IntegrationListener
+INFO   [8/21]   Tests created: 2
+INFO   [9/21] org.symphonyoss.integration.web.metrics.RequestMetricsController
+INFO   [9/21]   Tests created: 2
+INFO  [10/21] org.symphonyoss.integration.web.properties.AuthErrorMessageKeys
+INFO  [10/21]   Tests created: 0
+INFO  [11/21] org.symphonyoss.integration.web.properties.WebHookDispatcherResourceProperties
+INFO  [11/21]   Tests created: 0
+INFO  [12/21] org.symphonyoss.integration.web.properties.WebHookOriginCheckFilterProperties
+INFO  [12/21]   Tests created: 0
+INFO  [13/21] org.symphonyoss.integration.web.properties.WebHookResourceProperties
+INFO  [13/21]   Tests created: 0
+INFO  [14/21] org.symphonyoss.integration.web.properties.WebProperties
+INFO  [14/21]   Tests created: 0
+INFO  [15/21] org.symphonyoss.integration.web.register.WebResourcesRegistration
+INFO  [15/21]   Tests created: 4
+INFO  [16/21] org.symphonyoss.integration.web.resource.ApplicationAuthenticationResource
+INFO  [16/21]   Tests created: 0
+INFO  [17/21] org.symphonyoss.integration.web.resource.ApplicationAuthorizationResource
+INFO  [17/21]   Tests created: 0
+2026-01-22T17:55:54,247 ERROR [pool-7-thread-1362] WebHookDispatcherResource   - 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+org.symphonyoss.integration.exception.RemoteApiException: 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+	at org.symphonyoss.integration.web.resource.WebHookDispatcherResourceDiffblueTest9008566385416553908.testHandleRemoteApiException_thenReturnBodyIsAString(WebHookDispatcherResourceDiffblueTest9008566385416553908.java:48) ~[test-classes1614452795255560232/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [18/21] org.symphonyoss.integration.web.resource.WebHookDispatcherResource
+INFO  [18/21]   Tests created: 2
+2026-01-22T17:56:13,134 ERROR [pool-7-thread-1371]      WebHookResource   - null
+java.lang.Exception
+	at org.symphonyoss.integration.web.resource.WebHookResourceDiffblueTest9115184859335463158.testHandleBadRequest_whenException_thenReturnBodyIsNull(WebHookResourceDiffblueTest9115184859335463158.java:48) ~[test-classes1614452795255560232/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+2026-01-22T17:56:45,188 ERROR [pool-7-thread-1375]      WebHookResource   - null
+java.lang.Exception
+	at org.symphonyoss.integration.web.resource.WebHookResourceDiffblueTest2218683248767708027.testHandleUnexpectedException_whenException_thenReturnBodyIsUnexpectedException(WebHookResourceDiffblueTest2218683248767708027.java:46) ~[test-classes1614452795255560232/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [19/21] org.symphonyoss.integration.web.resource.WebHookResource
+INFO  [19/21]   Tests created: 18
+INFO  [20/21] org.symphonyoss.integration.web.resource.WebHookWelcomeResource
+INFO  [20/21]   Tests created: 0
+2026-01-22T17:57:20,537 ERROR [pool-7-thread-1383] WebResourceExceptionHandler   - 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+org.symphonyoss.integration.exception.RemoteApiException: 
+Component: Commons
+Message: An error occurred
+Solutions: 
+No solution has been cataloged for troubleshooting this problem.
+
+	at org.symphonyoss.integration.web.resource.WebResourceExceptionHandlerDiffblueTest4799301921940789006.testHandleRemoteAPIException_thenReturnBodyMessageIsAString(WebResourceExceptionHandlerDiffblueTest4799301921940789006.java:39) ~[test-classes1614452795255560232/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_472]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_472]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_472]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_472]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) ~[junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) ~[spring-test-4.3.6.RELEASE.jar:4.3.6.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115) ~[junit-4.12.jar:4.12]
+	at com.diffblue.junit4.isolation.IJunitCoreImpl.run(IJunitCoreImpl.java:35) ~[?:?]
+	at com.diffblue.cover.test.runners.JUnit4.run(JUnit4.java:54) ~[?:?]
+	at com.diffblue.cover.api.verifier.TestVerificationEnvironment.lambda$run$1(TestVerificationEnvironment.java:83) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604) ~[?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_472]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_472]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_472]
+INFO  [21/21] org.symphonyoss.integration.web.resource.WebResourceExceptionHandler
+INFO  [21/21]   Tests created: 5
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-web
+INFO  ---------------------------------------------------------------------------------------
+INFO  Total:                                              94 methods
+INFO  52 tests created for:                               52 methods
+INFO  
+INFO  Tested indirectly via other methods:                14 methods
+INFO     14 T005: Trivial constructor
+INFO  Not unit-testable:                                   1 method
+INFO      1 T006: Main method
+INFO  No tests created for:                               27 methods
+INFO      3 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/src/test/java/org/symphonyoss/integration/web/filter/IntegrationMetricsFilterDiffblueTest.java
+INFO    
+INFO  All 52 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 470 of 535 lines to cover (87.9%)
+INFO  Diffblue tests cover 191 of 535 lines to cover (35.7%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-web/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 46
+      Diffblue test coverage: 191 of 535 lines to cover
+      Manual test coverage: 470 of 535 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-web?runId=1000107
+INFO  
+INFO  [9/9] Creating tests for module: org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  ===============================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.provisioning
+INFO  - org.symphonyoss.integration.provisioning.client
+INFO  - org.symphonyoss.integration.provisioning.client.model
+INFO  - org.symphonyoss.integration.provisioning.exception
+INFO  - org.symphonyoss.integration.provisioning.properties
+INFO  - org.symphonyoss.integration.provisioning.service
+INFO  Gathering methods to test...
+WARN  E199: Libraries with limited support found
+      Libraries are on the classpath that have only limited support by
+      Diffblue Cover:
+      - PowerMock 1.6.1
+      For code that uses these libraries fewer or lower quality tests may be written.
+INFO  Found 102 callable methods in 30 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/30] org.symphonyoss.integration.provisioning.IntegrationProvisioningApp
+INFO   [1/30]   Tests created: 5
+INFO   [2/30] org.symphonyoss.integration.provisioning.IntegrationProvisioningService
+INFO   [2/30]   Tests created: 1
+INFO   [3/30] org.symphonyoss.integration.provisioning.client.AppRepositoryClient
+INFO   [3/30]   Tests created: 5
+INFO   [4/30] org.symphonyoss.integration.provisioning.client.model.AppStoreAssetsWrapper
+INFO   [4/30]   Tests created: 1
+INFO   [5/30] org.symphonyoss.integration.provisioning.client.model.AppStoreBuilder
+INFO   [5/30]   Tests created: 1
+INFO   [6/30] org.symphonyoss.integration.provisioning.client.model.AppStoreSettingsWrapper
+INFO   [6/30]   Tests created: 1
+INFO   [7/30] org.symphonyoss.integration.provisioning.client.model.AppStoreWrapper
+INFO   [7/30]   Tests created: 1
+INFO   [8/30] org.symphonyoss.integration.provisioning.exception.AppRepositoryClientException
+INFO   [8/30]   Tests created: 1
+INFO   [9/30] org.symphonyoss.integration.provisioning.exception.ApplicationProvisioningException
+INFO   [9/30]   Tests created: 6
+INFO  [10/30] org.symphonyoss.integration.provisioning.exception.CompanyCertificateException
+INFO  [10/30]   Tests created: 6
+INFO  [11/30] org.symphonyoss.integration.provisioning.exception.ConfigurationProvisioningException
+INFO  [11/30]   Tests created: 4
+INFO  [12/30] org.symphonyoss.integration.provisioning.exception.IntegrationProvisioningAuthException
+INFO  [12/30]   Tests created: 4
+INFO  [13/30] org.symphonyoss.integration.provisioning.exception.KeyPairException
+INFO  [13/30]   Tests created: 6
+INFO  [14/30] org.symphonyoss.integration.provisioning.exception.UpdateUserException
+INFO  [14/30]   Tests created: 4
+INFO  [15/30] org.symphonyoss.integration.provisioning.exception.UserSearchException
+INFO  [15/30]   Tests created: 6
+INFO  [16/30] org.symphonyoss.integration.provisioning.exception.UsernameMismatchException
+INFO  [16/30]   Tests created: 3
+INFO  [17/30] org.symphonyoss.integration.provisioning.properties.ApplicationProperties
+INFO  [17/30]   Tests created: 0
+INFO  [18/30] org.symphonyoss.integration.provisioning.properties.CompanyCertificateProperties
+INFO  [18/30]   Tests created: 0
+INFO  [19/30] org.symphonyoss.integration.provisioning.properties.ConfigurationProvisioningProperties
+INFO  [19/30]   Tests created: 0
+INFO  [20/30] org.symphonyoss.integration.provisioning.properties.IntegrationProvisioningProperties
+INFO  [20/30]   Tests created: 0
+INFO  [21/30] org.symphonyoss.integration.provisioning.properties.KeyPairProperties
+INFO  [21/30]   Tests created: 0
+INFO  [22/30] org.symphonyoss.integration.provisioning.properties.UserProperties
+INFO  [22/30]   Tests created: 0
+INFO  [23/30] org.symphonyoss.integration.provisioning.service.AppKeyPairService
+INFO  [23/30]   Tests created: 1
+INFO  [24/30] org.symphonyoss.integration.provisioning.service.ApplicationService
+INFO  [24/30]   Tests created: 5
+INFO  [25/30] org.symphonyoss.integration.provisioning.service.AuthenticationService
+INFO  [25/30]   Tests created: 4
+INFO  [26/30] org.symphonyoss.integration.provisioning.service.CompanyCertificateService
+INFO  [26/30]   Tests created: 29
+INFO  [27/30] org.symphonyoss.integration.provisioning.service.ConfigurationProvisioningService
+INFO  [27/30]   Tests created: 9
+INFO  [28/30] org.symphonyoss.integration.provisioning.service.KeyPairService
+INFO  [28/30]   Tests created: 5
+INFO  [29/30] org.symphonyoss.integration.provisioning.service.UserKeyPairService
+INFO  [29/30]   Tests created: 1
+INFO  [30/30] org.symphonyoss.integration.provisioning.service.UserService
+INFO  [30/30]   Tests created: 12
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-provisioning
+INFO  ------------------------------------------------------------------------------------------------
+INFO  Total:                                             102 methods
+INFO  121 tests created for:                              80 methods
+INFO  
+INFO  Tested indirectly via other methods:                16 methods
+INFO     16 T005: Trivial constructor
+INFO  Not unit-testable:                                   1 method
+INFO      1 T006: Main method
+INFO  No tests created for:                                5 methods
+INFO      2 R011: Sandboxing policy violation
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/IntegrationProvisioningAppDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/client/model/AppStoreBuilderDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/AppKeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ApplicationServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/CompanyCertificateServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/ConfigurationProvisioningServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/KeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserKeyPairServiceDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/src/test/java/org/symphonyoss/integration/provisioning/service/UserServiceDiffblueTest.java
+INFO    
+INFO  All 121 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 619 of 822 lines to cover (75.3%)
+INFO  Diffblue tests cover 153 of 822 lines to cover (18.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-provisioning/.diffblue/reports/report.json
+INFO  Coverage reports upload successful
+      Total count of Diffblue tests: 53
+      Diffblue test coverage: 153 of 822 lines to cover
+      Manual test coverage: 619 of 822 lines to cover
+      View this run on the dashboard at http://localhost:8080/ui/project/Projects/symphonyoss-App-Integrations-Core/integration-provisioning?runId=1000108
+INFO  
+INFO  Run summary:
+INFO  ------------
+WARN  create                                                      WARNING
+INFO  - org.symphonyoss.symphony.integrations:integration-auth-api-clientSUCCESS
+INFO  - org.symphonyoss.symphony.integrations:integration-pod-api-clientSUCCESS
+INFO  - org.symphonyoss.symphony.integrations:integration-agent-api-clientSUCCESS
+INFO  - org.symphonyoss.symphony.integrations:integration-auth    SUCCESS
+INFO  - org.symphonyoss.symphony.integrations:integration-config  SUCCESS
+INFO  - org.symphonyoss.symphony.integrations:integration-healthcheckSUCCESS
+WARN  - org.symphonyoss.symphony.integrations:integration-core    WARNING
+WARN  - org.symphonyoss.symphony.integrations:integration-web     WARNING
+WARN  - org.symphonyoss.symphony.integrations:integration-provisioningWARNING
+INFO  
+WARN  One or more warnings were logged, please review them in the log file
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T165813.log
+INFO  Finished in 1h 8m 19s
+2026-01-22T18:06:40,580 INFO  [Thread-173] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@6b545479: startup date [Thu Jan 22 17:55:02 GMT 2026]; root of context hierarchy
+2026-01-22T18:06:40,581 INFO  [Thread-176] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@c0ebcf4: startup date [Thu Jan 22 17:57:07 GMT 2026]; root of context hierarchy
+2026-01-22T18:06:40,581 INFO  [Thread-175] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@56611414: startup date [Thu Jan 22 17:55:54 GMT 2026]; root of context hierarchy
+2026-01-22T18:06:40,582 INFO  [Thread-174] GenericApplicationContext   - Closing org.springframework.context.support.GenericApplicationContext@7bd502c3: startup date [Thu Jan 22 17:55:13 GMT 2026]; root of context hierarchy
