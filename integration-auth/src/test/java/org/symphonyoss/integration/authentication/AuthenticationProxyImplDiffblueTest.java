@@ -1,8 +1,10 @@
 package org.symphonyoss.integration.authentication;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.security.KeyStore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -107,9 +109,7 @@ public class AuthenticationProxyImplDiffblueTest {
    */
   @Test
   @ManagedByDiffblue
-  @MethodsUnderTest({
-    "org.symphonyoss.integration.authentication.AuthenticationToken AuthenticationProxyImpl.getToken(String)"
-  })
+  @MethodsUnderTest({"AuthenticationToken AuthenticationProxyImpl.getToken(String)"})
   public void testGetToken_givenLogMessageSource_when42_thenThrowUnregisteredUserAuthException() {
     // Arrange, Act and Assert
     thrown.expect(UnregisteredUserAuthException.class);
@@ -136,6 +136,27 @@ public class AuthenticationProxyImplDiffblueTest {
   }
 
   /**
+   * Test {@link AuthenticationProxyImpl#reAuthOrThrow(String, RemoteApiException)}.
+   *
+   * <ul>
+   *   <li>Given {@link LogMessageSource}.
+   *   <li>Then throw {@link UnregisteredUserAuthException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationProxyImpl#reAuthOrThrow(String, RemoteApiException)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AuthenticationProxyImpl.reAuthOrThrow(String, RemoteApiException)"})
+  public void testReAuthOrThrow_givenLogMessageSource_thenThrowUnregisteredUserAuthException()
+      throws RemoteApiException {
+    // Arrange, Act and Assert
+    thrown.expect(UnregisteredUserAuthException.class);
+    authenticationProxyImpl.reAuthOrThrow(
+        "42", RemoteApiExceptionFactory.createUnauthorizedRemoteApiException());
+  }
+
+  /**
    * Test {@link AuthenticationProxyImpl#reAuthSessionOrThrow(String, RemoteApiException)}.
    *
    * <p>Method under test: {@link AuthenticationProxyImpl#reAuthSessionOrThrow(String,
@@ -144,13 +165,13 @@ public class AuthenticationProxyImplDiffblueTest {
   @Test
   @ManagedByDiffblue
   @MethodsUnderTest({
-    "org.symphonyoss.integration.authentication.AuthenticationToken AuthenticationProxyImpl.reAuthSessionOrThrow(String, RemoteApiException)"
+    "AuthenticationToken AuthenticationProxyImpl.reAuthSessionOrThrow(String, RemoteApiException)"
   })
   public void testReAuthSessionOrThrow() throws RemoteApiException {
     // Arrange, Act and Assert
     thrown.expect(UnregisteredSessionTokenException.class);
     authenticationProxyImpl.reAuthSessionOrThrow(
-        "ABC123", new RemoteApiException(1, "An error occurred"));
+        "ABC123", RemoteApiExceptionFactory.createUnauthorizedRemoteApiException());
   }
 
   /**
@@ -177,6 +198,106 @@ public class AuthenticationProxyImplDiffblueTest {
   public void testSessionUnauthorized() {
     // Arrange, Act and Assert
     assertFalse(authenticationProxyImpl.sessionUnauthorized(1));
+  }
+
+  /**
+   * Test {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}.
+   *
+   * <p>Method under test: {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AuthenticationProxyImpl.registerUser(String, KeyStore, String)"})
+  public void testRegisterUser() {
+    //   Diffblue Cover was unable to create a Spring-specific test for this Spring method.
+    //   Run dcover create --keep-partial-tests to gain insights into why
+    //   a non-Spring test was created.
+
+    // Arrange
+    AuthenticationProxyImpl createAuthenticationProxyImplResult =
+        AuthenticationProxyImplFactory.createAuthenticationProxyImpl();
+
+    // Act
+    createAuthenticationProxyImplResult.registerUser(
+        "42", AuthenticationContextFactory.createKeyStore(), "Key Store Pass");
+
+    // Assert
+    AuthenticationToken token = createAuthenticationProxyImplResult.getToken("42");
+    assertEquals(0L, token.getAuthenticationTime());
+    assertEquals(
+        AuthenticationToken.VOID_KM_TOKEN,
+        createAuthenticationProxyImplResult.getSessionToken("42"));
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getKeyManagerToken());
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getSessionToken());
+  }
+
+  /**
+   * Test {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AuthenticationProxyImpl.registerUser(String, KeyStore, String)"})
+  public void testRegisterUser_whenNull() {
+    //   Diffblue Cover was unable to create a Spring-specific test for this Spring method.
+    //   Run dcover create --keep-partial-tests to gain insights into why
+    //   a non-Spring test was created.
+
+    // Arrange
+    AuthenticationProxyImpl createAuthenticationProxyImplResult =
+        AuthenticationProxyImplFactory.createAuthenticationProxyImpl();
+
+    // Act
+    createAuthenticationProxyImplResult.registerUser(
+        "42", AuthenticationContextFactory.createKeyStore(), null);
+
+    // Assert
+    AuthenticationToken token = createAuthenticationProxyImplResult.getToken("42");
+    assertEquals(0L, token.getAuthenticationTime());
+    assertEquals(
+        AuthenticationToken.VOID_KM_TOKEN,
+        createAuthenticationProxyImplResult.getSessionToken("42"));
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getKeyManagerToken());
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getSessionToken());
+  }
+
+  /**
+   * Test {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}.
+   *
+   * <ul>
+   *   <li>When {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationProxyImpl#registerUser(String, KeyStore, String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void AuthenticationProxyImpl.registerUser(String, KeyStore, String)"})
+  public void testRegisterUser_whenNull2() {
+    //   Diffblue Cover was unable to create a Spring-specific test for this Spring method.
+    //   Run dcover create --keep-partial-tests to gain insights into why
+    //   a non-Spring test was created.
+
+    // Arrange
+    AuthenticationProxyImpl createAuthenticationProxyImplResult =
+        AuthenticationProxyImplFactory.createAuthenticationProxyImpl();
+
+    // Act
+    createAuthenticationProxyImplResult.registerUser("42", null, "Key Store Pass");
+
+    // Assert
+    AuthenticationToken token = createAuthenticationProxyImplResult.getToken("42");
+    assertEquals(0L, token.getAuthenticationTime());
+    assertEquals(
+        AuthenticationToken.VOID_KM_TOKEN,
+        createAuthenticationProxyImplResult.getSessionToken("42"));
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getKeyManagerToken());
+    assertEquals(AuthenticationToken.VOID_KM_TOKEN, token.getSessionToken());
   }
 
   /**

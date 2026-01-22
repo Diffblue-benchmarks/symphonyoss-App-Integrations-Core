@@ -1,0 +1,94 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-auth
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-auth
+INFO  =======================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.authentication
+INFO  - org.symphonyoss.integration.authentication.exception
+INFO  - org.symphonyoss.integration.authentication.jwt
+INFO  - org.symphonyoss.integration.authentication.properties
+INFO  Gathering methods to test...
+INFO  Found 47 callable methods in 14 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/14] org.symphonyoss.integration.authentication.AppAuthenticationContext
+INFO   [1/14]   Tests created: 7
+INFO   [2/14] org.symphonyoss.integration.authentication.AppAuthenticationProxyImpl
+INFO   [2/14]   Tests created: 3
+INFO   [3/14] org.symphonyoss.integration.authentication.AuthenticationContext
+INFO   [3/14]   Tests created: 2
+INFO   [4/14] org.symphonyoss.integration.authentication.AuthenticationProxyImpl
+INFO   [4/14]   Tests created: 14
+INFO   [5/14] org.symphonyoss.integration.authentication.UserAuthenticationContext
+INFO   [5/14]   Tests created: 9
+INFO   [6/14] org.symphonyoss.integration.authentication.exception.MissingClientException
+INFO   [6/14]   Tests created: 2
+INFO   [7/14] org.symphonyoss.integration.authentication.exception.MissingServiceConfigurationException
+INFO   [7/14]   Tests created: 4
+INFO   [8/14] org.symphonyoss.integration.authentication.exception.UnregisteredAppAuthException
+INFO   [8/14]   Tests created: 1
+INFO   [9/14] org.symphonyoss.integration.authentication.exception.UnregisteredSessionTokenException
+INFO   [9/14]   Tests created: 1
+INFO  [10/14] org.symphonyoss.integration.authentication.exception.UnregisteredUserAuthException
+INFO  [10/14]   Tests created: 1
+INFO  [11/14] org.symphonyoss.integration.authentication.jwt.JwtAuthenticationImpl
+INFO  [11/14]   Tests created: 42
+INFO  [12/14] org.symphonyoss.integration.authentication.properties.AppAuthenticationProxyProperties
+INFO  [12/14]   Tests created: 0
+INFO  [13/14] org.symphonyoss.integration.authentication.properties.AuthenticationContextProperties
+INFO  [13/14]   Tests created: 0
+INFO  [14/14] org.symphonyoss.integration.authentication.properties.AuthenticationProxyProperties
+INFO  [14/14]   Tests created: 0
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-auth
+INFO  ----------------------------------------------------------------------------------------
+INFO  Total:                                              47 methods
+INFO  86 tests created for:                               38 methods
+INFO  
+INFO  Tested indirectly via other methods:                 6 methods
+INFO      6 T005: Trivial constructor
+INFO  No tests created for:                                3 methods
+INFO      1 R013: No inputs found that don't throw a trivial exception
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/src/test/java/org/symphonyoss/integration/authentication/jwt/JwtAuthenticationImplDiffblueTest.java
+INFO    
+INFO  All 86 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 224 of 251 lines to cover (89.2%)
+INFO  Diffblue tests cover 122 of 251 lines to cover (48.6%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-auth/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T100526.log
+INFO  Finished in 8m 18s
