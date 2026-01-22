@@ -31,6 +31,12 @@ public class ApplicationsHealthAggregator implements HealthAggregator {
 
   private static final String DETAIL = "detail";
 
+  /**
+   * Creates a new ApplicationsHealthAggregator.
+   */
+  public ApplicationsHealthAggregator() {
+  }
+
   @Override
   public Health aggregate(Map<String, Health> healths) {
     Boolean allIntegrationsDown = true;

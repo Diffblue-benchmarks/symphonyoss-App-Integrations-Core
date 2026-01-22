@@ -31,6 +31,12 @@ import java.util.Map;
 public class CompositeServiceHealthAggregator implements HealthAggregator {
 
   /**
+   * Creates a new CompositeServiceHealthAggregator.
+   */
+  public CompositeServiceHealthAggregator() {
+  }
+
+  /**
    * This method receives all the service health indicators and aggregates the health status.
    * If at least one service is DOWN, the aggregated status is DOWN.
    * @param healths Service health indicators

@@ -1,0 +1,143 @@
+INFO  Diffblue Cover 2026.01.01-SNAPSHOT-f2f2d79-local
+INFO  
+INFO  Command: create
+INFO  Create tests for the specified package/class/method.
+INFO  
+INFO  Selected modules:
+INFO  - org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  
+INFO  
+INFO  [1/1] Creating tests for module: org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  ==============================================================================================
+INFO  
+INFO  Detecting environment:
+INFO  ----------------------
+INFO  Detected Java version 1.8.0_472
+INFO  Selected build system: Maven
+INFO  Selected classpath from build system maven
+INFO  Selected test framework: JUnit
+INFO  Selected Java language compliance level: 1.8, because 1.7 is not supported
+INFO  Selected test validation: enabled
+INFO  Prefixes for filtering classes/methods:
+INFO  - org.symphonyoss.integration.healthcheck
+INFO  - org.symphonyoss.integration.healthcheck.application
+INFO  - org.symphonyoss.integration.healthcheck.config
+INFO  - org.symphonyoss.integration.healthcheck.event
+INFO  - org.symphonyoss.integration.healthcheck.properties
+INFO  - org.symphonyoss.integration.healthcheck.services
+INFO  - org.symphonyoss.integration.healthcheck.services.indicators
+INFO  - org.symphonyoss.integration.healthcheck.services.invokers
+INFO  Gathering methods to test...
+INFO  Found 111 callable methods in 28 classes
+INFO  
+INFO  Creating tests:
+INFO  ---------------
+INFO   [1/28] org.symphonyoss.integration.healthcheck.CompositeHealthEndpoint
+INFO   [1/28]   Tests created: 1
+INFO   [2/28] org.symphonyoss.integration.healthcheck.IntegrationBridgeHealthAggregator
+INFO   [2/28]   Tests created: 1
+INFO   [3/28] org.symphonyoss.integration.healthcheck.IntegrationHealthIndicatorAdapter
+INFO   [3/28]   Tests created: 2
+INFO   [4/28] org.symphonyoss.integration.healthcheck.application.ApplicationsHealthAggregator
+INFO   [4/28]   Tests created: 1
+INFO   [5/28] org.symphonyoss.integration.healthcheck.application.ApplicationsHealthIndicator
+INFO   [5/28]   Tests created: 6
+INFO   [6/28] org.symphonyoss.integration.healthcheck.config.CachingConfiguration
+INFO   [6/28]   Tests created: 2
+INFO   [7/28] org.symphonyoss.integration.healthcheck.config.NamedThreadFactory
+INFO   [7/28]   Tests created: 1
+INFO   [8/28] org.symphonyoss.integration.healthcheck.config.RuntimeCacheResolver
+INFO   [8/28]   Tests created: 2
+INFO   [9/28] org.symphonyoss.integration.healthcheck.config.SchedulerConfiguration
+INFO   [9/28]   Tests created: 2
+INFO  [10/28] org.symphonyoss.integration.healthcheck.event.ServiceVersionUpdatedEventData
+INFO  [10/28]   Tests created: 1
+INFO  [11/28] org.symphonyoss.integration.healthcheck.properties.HealthCheckProperties
+INFO  [11/28]   Tests created: 0
+INFO  [12/28] org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthAggregator
+INFO  [12/28]   Tests created: 2
+INFO  [13/28] org.symphonyoss.integration.healthcheck.services.CompositeServiceHealthIndicator
+INFO  [13/28]   Tests created: 0
+INFO  [14/28] org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo
+INFO  [14/28]   Tests created: 30
+INFO  [15/28] org.symphonyoss.integration.healthcheck.services.IntegrationBridgeServiceInfo$Compability
+INFO  [15/28]   Tests created: 0
+INFO  [16/28] org.symphonyoss.integration.healthcheck.services.indicators.AgentHealthIndicator
+INFO  [16/28]   Tests created: 1
+INFO  [17/28] org.symphonyoss.integration.healthcheck.services.indicators.KmAuthHealthIndicator
+INFO  [17/28]   Tests created: 2
+INFO  [18/28] org.symphonyoss.integration.healthcheck.services.indicators.KmHealthIndicator
+INFO  [18/28]   Tests created: 1
+INFO  [19/28] org.symphonyoss.integration.healthcheck.services.indicators.PodHealthIndicator
+INFO  [19/28]   Tests created: 1
+INFO  [20/28] org.symphonyoss.integration.healthcheck.services.indicators.PodSessionManagerHealthIndicator
+INFO  [20/28]   Tests created: 2
+INFO  [21/28] org.symphonyoss.integration.healthcheck.services.indicators.ServiceHealthIndicator
+INFO  [21/28]   Tests created: 6
+INFO  [22/28] org.symphonyoss.integration.healthcheck.services.invokers.AgentHealthInvoker
+INFO  [22/28]   Tests created: 3
+INFO  [23/28] org.symphonyoss.integration.healthcheck.services.invokers.AuthenticationServiceHealthInvoker
+INFO  [23/28]   Tests created: 9
+INFO  [24/28] org.symphonyoss.integration.healthcheck.services.invokers.KmAuthHealthInvoker
+INFO  [24/28]   Tests created: 8
+INFO  [25/28] org.symphonyoss.integration.healthcheck.services.invokers.KmHealthInvoker
+INFO  [25/28]   Tests created: 3
+INFO  [26/28] org.symphonyoss.integration.healthcheck.services.invokers.PodHealthInvoker
+INFO  [26/28]   Tests created: 4
+INFO  [27/28] org.symphonyoss.integration.healthcheck.services.invokers.PodSessionManagerHealthInvoker
+INFO  [27/28]   Tests created: 4
+INFO  [28/28] org.symphonyoss.integration.healthcheck.services.invokers.ServiceHealthInvoker
+INFO  [28/28]   Tests created: 16
+INFO  
+INFO  Test creation summary for module: org.symphonyoss.symphony.integrations:integration-healthcheck
+INFO  -----------------------------------------------------------------------------------------------
+INFO  Total:                                             111 methods
+INFO  111 tests created for:                              83 methods
+INFO  
+INFO  Tested indirectly via other methods:                17 methods
+INFO     17 T005: Trivial constructor
+INFO  No tests created for:                                9 methods
+INFO      3 R013: No inputs found that don't throw a trivial exception
+INFO      2 R002: Missing observers
+INFO  
+INFO  Running validation command.
+INFO  This can take a couple of minutes.
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthAggregatorDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/application/ApplicationsHealthIndicatorDiffblueTest.java
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/CompositeServiceHealthAggregatorDiffblueTest.java
+INFO    
+INFO  Test execution failed, analyzing...
+INFO  9 individual tests did not pass and were removed.
+INFO    
+INFO  Trying to restore test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO  Successfully restored test source file /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO  Test execution failed, analyzing...
+INFO  The following files were modified during generation of tests and have been detected to cause problems.
+INFO  These files have been restored to the state before we added tests to them.
+INFO   /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/src/test/java/org/symphonyoss/integration/healthcheck/services/invokers/AuthenticationServiceHealthInvokerDiffblueTest.java
+INFO    
+INFO  All 111 created tests were successfully validated.
+INFO  
+INFO  Calculating coverage from manual tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/manual-tests-jacoco-report.xml
+INFO  
+INFO  Calculating coverage from Diffblue tests.
+INFO  This can take a while, please be patient...
+INFO  JaCoCo report file created in /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/diffblue-tests-jacoco-report.xml
+INFO  
+INFO  Manual tests cover 332 of 358 lines to cover (92.7%)
+INFO  Diffblue tests cover 231 of 358 lines to cover (64.5%)
+INFO  Writing JSON report to /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/integration-healthcheck/.diffblue/reports/report.json
+INFO  
+INFO  Log file: /home/jbergqvist/diffblue/symphonyoss-App-Integrations-Core/.diffblue/log/user-20260122T105453.log
+INFO  Finished in 3m 5s

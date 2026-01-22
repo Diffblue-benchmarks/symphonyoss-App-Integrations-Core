@@ -31,6 +31,24 @@ public class PodHealthInvokerDiffblueTest {
   private ServiceHealthIndicator serviceHealthIndicator;
 
   /**
+   * Test {@link PodHealthInvoker#getMinVersion()}.
+   *
+   * <ul>
+   *   <li>Given createPodHealthInvoker.
+   *   <li>Then return {@code 1.44.0}.
+   * </ul>
+   *
+   * <p>Method under test: {@link PodHealthInvoker#getMinVersion()}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.lang.String PodHealthInvoker.getMinVersion()"})
+  public void testGetMinVersion_givenCreatePodHealthInvoker_thenReturn1440() {
+    // Arrange, Act and Assert
+    assertEquals("1.44.0", HealthInvokerFactory.createPodHealthInvoker().getMinVersion());
+  }
+
+  /**
    * Test {@link PodHealthInvoker#getHealthCheckUrl()}.
    *
    * <p>Method under test: {@link PodHealthInvoker#getHealthCheckUrl()}
