@@ -24,22 +24,4 @@ public class NamedThreadFactoryDiffblueTest {
     assertEquals("Name-0", actualNewThreadResult.getName());
     assertEquals(5, actualNewThreadResult.getPriority());
   }
-
-  /**
-   * Test {@link NamedThreadFactory#newThread(Runnable)}.
-   *
-   * <p>Method under test: {@link NamedThreadFactory#newThread(Runnable)}
-   */
-  @Test
-  @ManagedByDiffblue
-  @MethodsUnderTest({"Thread NamedThreadFactory.newThread(Runnable)"})
-  public void testNewThread() {
-    // Arrange and Act
-    Thread actualNewThreadResult =
-        new NamedThreadFactory("Name", true).newThread(mock(Runnable.class));
-
-    // Assert
-    assertEquals("Name-0", actualNewThreadResult.getName());
-    assertEquals(5, actualNewThreadResult.getPriority());
-  }
 }

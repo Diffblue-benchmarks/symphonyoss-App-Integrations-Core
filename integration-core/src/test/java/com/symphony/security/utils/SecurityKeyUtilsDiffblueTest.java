@@ -476,6 +476,66 @@ public class SecurityKeyUtilsDiffblueTest {
    * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
    *
    * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----\s}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyEndRsaPrivateKeyS()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----\\s");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----UTF-8}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyEndRsaPrivateKeyUtf8()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----UTF-8");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----X.509}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyEndRsaPrivateKeyX509()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY----------END RSA PRIVATE KEY-----X.509");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
    *   <li>When {@code -----BEGIN PRIVATE KEY-----\n-----BEGIN RSA PRIVATE KEY-----}.
    * </ul>
    *
@@ -490,6 +550,26 @@ public class SecurityKeyUtilsDiffblueTest {
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPrivateKey(
         "-----BEGIN PRIVATE KEY-----\\n-----BEGIN RSA PRIVATE KEY-----");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----\n-----END RSA PRIVATE KEY-----}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyNEndRsaPrivateKey()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey(
+        "-----BEGIN PRIVATE KEY-----\\n-----END RSA PRIVATE KEY-----");
   }
 
   /**
@@ -777,6 +857,25 @@ public class SecurityKeyUtilsDiffblueTest {
     // Arrange, Act and Assert
     thrown.expect(GeneralSecurityException.class);
     SecurityKeyUtils.parseRSAPrivateKey(" -----BEGIN PRIVATE KEY-----Pem Private Key");
+  }
+
+  /**
+   * Test {@link SecurityKeyUtils#parseRSAPrivateKey(String)}.
+   *
+   * <ul>
+   *   <li>When {@code -----BEGIN PRIVATE KEY-----Pem Private Key}.
+   * </ul>
+   *
+   * <p>Method under test: {@link SecurityKeyUtils#parseRSAPrivateKey(String)}
+   */
+  @Test
+  @ManagedByDiffblue
+  @MethodsUnderTest({"java.security.PrivateKey SecurityKeyUtils.parseRSAPrivateKey(String)"})
+  public void testParseRSAPrivateKey_whenBeginPrivateKeyPemPrivateKey3()
+      throws GeneralSecurityException {
+    // Arrange, Act and Assert
+    thrown.expect(GeneralSecurityException.class);
+    SecurityKeyUtils.parseRSAPrivateKey("-----BEGIN PRIVATE KEY-----Pem Private Key ");
   }
 
   /**
