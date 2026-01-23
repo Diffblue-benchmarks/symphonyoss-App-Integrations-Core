@@ -22,3 +22,9 @@ integration-jira/
 integration-github/
 integration-universal-whi/
 integration-zapier/
+
+.diffblue/cache
+**.diffblue/cache
+**/.diffblue/cache
+**/**.diffblue/cache
+**/**/.diffblue/cache
